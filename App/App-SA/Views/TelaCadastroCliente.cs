@@ -6,13 +6,19 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SA___Projeto_Encontrar_Profissionais
+namespace App_SA
 {
     public partial class TelaCadastroCliente : Form
     {
         public TelaCadastroCliente()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new TelaLogin().Show();
+            Visible = false;
         }
     }
 }

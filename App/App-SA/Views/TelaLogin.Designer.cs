@@ -1,5 +1,5 @@
 ﻿
-namespace SA___Projeto_Encontrar_Profissionais
+namespace App_SA
 {
     partial class TelaLogin
     {
@@ -45,9 +45,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             this.lblAtencao.AutoSize = true;
             this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblAtencao.Location = new System.Drawing.Point(69, 103);
+            this.lblAtencao.Location = new System.Drawing.Point(59, 89);
             this.lblAtencao.Name = "lblAtencao";
-            this.lblAtencao.Size = new System.Drawing.Size(245, 15);
+            this.lblAtencao.Size = new System.Drawing.Size(216, 13);
             this.lblAtencao.TabIndex = 0;
             this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
             this.lblAtencao.Visible = false;
@@ -55,9 +55,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(69, 118);
+            this.label1.Location = new System.Drawing.Point(59, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 21);
             this.label1.TabIndex = 1;
@@ -65,17 +65,17 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             // txtBoxLogin
             // 
-            this.txtBoxLogin.Location = new System.Drawing.Point(69, 142);
+            this.txtBoxLogin.Location = new System.Drawing.Point(59, 123);
             this.txtBoxLogin.Name = "txtBoxLogin";
-            this.txtBoxLogin.Size = new System.Drawing.Size(245, 23);
+            this.txtBoxLogin.Size = new System.Drawing.Size(211, 20);
             this.txtBoxLogin.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 173);
+            this.label2.Location = new System.Drawing.Point(59, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 21);
             this.label2.TabIndex = 3;
@@ -83,31 +83,32 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             // txtBoxSenha
             // 
-            this.txtBoxSenha.Location = new System.Drawing.Point(69, 197);
+            this.txtBoxSenha.Location = new System.Drawing.Point(59, 171);
             this.txtBoxSenha.Name = "txtBoxSenha";
-            this.txtBoxSenha.Size = new System.Drawing.Size(245, 23);
+            this.txtBoxSenha.Size = new System.Drawing.Size(211, 20);
             this.txtBoxSenha.TabIndex = 4;
             // 
             // linkEsqueceuSenha
             // 
             this.linkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.Red;
             this.linkEsqueceuSenha.AutoSize = true;
-            this.linkEsqueceuSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.linkEsqueceuSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.Green;
             this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.linkEsqueceuSenha.Location = new System.Drawing.Point(135, 223);
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(116, 193);
             this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
             this.linkEsqueceuSenha.Size = new System.Drawing.Size(122, 17);
             this.linkEsqueceuSenha.TabIndex = 5;
             this.linkEsqueceuSenha.TabStop = true;
             this.linkEsqueceuSenha.Text = "Esqueceu a senha?";
+            this.linkEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEsqueceuSenha_LinkClicked);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(108, 9);
+            this.label3.Location = new System.Drawing.Point(93, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 31);
             this.label3.TabIndex = 6;
@@ -116,11 +117,11 @@ namespace SA___Projeto_Encontrar_Profissionais
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(157, 255);
+            this.button1.Location = new System.Drawing.Point(135, 221);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 31);
+            this.button1.Size = new System.Drawing.Size(141, 27);
             this.button1.TabIndex = 7;
             this.button1.Text = "Acessar minha conta";
             this.button1.UseVisualStyleBackColor = false;
@@ -129,11 +130,11 @@ namespace SA___Projeto_Encontrar_Profissionais
             // btnCadastroProfissional
             // 
             this.btnCadastroProfissional.BackColor = System.Drawing.Color.Yellow;
-            this.btnCadastroProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastroProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastroProfissional.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroProfissional.Location = new System.Drawing.Point(12, 407);
+            this.btnCadastroProfissional.Location = new System.Drawing.Point(10, 353);
             this.btnCadastroProfissional.Name = "btnCadastroProfissional";
-            this.btnCadastroProfissional.Size = new System.Drawing.Size(165, 31);
+            this.btnCadastroProfissional.Size = new System.Drawing.Size(141, 27);
             this.btnCadastroProfissional.TabIndex = 8;
             this.btnCadastroProfissional.Text = "Cadastro Profissional";
             this.btnCadastroProfissional.UseVisualStyleBackColor = false;
@@ -142,11 +143,11 @@ namespace SA___Projeto_Encontrar_Profissionais
             // btnCadastroCliente
             // 
             this.btnCadastroCliente.BackColor = System.Drawing.Color.Yellow;
-            this.btnCadastroCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastroCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastroCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroCliente.Location = new System.Drawing.Point(201, 407);
+            this.btnCadastroCliente.Location = new System.Drawing.Point(172, 353);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
-            this.btnCadastroCliente.Size = new System.Drawing.Size(165, 31);
+            this.btnCadastroCliente.Size = new System.Drawing.Size(141, 27);
             this.btnCadastroCliente.TabIndex = 9;
             this.btnCadastroCliente.Text = "Cadastro Cliente";
             this.btnCadastroCliente.UseVisualStyleBackColor = false;
@@ -154,10 +155,10 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             // TelaLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(378, 450);
+            this.ClientSize = new System.Drawing.Size(324, 390);
             this.Controls.Add(this.btnCadastroCliente);
             this.Controls.Add(this.btnCadastroProfissional);
             this.Controls.Add(this.button1);
@@ -169,6 +170,7 @@ namespace SA___Projeto_Encontrar_Profissionais
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAtencao);
             this.Name = "TelaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Login";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,5 +1,5 @@
 ﻿
-namespace SA___Projeto_Encontrar_Profissionais
+namespace App_SA
 {
     partial class TelaCadastroProfissional
     {
@@ -61,35 +61,35 @@ namespace SA___Projeto_Encontrar_Profissionais
             // btnCarregarFoto
             // 
             this.btnCarregarFoto.BackColor = System.Drawing.Color.Yellow;
-            this.btnCarregarFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCarregarFoto.Location = new System.Drawing.Point(70, 191);
+            this.btnCarregarFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCarregarFoto.Location = new System.Drawing.Point(60, 166);
             this.btnCarregarFoto.Name = "btnCarregarFoto";
-            this.btnCarregarFoto.Size = new System.Drawing.Size(120, 28);
+            this.btnCarregarFoto.Size = new System.Drawing.Size(103, 24);
             this.btnCarregarFoto.TabIndex = 3;
             this.btnCarregarFoto.Text = "Carregar Foto";
             this.btnCarregarFoto.UseVisualStyleBackColor = false;
             // 
             // pcBoxFotoProfissional
             // 
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(23, 58);
+            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(20, 50);
             this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
-            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(210, 124);
+            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(180, 107);
             this.pcBoxFotoProfissional.TabIndex = 2;
             this.pcBoxFotoProfissional.TabStop = false;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(7, 435);
+            this.textBox5.Location = new System.Drawing.Point(6, 377);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 23);
+            this.textBox5.Size = new System.Drawing.Size(203, 20);
             this.textBox5.TabIndex = 29;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(4, 413);
+            this.label6.Location = new System.Drawing.Point(3, 358);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 19);
             this.label6.TabIndex = 27;
@@ -97,17 +97,17 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(255, 170);
+            this.textBox4.Location = new System.Drawing.Point(219, 147);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 23);
+            this.textBox4.Size = new System.Drawing.Size(197, 20);
             this.textBox4.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(252, 148);
+            this.label5.Location = new System.Drawing.Point(216, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 26;
@@ -116,17 +116,17 @@ namespace SA___Projeto_Encontrar_Profissionais
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(255, 122);
+            this.comboBox2.Location = new System.Drawing.Point(219, 106);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 23);
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
             this.comboBox2.TabIndex = 25;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(252, 100);
+            this.label9.Location = new System.Drawing.Point(216, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 19);
             this.label9.TabIndex = 12;
@@ -135,17 +135,17 @@ namespace SA___Projeto_Encontrar_Profissionais
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(255, 74);
+            this.comboBox1.Location = new System.Drawing.Point(219, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 23);
+            this.comboBox1.Size = new System.Drawing.Size(194, 21);
             this.comboBox1.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(252, 52);
+            this.label8.Location = new System.Drawing.Point(216, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 19);
             this.label8.TabIndex = 13;
@@ -154,39 +154,40 @@ namespace SA___Projeto_Encontrar_Profissionais
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(11, 467);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(9, 405);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 28);
+            this.button2.Size = new System.Drawing.Size(74, 24);
             this.button2.TabIndex = 23;
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(113, 467);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(97, 405);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 28);
+            this.button1.Size = new System.Drawing.Size(72, 24);
             this.button1.TabIndex = 21;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 235);
+            this.textBox1.Location = new System.Drawing.Point(7, 204);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 23);
+            this.textBox1.Size = new System.Drawing.Size(204, 20);
             this.textBox1.TabIndex = 17;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(109, 336);
+            this.radioButton2.Location = new System.Drawing.Point(93, 291);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 19);
+            this.radioButton2.Size = new System.Drawing.Size(67, 17);
             this.radioButton2.TabIndex = 16;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Feminino";
@@ -196,9 +197,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(9, 336);
+            this.radioButton1.Location = new System.Drawing.Point(8, 291);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 19);
+            this.radioButton1.Size = new System.Drawing.Size(73, 17);
             this.radioButton1.TabIndex = 15;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Masculino";
@@ -207,9 +208,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 318);
+            this.label4.Location = new System.Drawing.Point(8, 276);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 11;
@@ -218,9 +219,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 263);
+            this.label3.Location = new System.Drawing.Point(8, 228);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 15);
             this.label3.TabIndex = 10;
@@ -229,9 +230,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 369);
+            this.label2.Location = new System.Drawing.Point(2, 320);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 14;
@@ -240,9 +241,9 @@ namespace SA___Projeto_Encontrar_Profissionais
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 217);
+            this.label1.Location = new System.Drawing.Point(7, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 19);
             this.label1.TabIndex = 9;
@@ -251,33 +252,33 @@ namespace SA___Projeto_Encontrar_Profissionais
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 387);
+            this.comboBox3.Location = new System.Drawing.Point(5, 335);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(237, 23);
+            this.comboBox3.Size = new System.Drawing.Size(204, 21);
             this.comboBox3.TabIndex = 30;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(9, 286);
+            this.maskedTextBox1.Location = new System.Drawing.Point(8, 248);
             this.maskedTextBox1.Mask = "000\\.000\\.000\\-00";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(236, 23);
+            this.maskedTextBox1.Size = new System.Drawing.Size(203, 20);
             this.maskedTextBox1.TabIndex = 31;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(252, 271);
+            this.richTextBox1.Location = new System.Drawing.Point(216, 235);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(229, 187);
+            this.richTextBox1.Size = new System.Drawing.Size(197, 163);
             this.richTextBox1.TabIndex = 32;
             this.richTextBox1.Text = "";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(289, 248);
+            this.label7.Location = new System.Drawing.Point(248, 215);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 19);
             this.label7.TabIndex = 33;
@@ -285,19 +286,19 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(258, 217);
+            this.textBox2.Location = new System.Drawing.Point(221, 188);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 26);
+            this.textBox2.Size = new System.Drawing.Size(194, 26);
             this.textBox2.TabIndex = 35;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(255, 196);
+            this.label10.Location = new System.Drawing.Point(219, 170);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 19);
             this.label10.TabIndex = 34;
@@ -307,19 +308,19 @@ namespace SA___Projeto_Encontrar_Profissionais
             // 
             this.lblAtencao.AutoSize = true;
             this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblAtencao.Location = new System.Drawing.Point(126, 28);
+            this.lblAtencao.Location = new System.Drawing.Point(108, 24);
             this.lblAtencao.Name = "lblAtencao";
-            this.lblAtencao.Size = new System.Drawing.Size(245, 15);
+            this.lblAtencao.Size = new System.Drawing.Size(216, 13);
             this.lblAtencao.TabIndex = 36;
             this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
             this.lblAtencao.Visible = false;
             // 
             // TelaCadastroProfissional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(496, 507);
+            this.ClientSize = new System.Drawing.Size(425, 439);
             this.Controls.Add(this.lblAtencao);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label10);
@@ -347,6 +348,7 @@ namespace SA___Projeto_Encontrar_Profissionais
             this.Controls.Add(this.btnCarregarFoto);
             this.Controls.Add(this.pcBoxFotoProfissional);
             this.Name = "TelaCadastroProfissional";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroProfissional";
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).EndInit();
             this.ResumeLayout(false);

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1433
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App-SA", "App-SA\App-SA.csproj", "{361D9AA8-A501-41F7-8B3D-76520C0FDF30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_SA", "App-SA\App_SA.csproj", "{361D9AA8-A501-41F7-8B3D-76520C0FDF30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App-Pessoal", "App-Pessoal\App-Pessoal.csproj", "{6668BC84-534F-4399-9DCC-2FC08A4DB603}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Pessoal", "App-Pessoal\App_Pessoal.csproj", "{6668BC84-534F-4399-9DCC-2FC08A4DB603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

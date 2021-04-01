@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App_SA.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SA___Projeto_Encontrar_Profissionais
+namespace App_SA
 {
     public partial class TelaLogin : Form
     {
@@ -31,14 +32,20 @@ namespace SA___Projeto_Encontrar_Profissionais
 
         private void btnCadastroProfissional_Click(object sender, EventArgs e)
         {
-            TelaCadastroProfissional cadastroProfissional = new TelaCadastroProfissional();
-            cadastroProfissional.ShowDialog();
+            new TelaCadastroProfissional().Show();
+            Visible = false;
         }
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
-            TelaCadastroCliente cadastroCliente = new TelaCadastroCliente();
-            cadastroCliente.ShowDialog();
+            new TelaCadastroCliente().Show();
+            Visible = false;
+        }
+
+        private void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new TelaRecuperaSenha().Show();
+            Visible = false;
         }
     }
 }
