@@ -36,8 +36,10 @@
             this.lblConfSenha = new System.Windows.Forms.Label();
             this.txtConfSenha = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnConfEmail = new System.Windows.Forms.Button();
-            this.btnConfSenha = new System.Windows.Forms.Button();
+            this.btnConf1 = new System.Windows.Forms.Button();
+            this.btnConf2 = new System.Windows.Forms.Button();
+            this.mkbCpf = new System.Windows.Forms.MaskedTextBox();
+            this.lblCpf = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -45,7 +47,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(35, 9);
+            this.label5.Location = new System.Drawing.Point(170, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(204, 31);
             this.label5.TabIndex = 20;
@@ -55,14 +57,14 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(41, 83);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(144, 20);
+            this.txtEmail.Size = new System.Drawing.Size(478, 20);
             this.txtEmail.TabIndex = 21;
             // 
             // txtNewSenha
             // 
             this.txtNewSenha.Location = new System.Drawing.Point(41, 83);
             this.txtNewSenha.Name = "txtNewSenha";
-            this.txtNewSenha.Size = new System.Drawing.Size(144, 20);
+            this.txtNewSenha.Size = new System.Drawing.Size(478, 20);
             this.txtNewSenha.TabIndex = 22;
             this.txtNewSenha.Visible = false;
             // 
@@ -94,7 +96,7 @@
             this.lblConfSenha.AutoSize = true;
             this.lblConfSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblConfSenha.ForeColor = System.Drawing.Color.White;
-            this.lblConfSenha.Location = new System.Drawing.Point(37, 119);
+            this.lblConfSenha.Location = new System.Drawing.Point(37, 141);
             this.lblConfSenha.Name = "lblConfSenha";
             this.lblConfSenha.Size = new System.Drawing.Size(122, 19);
             this.lblConfSenha.TabIndex = 26;
@@ -103,9 +105,9 @@
             // 
             // txtConfSenha
             // 
-            this.txtConfSenha.Location = new System.Drawing.Point(41, 141);
+            this.txtConfSenha.Location = new System.Drawing.Point(41, 163);
             this.txtConfSenha.Name = "txtConfSenha";
-            this.txtConfSenha.Size = new System.Drawing.Size(144, 20);
+            this.txtConfSenha.Size = new System.Drawing.Size(478, 20);
             this.txtConfSenha.TabIndex = 27;
             this.txtConfSenha.Visible = false;
             // 
@@ -114,49 +116,70 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
             this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 180);
+            this.btnVoltar.Location = new System.Drawing.Point(41, 257);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(87, 27);
+            this.btnVoltar.Size = new System.Drawing.Size(224, 50);
             this.btnVoltar.TabIndex = 29;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnConfEmail
+            // btnConf1
             // 
-            this.btnConfEmail.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnConfEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfEmail.ForeColor = System.Drawing.Color.Black;
-            this.btnConfEmail.Location = new System.Drawing.Point(134, 180);
-            this.btnConfEmail.Name = "btnConfEmail";
-            this.btnConfEmail.Size = new System.Drawing.Size(101, 27);
-            this.btnConfEmail.TabIndex = 30;
-            this.btnConfEmail.Text = "Confirmar";
-            this.btnConfEmail.UseVisualStyleBackColor = false;
-            this.btnConfEmail.Click += new System.EventHandler(this.button3_Click);
+            this.btnConf1.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnConf1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConf1.ForeColor = System.Drawing.Color.Black;
+            this.btnConf1.Location = new System.Drawing.Point(295, 257);
+            this.btnConf1.Name = "btnConf1";
+            this.btnConf1.Size = new System.Drawing.Size(224, 50);
+            this.btnConf1.TabIndex = 30;
+            this.btnConf1.Text = "Confirmar";
+            this.btnConf1.UseVisualStyleBackColor = false;
+            this.btnConf1.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnConfSenha
+            // btnConf2
             // 
-            this.btnConfSenha.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnConfSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnConfSenha.Location = new System.Drawing.Point(134, 180);
-            this.btnConfSenha.Name = "btnConfSenha";
-            this.btnConfSenha.Size = new System.Drawing.Size(101, 27);
-            this.btnConfSenha.TabIndex = 31;
-            this.btnConfSenha.Text = "Confirmar";
-            this.btnConfSenha.UseVisualStyleBackColor = false;
-            this.btnConfSenha.Visible = false;
-            this.btnConfSenha.Click += new System.EventHandler(this.btnConfSenha_Click);
+            this.btnConf2.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnConf2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConf2.ForeColor = System.Drawing.Color.Black;
+            this.btnConf2.Location = new System.Drawing.Point(295, 254);
+            this.btnConf2.Name = "btnConf2";
+            this.btnConf2.Size = new System.Drawing.Size(224, 53);
+            this.btnConf2.TabIndex = 31;
+            this.btnConf2.Text = "Confirmar";
+            this.btnConf2.UseVisualStyleBackColor = false;
+            this.btnConf2.Visible = false;
+            this.btnConf2.Click += new System.EventHandler(this.btnConfSenha_Click);
+            // 
+            // mkbCpf
+            // 
+            this.mkbCpf.Location = new System.Drawing.Point(41, 163);
+            this.mkbCpf.Mask = "000\\.000\\.000\\-00";
+            this.mkbCpf.Name = "mkbCpf";
+            this.mkbCpf.Size = new System.Drawing.Size(298, 20);
+            this.mkbCpf.TabIndex = 32;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCpf.ForeColor = System.Drawing.Color.White;
+            this.lblCpf.Location = new System.Drawing.Point(37, 141);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(122, 19);
+            this.lblCpf.TabIndex = 33;
+            this.lblCpf.Text = "Informe seu CPF";
             // 
             // TelaRecuperaSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(247, 219);
-            this.Controls.Add(this.btnConfSenha);
-            this.Controls.Add(this.btnConfEmail);
+            this.ClientSize = new System.Drawing.Size(549, 350);
+            this.Controls.Add(this.lblCpf);
+            this.Controls.Add(this.mkbCpf);
+            this.Controls.Add(this.btnConf2);
+            this.Controls.Add(this.btnConf1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtConfSenha);
             this.Controls.Add(this.lblConfSenha);
@@ -183,7 +206,9 @@
         private System.Windows.Forms.Label lblConfSenha;
         private System.Windows.Forms.TextBox txtConfSenha;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnConfEmail;
-        private System.Windows.Forms.Button btnConfSenha;
+        private System.Windows.Forms.Button btnConf1;
+        private System.Windows.Forms.Button btnConf2;
+        private System.Windows.Forms.MaskedTextBox mkbCpf;
+        private System.Windows.Forms.Label lblCpf;
     }
 }

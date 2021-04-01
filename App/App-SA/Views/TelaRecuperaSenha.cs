@@ -28,14 +28,18 @@ namespace App_SA.Views
             lblEmail.Visible = false;
             txtEmail.Visible = false;
 
+            lblCpf.Visible = false;
+            mkbCpf.Visible = false;
+
             lblNewSenha.Visible = true;
             txtNewSenha.Visible = true;
 
             lblConfSenha.Visible = true;
             txtConfSenha.Visible = true;
 
-            btnConfEmail.Visible = false;
-            btnConfSenha.Visible = true;
+
+            btnConf1.Visible = false;
+            btnConf2.Visible = true;
 
 
         }
@@ -45,5 +49,7 @@ namespace App_SA.Views
              new TelaLogin().Show();
              Visible = false;
         }
+
+
     }
 }
