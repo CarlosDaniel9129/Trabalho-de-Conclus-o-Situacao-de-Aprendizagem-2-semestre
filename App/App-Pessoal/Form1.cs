@@ -16,5 +16,10 @@ namespace App_Pessoal
         {
             InitializeComponent();
         }
+
+        private void oi()
+        {
+            Console.WriteLine("oi amiguinho");
+        } 
     }
 }
