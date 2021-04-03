@@ -18,7 +18,7 @@ namespace App_SA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAcessarConta_Click(object sender, EventArgs e)
         {
             if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
             {
