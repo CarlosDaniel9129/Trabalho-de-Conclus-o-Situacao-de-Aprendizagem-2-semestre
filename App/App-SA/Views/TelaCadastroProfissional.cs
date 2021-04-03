@@ -46,7 +46,7 @@ namespace App_SA
                     Bairro = txtBairro.Text
                 };
 
-                }
+                
 
             }
             catch (Exception)

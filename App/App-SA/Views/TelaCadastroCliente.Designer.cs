@@ -29,7 +29,7 @@ namespace App_SA
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBairo = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,12 +51,12 @@ namespace App_SA
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtBairo
+            // txtBairro
             // 
-            this.txtBairo.Location = new System.Drawing.Point(376, 205);
-            this.txtBairo.Name = "txtBairo";
-            this.txtBairo.Size = new System.Drawing.Size(330, 20);
-            this.txtBairo.TabIndex = 28;
+            this.txtBairro.Location = new System.Drawing.Point(376, 205);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(330, 20);
+            this.txtBairro.TabIndex = 28;
             // 
             // label5
             // 
@@ -250,7 +250,7 @@ namespace App_SA
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblAtencao);
-            this.Controls.Add(this.txtBairo);
+            this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCidade);
             this.Controls.Add(this.label9);
@@ -271,7 +271,7 @@ namespace App_SA
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtBairo;
+        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.Label label9;
