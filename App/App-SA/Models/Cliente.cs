@@ -8,5 +8,6 @@ namespace App_SA.Models
 {
     class Cliente
     {
+
     }
 }

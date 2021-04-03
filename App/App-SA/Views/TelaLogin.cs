@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App_SA.Controller;
 
 namespace App_SA
 {
@@ -20,14 +21,29 @@ namespace App_SA
 
         private void btnAcessarConta_Click(object sender, EventArgs e)
         {
-            if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
+            try
             {
-                lblAtencao.Visible = true;
-                return;
+                if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
+                {
+                    lblAtencao.Visible = true;
+                    return;
+                }
+                else
+                {
+                    Controle controle = new Controle();
+                    controle.acessar(txtBoxLogin.Text, txtBoxSenha.Text);
+
+                    TelaPesquisa pesquisarProfissional = new TelaPesquisa();
+                    pesquisarProfissional.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
 
-            TelaPesquisa pesquisarProfissional = new TelaPesquisa();
-            pesquisarProfissional.ShowDialog();
+      
         }
 
         private void btnCadastroProfissional_Click(object sender, EventArgs e)
