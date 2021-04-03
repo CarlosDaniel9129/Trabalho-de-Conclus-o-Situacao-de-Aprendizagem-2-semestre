@@ -93,7 +93,7 @@ namespace App_SA
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(369, 318);
+            this.label5.Location = new System.Drawing.Point(369, 319);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 26;
@@ -206,7 +206,7 @@ namespace App_SA
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 63);
+            this.label1.Location = new System.Drawing.Point(4, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 19);
             this.label1.TabIndex = 9;
@@ -252,7 +252,7 @@ namespace App_SA
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(6, 319);
+            this.label10.Location = new System.Drawing.Point(6, 320);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 19);
             this.label10.TabIndex = 34;
@@ -306,7 +306,7 @@ namespace App_SA
             this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtencao.Image = global::App_SA.Properties.Resources._2682803_32;
             this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAtencao.Location = new System.Drawing.Point(23, 9);
+            this.lblAtencao.Location = new System.Drawing.Point(23, 18);
             this.lblAtencao.Name = "lblAtencao";
             this.lblAtencao.Size = new System.Drawing.Size(667, 35);
             this.lblAtencao.TabIndex = 41;
