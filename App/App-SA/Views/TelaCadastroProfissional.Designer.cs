@@ -159,7 +159,7 @@ namespace App_SA
             this.btnSalvarProfissional.TabIndex = 21;
             this.btnSalvarProfissional.Text = "Salvar";
             this.btnSalvarProfissional.UseVisualStyleBackColor = false;
-            this.btnSalvarProfissional.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvarProfissional.Click += new System.EventHandler(this.btnSalvarProfissional_Click);
             // 
             // txtNome
             // 
