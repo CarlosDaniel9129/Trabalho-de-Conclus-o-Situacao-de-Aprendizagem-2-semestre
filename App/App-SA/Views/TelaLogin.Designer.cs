@@ -36,7 +36,7 @@ namespace App_SA
             this.txtBoxSenha = new System.Windows.Forms.TextBox();
             this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAcessarConta = new System.Windows.Forms.Button();
             this.btnCadastroProfissional = new System.Windows.Forms.Button();
             this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -114,18 +114,18 @@ namespace App_SA
             this.label3.TabIndex = 6;
             this.label3.Text = "WORKERS";
             // 
-            // button1
+            // btnAcessarConta
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(32, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(348, 27);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Acessar minha conta";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAcessarConta.BackColor = System.Drawing.Color.Yellow;
+            this.btnAcessarConta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAcessarConta.ForeColor = System.Drawing.Color.Black;
+            this.btnAcessarConta.Location = new System.Drawing.Point(32, 225);
+            this.btnAcessarConta.Name = "btnAcessarConta";
+            this.btnAcessarConta.Size = new System.Drawing.Size(348, 27);
+            this.btnAcessarConta.TabIndex = 7;
+            this.btnAcessarConta.Text = "Acessar minha conta";
+            this.btnAcessarConta.UseVisualStyleBackColor = false;
+            this.btnAcessarConta.Click += new System.EventHandler(this.btnAcessarConta_Click);
             // 
             // btnCadastroProfissional
             // 
@@ -161,7 +161,7 @@ namespace App_SA
             this.ClientSize = new System.Drawing.Size(415, 369);
             this.Controls.Add(this.btnCadastroCliente);
             this.Controls.Add(this.btnCadastroProfissional);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAcessarConta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkEsqueceuSenha);
             this.Controls.Add(this.txtBoxSenha);
@@ -186,7 +186,7 @@ namespace App_SA
         private System.Windows.Forms.TextBox txtBoxSenha;
         private System.Windows.Forms.LinkLabel linkEsqueceuSenha;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAcessarConta;
         private System.Windows.Forms.Button btnCadastroProfissional;
         private System.Windows.Forms.Button btnCadastroCliente;
     }

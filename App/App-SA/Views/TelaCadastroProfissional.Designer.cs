@@ -31,31 +31,31 @@ namespace App_SA
         {
             this.btnCarregarFoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbCidade = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSalvarProfissional = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cbProfissao = new System.Windows.Forms.ComboBox();
+            this.maskedTxtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.richTxtInformacoesAdicionais = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.maskedTxtValorHora = new System.Windows.Forms.MaskedTextBox();
             this.pcBoxFotoProfissional = new System.Windows.Forms.PictureBox();
             this.lblAtencao = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbFormacao = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,12 +81,12 @@ namespace App_SA
             this.label6.TabIndex = 27;
             this.label6.Text = "Formação";
             // 
-            // textBox4
+            // txtBairro
             // 
-            this.textBox4.Location = new System.Drawing.Point(370, 341);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(331, 20);
-            this.textBox4.TabIndex = 28;
+            this.txtBairro.Location = new System.Drawing.Point(370, 341);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(331, 20);
+            this.txtBairro.TabIndex = 28;
             // 
             // label5
             // 
@@ -99,13 +99,13 @@ namespace App_SA
             this.label5.TabIndex = 26;
             this.label5.Text = "Bairro";
             // 
-            // comboBox2
+            // cbCidade
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(369, 278);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(331, 21);
-            this.comboBox2.TabIndex = 25;
+            this.cbCidade.FormattingEnabled = true;
+            this.cbCidade.Location = new System.Drawing.Point(369, 278);
+            this.cbCidade.Name = "cbCidade";
+            this.cbCidade.Size = new System.Drawing.Size(331, 21);
+            this.cbCidade.TabIndex = 25;
             // 
             // label9
             // 
@@ -118,13 +118,13 @@ namespace App_SA
             this.label9.TabIndex = 12;
             this.label9.Text = "Cidade";
             // 
-            // comboBox1
+            // cbEstado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(369, 213);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(332, 21);
-            this.comboBox1.TabIndex = 24;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(369, 213);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(332, 21);
+            this.cbEstado.TabIndex = 24;
             // 
             // label8
             // 
@@ -137,36 +137,36 @@ namespace App_SA
             this.label8.TabIndex = 13;
             this.label8.Text = "Estado";
             // 
-            // button2
+            // btnVoltar
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 625);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 54);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
+            this.btnVoltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.Location = new System.Drawing.Point(12, 625);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(226, 54);
+            this.btnVoltar.TabIndex = 23;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // button1
+            // btnSalvarProfissional
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(249, 625);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 54);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvarProfissional.BackColor = System.Drawing.Color.Yellow;
+            this.btnSalvarProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSalvarProfissional.Location = new System.Drawing.Point(249, 625);
+            this.btnSalvarProfissional.Name = "btnSalvarProfissional";
+            this.btnSalvarProfissional.Size = new System.Drawing.Size(224, 54);
+            this.btnSalvarProfissional.TabIndex = 21;
+            this.btnSalvarProfissional.Text = "Salvar";
+            this.btnSalvarProfissional.UseVisualStyleBackColor = false;
+            this.btnSalvarProfissional.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtNome.Location = new System.Drawing.Point(7, 85);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(332, 20);
+            this.txtNome.TabIndex = 17;
             // 
             // label4
             // 
@@ -212,29 +212,29 @@ namespace App_SA
             this.label1.TabIndex = 9;
             this.label1.Text = "Nome";
             // 
-            // comboBox3
+            // cbProfissao
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(367, 85);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(332, 21);
-            this.comboBox3.TabIndex = 30;
+            this.cbProfissao.FormattingEnabled = true;
+            this.cbProfissao.Location = new System.Drawing.Point(367, 85);
+            this.cbProfissao.Name = "cbProfissao";
+            this.cbProfissao.Size = new System.Drawing.Size(332, 21);
+            this.cbProfissao.TabIndex = 30;
             // 
-            // maskedTextBox1
+            // maskedTxtCpf
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(8, 145);
-            this.maskedTextBox1.Mask = "000\\.000\\.000\\-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(332, 20);
-            this.maskedTextBox1.TabIndex = 31;
+            this.maskedTxtCpf.Location = new System.Drawing.Point(8, 145);
+            this.maskedTxtCpf.Mask = "000\\.000\\.000\\-00";
+            this.maskedTxtCpf.Name = "maskedTxtCpf";
+            this.maskedTxtCpf.Size = new System.Drawing.Size(332, 20);
+            this.maskedTxtCpf.TabIndex = 31;
             // 
-            // richTextBox1
+            // richTxtInformacoesAdicionais
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 412);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(326, 163);
-            this.richTextBox1.TabIndex = 32;
-            this.richTextBox1.Text = "";
+            this.richTxtInformacoesAdicionais.Location = new System.Drawing.Point(12, 412);
+            this.richTxtInformacoesAdicionais.Name = "richTxtInformacoesAdicionais";
+            this.richTxtInformacoesAdicionais.Size = new System.Drawing.Size(326, 163);
+            this.richTxtInformacoesAdicionais.TabIndex = 32;
+            this.richTxtInformacoesAdicionais.Text = "";
             // 
             // label7
             // 
@@ -258,12 +258,12 @@ namespace App_SA
             this.label10.TabIndex = 34;
             this.label10.Text = "Preço/Hora (R$)";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 214);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(332, 20);
-            this.textBox3.TabIndex = 37;
+            this.txtEmail.Location = new System.Drawing.Point(8, 214);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(332, 20);
+            this.txtEmail.TabIndex = 37;
             // 
             // label11
             // 
@@ -276,21 +276,21 @@ namespace App_SA
             this.label11.TabIndex = 38;
             this.label11.Text = "E-mail";
             // 
-            // comboBox4
+            // cbSexo
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(9, 278);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(331, 21);
-            this.comboBox4.TabIndex = 39;
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Location = new System.Drawing.Point(9, 278);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(331, 21);
+            this.cbSexo.TabIndex = 39;
             // 
-            // maskedTextBox2
+            // maskedTxtValorHora
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(10, 341);
-            this.maskedTextBox2.Mask = "$000\\.00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(331, 20);
-            this.maskedTextBox2.TabIndex = 40;
+            this.maskedTxtValorHora.Location = new System.Drawing.Point(10, 341);
+            this.maskedTxtValorHora.Mask = "$000\\.00";
+            this.maskedTxtValorHora.Name = "maskedTxtValorHora";
+            this.maskedTxtValorHora.Size = new System.Drawing.Size(331, 20);
+            this.maskedTxtValorHora.TabIndex = 40;
             // 
             // pcBoxFotoProfissional
             // 
@@ -314,13 +314,13 @@ namespace App_SA
             this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAtencao.Visible = false;
             // 
-            // comboBox5
+            // cbFormacao
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(367, 144);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(332, 21);
-            this.comboBox5.TabIndex = 42;
+            this.cbFormacao.FormattingEnabled = true;
+            this.cbFormacao.Location = new System.Drawing.Point(367, 144);
+            this.cbFormacao.Name = "cbFormacao";
+            this.cbFormacao.Size = new System.Drawing.Size(332, 21);
+            this.cbFormacao.TabIndex = 42;
             // 
             // TelaCadastroProfissional
             // 
@@ -328,27 +328,27 @@ namespace App_SA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(722, 691);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbFormacao);
             this.Controls.Add(this.lblAtencao);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.maskedTxtValorHora);
+            this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.richTxtInformacoesAdicionais);
+            this.Controls.Add(this.maskedTxtCpf);
+            this.Controls.Add(this.cbProfissao);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbCidade);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvarProfissional);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -369,29 +369,29 @@ namespace App_SA
         private System.Windows.Forms.Button btnCarregarFoto;
         private System.Windows.Forms.PictureBox pcBoxFotoProfissional;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnSalvarProfissional;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ComboBox cbProfissao;
+        private System.Windows.Forms.MaskedTextBox maskedTxtCpf;
+        private System.Windows.Forms.RichTextBox richTxtInformacoesAdicionais;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.MaskedTextBox maskedTxtValorHora;
         private System.Windows.Forms.Label lblAtencao;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbFormacao;
     }
 }

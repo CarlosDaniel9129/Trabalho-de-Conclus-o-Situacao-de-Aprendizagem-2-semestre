@@ -15,7 +15,7 @@ namespace App_SA
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
             new TelaLogin().Show();
             Visible = false;
