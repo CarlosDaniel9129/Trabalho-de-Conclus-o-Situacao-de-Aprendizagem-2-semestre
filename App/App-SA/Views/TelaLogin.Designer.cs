@@ -30,9 +30,9 @@ namespace App_SA
         private void InitializeComponent()
         {
             this.lblAtencao = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.txtBoxLogin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.txtBoxSenha = new System.Windows.Forms.TextBox();
             this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,37 +52,41 @@ namespace App_SA
             this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
             this.lblAtencao.Visible = false;
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(32, 93);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(53, 21);
+            this.lblLogin.TabIndex = 1;
+            this.lblLogin.Text = "Login";
             // 
             // txtBoxLogin
             // 
+            this.txtBoxLogin.AcceptsTab = true;
+            this.txtBoxLogin.BackColor = System.Drawing.Color.White;
+            this.txtBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLogin.Location = new System.Drawing.Point(32, 117);
             this.txtBoxLogin.Name = "txtBoxLogin";
             this.txtBoxLogin.Size = new System.Drawing.Size(348, 20);
             this.txtBoxLogin.TabIndex = 2;
             // 
-            // label2
+            // lblSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Senha";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(28, 147);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(57, 21);
+            this.lblSenha.TabIndex = 3;
+            this.lblSenha.Text = "Senha";
             // 
             // txtBoxSenha
             // 
+            this.txtBoxSenha.AcceptsTab = true;
             this.txtBoxSenha.Location = new System.Drawing.Point(32, 171);
             this.txtBoxSenha.Name = "txtBoxSenha";
             this.txtBoxSenha.Size = new System.Drawing.Size(348, 20);
@@ -165,9 +169,9 @@ namespace App_SA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkEsqueceuSenha);
             this.Controls.Add(this.txtBoxSenha);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtBoxLogin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblAtencao);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -180,9 +184,9 @@ namespace App_SA
         #endregion
 
         private System.Windows.Forms.Label lblAtencao;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtBoxLogin;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtBoxSenha;
         private System.Windows.Forms.LinkLabel linkEsqueceuSenha;
         private System.Windows.Forms.Label label3;

@@ -25,17 +25,17 @@ namespace App_SA
             {
                 if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
                 {
-                    lblAtencao.Visible = true;
-                    return;
+                    ControlarVisibilidade();
                 }
                 else
                 {
+                    lblAtencao.Visible = false;
                     Controle controle = new Controle();
                     controle.acessar(txtBoxLogin.Text, txtBoxSenha.Text);
 
                     TelaPesquisa pesquisarProfissional = new TelaPesquisa();
                     pesquisarProfissional.ShowDialog();
-                }
+                }                
             }
             catch (Exception ex)
             {
@@ -43,7 +43,7 @@ namespace App_SA
                 MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
 
-       
+
         }
 
         private void btnCadastroProfissional_Click(object sender, EventArgs e)
@@ -62,6 +62,23 @@ namespace App_SA
         {
             new TelaRecuperaSenha().Show();
             Visible = false;
+        }
+
+        private void ControlarVisibilidade()
+        {
+            lblAtencao.Visible = true;
+
+            if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null)
+                lblLogin.ForeColor = Color.Red;
+            else
+                lblLogin.ForeColor = Color.White;
+
+            if (txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
+                lblSenha.ForeColor = Color.Red;
+            else
+                lblSenha.ForeColor = Color.White;
+
+            return;
         }
     }
 }

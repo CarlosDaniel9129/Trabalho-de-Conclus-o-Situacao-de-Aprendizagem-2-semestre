@@ -30,32 +30,36 @@ namespace App_SA
         private void InitializeComponent()
         {
             this.btnCarregarFoto = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblFormacao = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblBairro = new System.Windows.Forms.Label();
             this.cbCidade = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSalvarProfissional = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.lblProfissao = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.cbProfissao = new System.Windows.Forms.ComboBox();
             this.maskedTxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.richTxtInformacoesAdicionais = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblValorHora = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.maskedTxtValorHora = new System.Windows.Forms.MaskedTextBox();
             this.pcBoxFotoProfissional = new System.Windows.Forms.PictureBox();
             this.lblAtencao = new System.Windows.Forms.Label();
             this.cbFormacao = new System.Windows.Forms.ComboBox();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.lblConfirmarSenha = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,23 +67,23 @@ namespace App_SA
             // 
             this.btnCarregarFoto.BackColor = System.Drawing.Color.Yellow;
             this.btnCarregarFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCarregarFoto.Location = new System.Drawing.Point(484, 625);
+            this.btnCarregarFoto.Location = new System.Drawing.Point(487, 668);
             this.btnCarregarFoto.Name = "btnCarregarFoto";
             this.btnCarregarFoto.Size = new System.Drawing.Size(215, 54);
             this.btnCarregarFoto.TabIndex = 3;
             this.btnCarregarFoto.Text = "Carregar Foto";
             this.btnCarregarFoto.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // lblFormacao
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(364, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 19);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Formação";
+            this.lblFormacao.AutoSize = true;
+            this.lblFormacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFormacao.ForeColor = System.Drawing.Color.White;
+            this.lblFormacao.Location = new System.Drawing.Point(364, 126);
+            this.lblFormacao.Name = "lblFormacao";
+            this.lblFormacao.Size = new System.Drawing.Size(75, 19);
+            this.lblFormacao.TabIndex = 27;
+            this.lblFormacao.Text = "Formação";
             // 
             // txtBairro
             // 
@@ -88,16 +92,16 @@ namespace App_SA
             this.txtBairro.Size = new System.Drawing.Size(331, 20);
             this.txtBairro.TabIndex = 28;
             // 
-            // label5
+            // lblBairro
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(369, 319);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Bairro";
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBairro.ForeColor = System.Drawing.Color.White;
+            this.lblBairro.Location = new System.Drawing.Point(369, 319);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(52, 19);
+            this.lblBairro.TabIndex = 26;
+            this.lblBairro.Text = "Bairro";
             // 
             // cbCidade
             // 
@@ -107,16 +111,16 @@ namespace App_SA
             this.cbCidade.Size = new System.Drawing.Size(331, 21);
             this.cbCidade.TabIndex = 25;
             // 
-            // label9
+            // lblCidade
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(366, 256);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 19);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Cidade";
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCidade.ForeColor = System.Drawing.Color.White;
+            this.lblCidade.Location = new System.Drawing.Point(366, 256);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(56, 19);
+            this.lblCidade.TabIndex = 12;
+            this.lblCidade.Text = "Cidade";
             // 
             // cbEstado
             // 
@@ -126,22 +130,22 @@ namespace App_SA
             this.cbEstado.Size = new System.Drawing.Size(332, 21);
             this.cbEstado.TabIndex = 24;
             // 
-            // label8
+            // lblEstado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(366, 194);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 19);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Estado";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(366, 194);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(55, 19);
+            this.lblEstado.TabIndex = 13;
+            this.lblEstado.Text = "Estado";
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
             this.btnVoltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.Location = new System.Drawing.Point(12, 625);
+            this.btnVoltar.Location = new System.Drawing.Point(15, 668);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(226, 54);
             this.btnVoltar.TabIndex = 23;
@@ -153,7 +157,7 @@ namespace App_SA
             // 
             this.btnSalvarProfissional.BackColor = System.Drawing.Color.Yellow;
             this.btnSalvarProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvarProfissional.Location = new System.Drawing.Point(249, 625);
+            this.btnSalvarProfissional.Location = new System.Drawing.Point(252, 668);
             this.btnSalvarProfissional.Name = "btnSalvarProfissional";
             this.btnSalvarProfissional.Size = new System.Drawing.Size(224, 54);
             this.btnSalvarProfissional.TabIndex = 21;
@@ -168,49 +172,49 @@ namespace App_SA
             this.txtNome.Size = new System.Drawing.Size(332, 20);
             this.txtNome.TabIndex = 17;
             // 
-            // label4
+            // lblSexo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 19);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Sexo";
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSexo.ForeColor = System.Drawing.Color.White;
+            this.lblSexo.Location = new System.Drawing.Point(6, 191);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(42, 19);
+            this.lblSexo.TabIndex = 11;
+            this.lblSexo.Text = "Sexo";
             // 
-            // label3
+            // lblCpf
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "CPF";
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCpf.ForeColor = System.Drawing.Color.White;
+            this.lblCpf.Location = new System.Drawing.Point(5, 127);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(30, 15);
+            this.lblCpf.TabIndex = 10;
+            this.lblCpf.Text = "CPF";
             // 
-            // label2
+            // lblProfissao
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(365, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Profissão";
+            this.lblProfissao.AutoSize = true;
+            this.lblProfissao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblProfissao.ForeColor = System.Drawing.Color.White;
+            this.lblProfissao.Location = new System.Drawing.Point(365, 66);
+            this.lblProfissao.Name = "lblProfissao";
+            this.lblProfissao.Size = new System.Drawing.Size(71, 19);
+            this.lblProfissao.TabIndex = 14;
+            this.lblProfissao.Text = "Profissão";
             // 
-            // label1
+            // lblNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nome";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(4, 64);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(49, 19);
+            this.lblNome.TabIndex = 9;
+            this.lblNome.Text = "Nome";
             // 
             // cbProfissao
             // 
@@ -230,7 +234,7 @@ namespace App_SA
             // 
             // richTxtInformacoesAdicionais
             // 
-            this.richTxtInformacoesAdicionais.Location = new System.Drawing.Point(12, 412);
+            this.richTxtInformacoesAdicionais.Location = new System.Drawing.Point(15, 455);
             this.richTxtInformacoesAdicionais.Name = "richTxtInformacoesAdicionais";
             this.richTxtInformacoesAdicionais.Size = new System.Drawing.Size(326, 163);
             this.richTxtInformacoesAdicionais.TabIndex = 32;
@@ -241,52 +245,52 @@ namespace App_SA
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 390);
+            this.label7.Location = new System.Drawing.Point(12, 433);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 19);
             this.label7.TabIndex = 33;
             this.label7.Text = "Informações Adicionais";
             // 
-            // label10
+            // lblValorHora
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(6, 320);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 19);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Preço/Hora (R$)";
+            this.lblValorHora.AutoSize = true;
+            this.lblValorHora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblValorHora.ForeColor = System.Drawing.Color.White;
+            this.lblValorHora.Location = new System.Drawing.Point(6, 258);
+            this.lblValorHora.Name = "lblValorHora";
+            this.lblValorHora.Size = new System.Drawing.Size(119, 19);
+            this.lblValorHora.TabIndex = 34;
+            this.lblValorHora.Text = "Preço/Hora (R$)";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(8, 214);
+            this.txtEmail.Location = new System.Drawing.Point(9, 341);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(332, 20);
             this.txtEmail.TabIndex = 37;
             // 
-            // label11
+            // lblEmail
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(8, 192);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 19);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "E-mail";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(9, 319);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(52, 19);
+            this.lblEmail.TabIndex = 38;
+            this.lblEmail.Text = "E-mail";
             // 
             // cbSexo
             // 
             this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Location = new System.Drawing.Point(9, 278);
+            this.cbSexo.Location = new System.Drawing.Point(9, 213);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(331, 21);
             this.cbSexo.TabIndex = 39;
             // 
             // maskedTxtValorHora
             // 
-            this.maskedTxtValorHora.Location = new System.Drawing.Point(10, 341);
+            this.maskedTxtValorHora.Location = new System.Drawing.Point(10, 279);
             this.maskedTxtValorHora.Mask = "$000\\.00";
             this.maskedTxtValorHora.Name = "maskedTxtValorHora";
             this.maskedTxtValorHora.Size = new System.Drawing.Size(331, 20);
@@ -294,7 +298,7 @@ namespace App_SA
             // 
             // pcBoxFotoProfissional
             // 
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(440, 412);
+            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(443, 455);
             this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
             this.pcBoxFotoProfissional.Size = new System.Drawing.Size(186, 163);
             this.pcBoxFotoProfissional.TabIndex = 2;
@@ -322,37 +326,77 @@ namespace App_SA
             this.cbFormacao.Size = new System.Drawing.Size(332, 21);
             this.cbFormacao.TabIndex = 42;
             // 
+            // txtConfirmarSenha
+            // 
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(369, 398);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(333, 20);
+            this.txtConfirmarSenha.TabIndex = 52;
+            // 
+            // lblConfirmarSenha
+            // 
+            this.lblConfirmarSenha.AutoSize = true;
+            this.lblConfirmarSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblConfirmarSenha.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(365, 382);
+            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
+            this.lblConfirmarSenha.Size = new System.Drawing.Size(122, 19);
+            this.lblConfirmarSenha.TabIndex = 51;
+            this.lblConfirmarSenha.Text = "Confirmar Senha";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(9, 398);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(332, 20);
+            this.txtSenha.TabIndex = 50;
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(5, 382);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(50, 19);
+            this.lblSenha.TabIndex = 49;
+            this.lblSenha.Text = "Senha";
+            // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(722, 691);
+            this.ClientSize = new System.Drawing.Size(722, 742);
+            this.Controls.Add(this.txtConfirmarSenha);
+            this.Controls.Add(this.lblConfirmarSenha);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.cbFormacao);
             this.Controls.Add(this.lblAtencao);
             this.Controls.Add(this.maskedTxtValorHora);
             this.Controls.Add(this.cbSexo);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblValorHora);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.richTxtInformacoesAdicionais);
             this.Controls.Add(this.maskedTxtCpf);
             this.Controls.Add(this.cbProfissao);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblFormacao);
             this.Controls.Add(this.txtBairro);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblBairro);
             this.Controls.Add(this.cbCidade);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSalvarProfissional);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSexo);
+            this.Controls.Add(this.lblCpf);
+            this.Controls.Add(this.lblProfissao);
+            this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnCarregarFoto);
             this.Controls.Add(this.pcBoxFotoProfissional);
             this.Name = "TelaCadastroProfissional";
@@ -368,30 +412,34 @@ namespace App_SA
 
         private System.Windows.Forms.Button btnCarregarFoto;
         private System.Windows.Forms.PictureBox pcBoxFotoProfissional;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblFormacao;
         private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.ComboBox cbCidade;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnSalvarProfissional;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.Label lblProfissao;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.ComboBox cbProfissao;
         private System.Windows.Forms.MaskedTextBox maskedTxtCpf;
         private System.Windows.Forms.RichTextBox richTxtInformacoesAdicionais;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblValorHora;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorHora;
         private System.Windows.Forms.Label lblAtencao;
         private System.Windows.Forms.ComboBox cbFormacao;
+        private System.Windows.Forms.TextBox txtConfirmarSenha;
+        private System.Windows.Forms.Label lblConfirmarSenha;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Label lblSenha;
     }
 }
