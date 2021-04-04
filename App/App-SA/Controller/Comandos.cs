@@ -22,7 +22,7 @@ namespace App_SA.Controller
 
             myComand = new MySqlCommand("select * from teste where login = @login and senha = @senha", myConn);
             myComand.Parameters.AddWithValue("@login", login);
-            myComand.Parameters.AddWithValue("@login", senha);
+            myComand.Parameters.AddWithValue("@senha", senha);
 
             try
             {

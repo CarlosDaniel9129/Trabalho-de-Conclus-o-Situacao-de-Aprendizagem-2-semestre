@@ -30,7 +30,8 @@ namespace App_SA
             
             try
             {
-               
+               //terminar
+
                 Profissional profissional = new Profissional()
                 {
                     Nome = txtNome.Text,

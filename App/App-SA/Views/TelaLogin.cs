@@ -43,7 +43,7 @@ namespace App_SA
                 MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
 
-      
+       
         }
 
         private void btnCadastroProfissional_Click(object sender, EventArgs e)
