@@ -15,6 +15,9 @@ namespace App_SA.Controller
         private MySqlCommand myComand;
         private MySqlDataReader myReader;
 
+
+
+
         public bool verificaLogin(string login, string senha)
         {
             
@@ -39,6 +42,16 @@ namespace App_SA.Controller
             }
 
             return tem;
+        }
+
+        public void cadastraClien(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro)
+        {
+
+        }
+
+        public void cadastraProf(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro, double valor, string infos, string profissao, string formacao)
+        {
+
         }
     }
 }

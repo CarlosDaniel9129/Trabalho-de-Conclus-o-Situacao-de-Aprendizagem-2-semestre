@@ -51,6 +51,7 @@
     <Compile Include="Controller\Conexao.cs" />
     <Compile Include="Controller\Controle.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Profissional.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

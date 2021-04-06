@@ -44,16 +44,19 @@ namespace App_SA
                     {
                         Nome = txtNome.Text,
                         Cpf = txtEmail.Text,
+                        Senha = txtSenha.Text,
                         Email = txtEmail.Text,
                         Sexo = cbSexo.Text,
                         ValorHora = double.Parse(maskedTxtValorHora.Text),
-                        Info = richTxtInformacoesAdicionais.Text,
+                        Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
                         Formacao = cbFormacao.Text,
                         Estado = cbEstado.Text,
                         Cidade = cbCidade.Text,
                         Bairro = txtBairro.Text
                     };
+
+                    profissional.cadastraDados();
 
                     new TelaLogin().Show();
                     Visible = false;
