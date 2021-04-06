@@ -3,57 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App_SA.Controller;
 
 namespace App_SA.Models
 {
-    class Profissional
+    class Profissional : Pessoa
     {
-        private string nome;
-
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-
-        private string cpf;
-
-        public string Cpf
-        {
-            get { return cpf; }
-            set { cpf = value; }
-        }
-
-        private string email;
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-
-        private string sexo;
-
-        public string Sexo
-        {
-            get { return sexo; }
-            set { sexo = value; }
-        }
-
-        private double valorHora;
+        private double valorhora;
 
         public double ValorHora
         {
-            get { return valorHora; }
-            set { valorHora = value; }
+            get { return valorhora; }
+            set { valorhora = value; }
         }
 
-        private string info;
+        private string infos;
 
-        public string Info
+        public string Infos
         {
-            get { return info; }
-            set { info = value; }
+            get { return infos; }
+            set { infos = value; }
         }
 
         private string profissao;
@@ -72,28 +41,23 @@ namespace App_SA.Models
             set { formacao = value; }
         }
 
-        private string estado;
 
-        public string Estado
+        public override void cadastraDados()
         {
-            get { return estado; }
-            set { estado = value; }
-        }
+            base.cadastraDados();
 
-        private string cidade;
+            Controle controle = new Controle();
 
-        public string Cidade
-        {
-            get { return cidade; }
-            set { cidade = value; }
-        }
+            controle.acessar(Nome, Senha);
 
-        private string bairro;
-
-        public string Bairro
-        {
-            get { return bairro; }
-            set { bairro = value; }
+            if (controle.tem.Equals(false))
+            {
+                controle.cadastraDados(Nome, Cpf, Sexo, Email, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
+            }
+            else
+            {
+                throw new Exception("Este Usuário ja possui cadastro");
+            }
         }
     }
 }

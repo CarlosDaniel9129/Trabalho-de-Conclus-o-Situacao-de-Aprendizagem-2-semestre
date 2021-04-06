@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using App_SA.Models;
 
 namespace App_SA
 {
@@ -23,21 +24,43 @@ namespace App_SA
 
         private void btnSalavarCliente_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == string.Empty || txtNome.Text == null
+            try
+            {
+                if (txtNome.Text == string.Empty || txtNome.Text == null
                 || maskedTxtCpf.Text == string.Empty || maskedTxtCpf.Text == null
                 || cbEstado.Text == string.Empty || cbEstado.Text == null
                 || cbCidade.Text == string.Empty || cbCidade.Text == null
                 || txtEmail.Text == string.Empty || txtEmail.Text == null
                 || txtSenha.Text == string.Empty || txtSenha.Text == null
                 || txtConfirmarSenha.Text == string.Empty || txtConfirmarSenha == null)
-            {
-                ControlarVisibilidade();
+                {
+                    ControlarVisibilidade();
+                }
+                else
+                {
+                    Cliente cliente = new Cliente()
+                    {
+                        Nome = txtNome.Text,
+                        Cpf = txtEmail.Text,
+                        Senha = txtSenha.Text,
+                        Email = txtEmail.Text,
+                        Sexo = cbSexo.Text,
+                        Estado = cbEstado.Text,
+                        Cidade = cbCidade.Text,
+                        Bairro = txtBairro.Text
+                    };
+
+                    cliente.cadastraDados();
+
+                    new TelaLogin().Show();
+                    Visible = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                new TelaLogin().Show();
-                Visible = false;
+                MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
+
         }
 
         private void ControlarVisibilidade()
