@@ -74,12 +74,12 @@ namespace App_SA
             else
                 lblNome.ForeColor = Color.White;
 
-            if (maskedTxtCpf.Text == string.Empty || maskedTxtCpf.Text == null)
+            if (!maskedTxtCpf.MaskCompleted)
                 lblCpf.ForeColor = Color.Red;
             else
                 lblCpf.ForeColor = Color.White;
 
-            if (maskedTxtValorHora.Text == string.Empty || maskedTxtValorHora.Text == null)
+            if (maskedTxtValorHora.MaskCompleted)
                 lblValorHora.ForeColor = Color.Red;
             else
                 lblValorHora.ForeColor = Color.White;
@@ -118,10 +118,6 @@ namespace App_SA
                 lblCidade.ForeColor = Color.Red;
             else
                 lblCidade.ForeColor = Color.White;
-
-            
-
-            
 
             return;
         }
