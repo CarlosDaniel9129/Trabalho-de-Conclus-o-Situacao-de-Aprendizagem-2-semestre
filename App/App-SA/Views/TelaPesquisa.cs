@@ -15,10 +15,15 @@ namespace App_SA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMinhaConta_Click(object sender, EventArgs e)
         {
-            new TelaLogin().Show();
+            new TelaCadastroProfissional().Show();
             Visible = false;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
