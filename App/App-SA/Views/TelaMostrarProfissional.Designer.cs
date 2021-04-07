@@ -1,7 +1,7 @@
 ﻿
 namespace App_SA.Views
 {
-    partial class TelaMostrarProfissional
+    partial class Profissional
     {
         /// <summary>
         /// Required designer variable.
@@ -302,7 +302,7 @@ namespace App_SA.Views
             this.textBox8.Size = new System.Drawing.Size(332, 20);
             this.textBox8.TabIndex = 90;
             // 
-            // TelaMostrarProfissional
+            // Profissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,8 +335,8 @@ namespace App_SA.Views
             this.Controls.Add(this.lblProfissao);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.pcBoxFotoProfissional);
-            this.Name = "TelaMostrarProfissional";
-            this.Text = "TelaMostrarProfissional";
+            this.Name = "Profissional";
+            this.Text = "Mostrar Profissional";
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

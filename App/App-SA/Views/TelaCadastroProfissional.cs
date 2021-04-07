@@ -17,6 +17,11 @@ namespace App_SA
         public TelaCadastroProfissional()
         {
             InitializeComponent();
+            
+            //if ()//ja é cadastrado?
+            //{
+            //   // mostrar botao pesquisar profissional
+            //}
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -26,14 +31,13 @@ namespace App_SA
         }
 
         private void btnSalvarProfissional_Click(object sender, EventArgs e)
-        {
-            
+        {            
             try
             {
                 if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted || maskedTxtValorHora.MaskCompleted
-                    || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirmarSenha.Text == string.Empty
-                    || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty || cbEstado.Text == string.Empty
-                    || cbCidade.Text == string.Empty || txtBairro.Text == string.Empty)
+                    || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty 
+                    || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty
+                    || cbEstado.Text == string.Empty || txtCidade.Text == string.Empty || txtBairro.Text == string.Empty)
                 {
                     ControlarVisibilidade();
                 }
@@ -51,7 +55,7 @@ namespace App_SA
                         Profissao = cbProfissao.Text,
                         Formacao = cbFormacao.Text,
                         Estado = cbEstado.Text,
-                        Cidade = cbCidade.Text,
+                        Cidade = txtCidade.Text,
                         Bairro = txtBairro.Text
                     };
 
@@ -80,6 +84,11 @@ namespace App_SA
                 lblCpf.ForeColor = Color.Red;
             else
                 lblCpf.ForeColor = Color.White;
+
+            if (!maskedTelefone.MaskCompleted)
+                lblTelefone.ForeColor = Color.Red;
+            else
+                lblTelefone.ForeColor = Color.White;
 
             if (!maskedTxtValorHora.MaskCompleted)
                 lblValorHora.ForeColor = Color.Red;
@@ -116,7 +125,7 @@ namespace App_SA
             else
                 lblEstado.ForeColor = Color.White;
 
-            if (cbCidade.Text == string.Empty)
+            if (txtCidade.Text == string.Empty)
                 lblCidade.ForeColor = Color.Red;
             else
                 lblCidade.ForeColor = Color.White;
@@ -127,6 +136,17 @@ namespace App_SA
                 lblBairro.ForeColor = Color.White;
 
             return;
+        }
+
+        private void btnPesquisaProfissional_Click(object sender, EventArgs e)
+        {
+            new TelaPesquisa().Show();
+            Visible = false;
+        }
+
+        private void btnCarregarFoto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -67,12 +67,6 @@
     <Compile Include="Views\TelaRecuperaSenha.Designer.cs">
       <DependentUpon>TelaRecuperaSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TelaCadastroCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\TelaCadastroCliente.Designer.cs">
-      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\TelaCadastroProfissional.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +95,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\TelaCadastroCliente.resx">
-      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaCadastroProfissional.resx">
       <DependentUpon>TelaCadastroProfissional.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,7 +38,6 @@ namespace App_SA
             this.label3 = new System.Windows.Forms.Label();
             this.btnAcessarConta = new System.Windows.Forms.Button();
             this.btnCadastroProfissional = new System.Windows.Forms.Button();
-            this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAtencao
@@ -136,34 +135,20 @@ namespace App_SA
             this.btnCadastroProfissional.BackColor = System.Drawing.Color.Yellow;
             this.btnCadastroProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastroProfissional.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroProfissional.Location = new System.Drawing.Point(32, 321);
+            this.btnCadastroProfissional.Location = new System.Drawing.Point(32, 258);
             this.btnCadastroProfissional.Name = "btnCadastroProfissional";
-            this.btnCadastroProfissional.Size = new System.Drawing.Size(165, 27);
+            this.btnCadastroProfissional.Size = new System.Drawing.Size(348, 27);
             this.btnCadastroProfissional.TabIndex = 8;
-            this.btnCadastroProfissional.Text = "Cadastro Profissional";
+            this.btnCadastroProfissional.Text = "Cadastre-se";
             this.btnCadastroProfissional.UseVisualStyleBackColor = false;
             this.btnCadastroProfissional.Click += new System.EventHandler(this.btnCadastroProfissional_Click);
-            // 
-            // btnCadastroCliente
-            // 
-            this.btnCadastroCliente.BackColor = System.Drawing.Color.Yellow;
-            this.btnCadastroCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCadastroCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroCliente.Location = new System.Drawing.Point(215, 321);
-            this.btnCadastroCliente.Name = "btnCadastroCliente";
-            this.btnCadastroCliente.Size = new System.Drawing.Size(165, 27);
-            this.btnCadastroCliente.TabIndex = 9;
-            this.btnCadastroCliente.Text = "Cadastro Cliente";
-            this.btnCadastroCliente.UseVisualStyleBackColor = false;
-            this.btnCadastroCliente.Click += new System.EventHandler(this.btnCadastroCliente_Click);
             // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(415, 369);
-            this.Controls.Add(this.btnCadastroCliente);
+            this.ClientSize = new System.Drawing.Size(415, 306);
             this.Controls.Add(this.btnCadastroProfissional);
             this.Controls.Add(this.btnAcessarConta);
             this.Controls.Add(this.label3);
@@ -175,7 +160,7 @@ namespace App_SA
             this.Controls.Add(this.lblAtencao);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tela Login";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +177,6 @@ namespace App_SA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAcessarConta;
         private System.Windows.Forms.Button btnCadastroProfissional;
-        private System.Windows.Forms.Button btnCadastroCliente;
     }
 }
 

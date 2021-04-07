@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace App_SA.Views
 {
-    public partial class TelaMostrarProfissional : Form
+    public partial class Profissional : Form
     {
-        public TelaMostrarProfissional()
+        public Profissional()
         {
             InitializeComponent();
         }

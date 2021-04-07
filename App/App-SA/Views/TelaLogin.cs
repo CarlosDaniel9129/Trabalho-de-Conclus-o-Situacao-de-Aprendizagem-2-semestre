@@ -52,12 +52,6 @@ namespace App_SA
             Visible = false;
         }
 
-        private void btnCadastroCliente_Click(object sender, EventArgs e)
-        {
-            new TelaCadastroCliente().Show();
-            Visible = false;
-        }
-
         private void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new TelaRecuperaSenha().Show();
