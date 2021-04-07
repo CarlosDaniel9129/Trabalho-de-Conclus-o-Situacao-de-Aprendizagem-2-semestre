@@ -60,6 +60,10 @@ namespace App_SA
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
+            this.lblAreaFormacao = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +83,7 @@ namespace App_SA
             this.lblFormacao.AutoSize = true;
             this.lblFormacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblFormacao.ForeColor = System.Drawing.Color.White;
-            this.lblFormacao.Location = new System.Drawing.Point(364, 126);
+            this.lblFormacao.Location = new System.Drawing.Point(369, 158);
             this.lblFormacao.Name = "lblFormacao";
             this.lblFormacao.Size = new System.Drawing.Size(75, 19);
             this.lblFormacao.TabIndex = 27;
@@ -87,7 +91,7 @@ namespace App_SA
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(370, 341);
+            this.txtBairro.Location = new System.Drawing.Point(367, 328);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(331, 20);
             this.txtBairro.TabIndex = 28;
@@ -97,7 +101,7 @@ namespace App_SA
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblBairro.ForeColor = System.Drawing.Color.White;
-            this.lblBairro.Location = new System.Drawing.Point(369, 319);
+            this.lblBairro.Location = new System.Drawing.Point(366, 306);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(52, 19);
             this.lblBairro.TabIndex = 26;
@@ -106,7 +110,7 @@ namespace App_SA
             // cbCidade
             // 
             this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(369, 278);
+            this.cbCidade.Location = new System.Drawing.Point(367, 278);
             this.cbCidade.Name = "cbCidade";
             this.cbCidade.Size = new System.Drawing.Size(331, 21);
             this.cbCidade.TabIndex = 25;
@@ -116,7 +120,7 @@ namespace App_SA
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblCidade.ForeColor = System.Drawing.Color.White;
-            this.lblCidade.Location = new System.Drawing.Point(366, 256);
+            this.lblCidade.Location = new System.Drawing.Point(364, 256);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(56, 19);
             this.lblCidade.TabIndex = 12;
@@ -125,7 +129,7 @@ namespace App_SA
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(369, 213);
+            this.cbEstado.Location = new System.Drawing.Point(370, 232);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(332, 21);
             this.cbEstado.TabIndex = 24;
@@ -135,7 +139,7 @@ namespace App_SA
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(366, 194);
+            this.lblEstado.Location = new System.Drawing.Point(367, 213);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 19);
             this.lblEstado.TabIndex = 13;
@@ -177,7 +181,7 @@ namespace App_SA
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblSexo.ForeColor = System.Drawing.Color.White;
-            this.lblSexo.Location = new System.Drawing.Point(6, 191);
+            this.lblSexo.Location = new System.Drawing.Point(6, 158);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(42, 19);
             this.lblSexo.TabIndex = 11;
@@ -188,7 +192,7 @@ namespace App_SA
             this.lblCpf.AutoSize = true;
             this.lblCpf.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.lblCpf.ForeColor = System.Drawing.Color.White;
-            this.lblCpf.Location = new System.Drawing.Point(5, 127);
+            this.lblCpf.Location = new System.Drawing.Point(4, 114);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(30, 15);
             this.lblCpf.TabIndex = 10;
@@ -219,6 +223,10 @@ namespace App_SA
             // cbProfissao
             // 
             this.cbProfissao.FormattingEnabled = true;
+            this.cbProfissao.Items.AddRange(new object[] {
+            "Eletricista",
+            "Diarista",
+            "Massoterapeuta"});
             this.cbProfissao.Location = new System.Drawing.Point(367, 85);
             this.cbProfissao.Name = "cbProfissao";
             this.cbProfissao.Size = new System.Drawing.Size(332, 21);
@@ -226,7 +234,7 @@ namespace App_SA
             // 
             // maskedTxtCpf
             // 
-            this.maskedTxtCpf.Location = new System.Drawing.Point(8, 145);
+            this.maskedTxtCpf.Location = new System.Drawing.Point(7, 132);
             this.maskedTxtCpf.Mask = "000\\.000\\.000\\-00";
             this.maskedTxtCpf.Name = "maskedTxtCpf";
             this.maskedTxtCpf.Size = new System.Drawing.Size(332, 20);
@@ -256,7 +264,7 @@ namespace App_SA
             this.lblValorHora.AutoSize = true;
             this.lblValorHora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblValorHora.ForeColor = System.Drawing.Color.White;
-            this.lblValorHora.Location = new System.Drawing.Point(6, 258);
+            this.lblValorHora.Location = new System.Drawing.Point(363, 357);
             this.lblValorHora.Name = "lblValorHora";
             this.lblValorHora.Size = new System.Drawing.Size(119, 19);
             this.lblValorHora.TabIndex = 34;
@@ -264,7 +272,7 @@ namespace App_SA
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(9, 341);
+            this.txtEmail.Location = new System.Drawing.Point(10, 282);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(332, 20);
             this.txtEmail.TabIndex = 37;
@@ -274,7 +282,7 @@ namespace App_SA
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(9, 319);
+            this.lblEmail.Location = new System.Drawing.Point(10, 260);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(52, 19);
             this.lblEmail.TabIndex = 38;
@@ -283,14 +291,17 @@ namespace App_SA
             // cbSexo
             // 
             this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Location = new System.Drawing.Point(9, 213);
+            this.cbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.cbSexo.Location = new System.Drawing.Point(9, 180);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(331, 21);
             this.cbSexo.TabIndex = 39;
             // 
             // maskedTxtValorHora
             // 
-            this.maskedTxtValorHora.Location = new System.Drawing.Point(10, 279);
+            this.maskedTxtValorHora.Location = new System.Drawing.Point(367, 378);
             this.maskedTxtValorHora.Mask = "$000\\.00";
             this.maskedTxtValorHora.Name = "maskedTxtValorHora";
             this.maskedTxtValorHora.Size = new System.Drawing.Size(331, 20);
@@ -321,14 +332,17 @@ namespace App_SA
             // cbFormacao
             // 
             this.cbFormacao.FormattingEnabled = true;
-            this.cbFormacao.Location = new System.Drawing.Point(367, 144);
+            this.cbFormacao.Items.AddRange(new object[] {
+            "Nenhum",
+            "En"});
+            this.cbFormacao.Location = new System.Drawing.Point(367, 132);
             this.cbFormacao.Name = "cbFormacao";
             this.cbFormacao.Size = new System.Drawing.Size(332, 21);
             this.cbFormacao.TabIndex = 42;
             // 
             // txtConfirmarSenha
             // 
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(369, 398);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(10, 378);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.Size = new System.Drawing.Size(333, 20);
             this.txtConfirmarSenha.TabIndex = 52;
@@ -338,7 +352,7 @@ namespace App_SA
             this.lblConfirmarSenha.AutoSize = true;
             this.lblConfirmarSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblConfirmarSenha.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(365, 382);
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(6, 353);
             this.lblConfirmarSenha.Name = "lblConfirmarSenha";
             this.lblConfirmarSenha.Size = new System.Drawing.Size(122, 19);
             this.lblConfirmarSenha.TabIndex = 51;
@@ -346,7 +360,7 @@ namespace App_SA
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(9, 398);
+            this.txtSenha.Location = new System.Drawing.Point(10, 328);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(332, 20);
             this.txtSenha.TabIndex = 50;
@@ -356,18 +370,132 @@ namespace App_SA
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(5, 382);
+            this.lblSenha.Location = new System.Drawing.Point(10, 306);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(50, 19);
             this.lblSenha.TabIndex = 49;
             this.lblSenha.Text = "Senha";
+            // 
+            // lblAreaFormacao
+            // 
+            this.lblAreaFormacao.AutoSize = true;
+            this.lblAreaFormacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAreaFormacao.ForeColor = System.Drawing.Color.White;
+            this.lblAreaFormacao.Location = new System.Drawing.Point(369, 110);
+            this.lblAreaFormacao.Name = "lblAreaFormacao";
+            this.lblAreaFormacao.Size = new System.Drawing.Size(132, 19);
+            this.lblAreaFormacao.TabIndex = 91;
+            this.lblAreaFormacao.Text = "Área de Formação";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nenhum",
+            "Curso Tecnico",
+            "Administração",
+            "Agronomia",
+            "Antropologia",
+            "Arquitetura e Urbanismo",
+            "Arquivologia",
+            "Artes Cênicas",
+            "Artes Plásticas",
+            "Astronomia",
+            "Biblioteconomia",
+            "Biofísica",
+            "Bioquímica",
+            "Biotecnologia",
+            "Ciência da Computação",
+            "Ciência da Computação",
+            "Ciência Política",
+            "Ciências Biológicas",
+            "Ciências Contábeis",
+            "Cinema",
+            "Dança",
+            "Design de Interiores",
+            "Design Gráfico",
+            "Direito",
+            "Ecologia",
+            "Economia",
+            "Educação Física",
+            "Enfermagem",
+            "Engenharia Agrícola",
+            "Engenharia de Alimentos",
+            "Engenharia de Pesca",
+            "Engenharia Florestal",
+            "Estatística",
+            "Farmácia",
+            "Filosofia",
+            "Física",
+            "Fisioterapia",
+            "Fonoaudiologia",
+            "Fotografia",
+            "Geofísica",
+            "Geofísica",
+            "Geografia",
+            "Geologia",
+            "História",
+            "Jornalismo",
+            "Letras",
+            "Linguística",
+            "Matemática",
+            "Medicina",
+            "Medicina Veterinária",
+            "Meteorologia",
+            "Meteorologia",
+            "Moda",
+            "Museologia",
+            "Música",
+            "Oceanografia",
+            "Odontologia",
+            "Psicologia",
+            "Publicidade e Propaganda",
+            "Química",
+            "Rádio e TV",
+            "Relações Internacionais",
+            "Relações Públicas",
+            "Saúde Coletiva",
+            "Serviço Social",
+            "Sociologia",
+            "Teatro",
+            "Teologia",
+            "Terapia Ocupacional",
+            "Tradução e Interpretação",
+            "Turismo",
+            "Zootecnia"});
+            this.comboBox1.Location = new System.Drawing.Point(367, 180);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(332, 21);
+            this.comboBox1.TabIndex = 92;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(8, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 19);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "Telefone";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(7, 237);
+            this.maskedTextBox1.Mask = "(00) 00000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(332, 20);
+            this.maskedTextBox1.TabIndex = 95;
             // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(722, 742);
+            this.ClientSize = new System.Drawing.Size(742, 750);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblAreaFormacao);
             this.Controls.Add(this.txtConfirmarSenha);
             this.Controls.Add(this.lblConfirmarSenha);
             this.Controls.Add(this.txtSenha);
@@ -399,6 +527,7 @@ namespace App_SA
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnCarregarFoto);
             this.Controls.Add(this.pcBoxFotoProfissional);
+            this.Controls.Add(this.label1);
             this.Name = "TelaCadastroProfissional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroProfissional";
@@ -441,5 +570,9 @@ namespace App_SA
         private System.Windows.Forms.Label lblConfirmarSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblAreaFormacao;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
