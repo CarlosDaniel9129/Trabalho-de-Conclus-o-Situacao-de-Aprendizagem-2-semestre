@@ -11,14 +11,13 @@ namespace App_SA.Controller
     {
         public bool tem = true;
 
-        public bool acessar(string login, string senha)
+        public bool acessar(string email, string senha)
         {
             Comandos comandos = new Comandos();
-            comandos.verificaLogin(login, senha);
+            comandos.verificaLogin(email, senha);
 
-            if (comandos.tem.Equals(false))
+            if (comandos.tem.Equals(false)) //da erro na tela de cadastro cliente
             {
-                tem = false;
                 throw new Exception("Verifique Login e Senha e tente Novamente");
             }
             else
@@ -28,16 +27,29 @@ namespace App_SA.Controller
             return tem;
         }
 
-        public virtual void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro)
+        public bool verificaLogin(string login, string senha)
+        {
+            Comandos comandos = new Comandos();
+            comandos.verificaLogin(login, senha);
+
+            if (comandos.tem.Equals(false)) //da erro na tela de cadastro cliente
+            {
+                tem = false;
+            }
+
+            return tem;
+        }
+
+        public void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro)
         {
             Comandos comandos = new Comandos();
             comandos.cadastraClien(nome, cpf, sexo, email, senha, estado, cidade, bairro);
         }
 
-        public virtual void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro, double valor, string infos, string profissao, string formacao)
+        public void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
         {
             Comandos comandos = new Comandos();
-            comandos.cadastraProf(nome, cpf, sexo, email, senha, estado, cidade, bairro, valor, infos, profissao, formacao);
+            comandos.cadastraProf(nome, cpf, sexo, email, senha, estado, cidade, bairro, valorHora, infos, profissao, formacao);
         }
 
     }

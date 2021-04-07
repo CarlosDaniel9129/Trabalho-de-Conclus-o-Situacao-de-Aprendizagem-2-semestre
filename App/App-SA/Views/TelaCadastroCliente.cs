@@ -43,6 +43,7 @@ namespace App_SA
                         Nome = txtNome.Text,
                         Cpf = txtEmail.Text,
                         Senha = txtSenha.Text,
+                        ConfSenha = txtConfirmarSenha.Text,
                         Email = txtEmail.Text,
                         Sexo = cbSexo.Text,
                         Estado = cbEstado.Text,
@@ -50,7 +51,9 @@ namespace App_SA
                         Bairro = txtBairro.Text
                     };
 
-                    cliente.cadastraDados();
+                    cliente.cadastraClien();
+
+                    MessageBox.Show("Cadastro realizado com Secesso");
 
                     new TelaLogin().Show();
                     Visible = false;

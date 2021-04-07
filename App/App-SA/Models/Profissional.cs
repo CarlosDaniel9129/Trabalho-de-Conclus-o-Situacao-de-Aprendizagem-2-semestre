@@ -7,11 +7,11 @@ using App_SA.Controller;
 
 namespace App_SA.Models
 {
-    class Profissional : Pessoa
+    class Profissional : Cliente
     {
-        private double valorhora;
+        private decimal valorhora;
 
-        public double ValorHora
+        public decimal ValorHora
         {
             get { return valorhora; }
             set { valorhora = value; }
@@ -42,22 +42,21 @@ namespace App_SA.Models
         }
 
 
-        public override void cadastraDados()
+        public void cadastraProf()
         {
-            base.cadastraDados();
 
             Controle controle = new Controle();
 
-            controle.acessar(Nome, Senha);
+          //  controle.verificaLogin(Nome, Senha);
 
-            if (controle.tem.Equals(false))
-            {
+            //if (controle.tem.Equals(false))
+            //{
                 controle.cadastraDados(Nome, Cpf, Sexo, Email, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
-            }
-            else
-            {
-                throw new Exception("Este Usuário ja possui cadastro");
-            }
+            //}
+            //else
+            //{
+            //    throw new Exception("Este Usuário ja possui cadastro");
+            //}
         }
     }
 }

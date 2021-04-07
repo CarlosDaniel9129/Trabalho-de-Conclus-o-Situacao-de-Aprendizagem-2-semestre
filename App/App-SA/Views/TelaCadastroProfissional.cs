@@ -43,20 +43,23 @@ namespace App_SA
                     Profissional profissional = new Profissional()
                     {
                         Nome = txtNome.Text,
-                        Cpf = txtEmail.Text,
+                        Cpf = maskedTxtCpf.Text,
                         Senha = txtSenha.Text,
+                        ConfSenha = txtConfirmarSenha.Text,
                         Email = txtEmail.Text,
                         Sexo = cbSexo.Text,
-                        ValorHora = double.Parse(maskedTxtValorHora.Text),
+                        Estado = cbEstado.Text,
+                        Cidade = cbCidade.Text,
+                        Bairro = txtBairro.Text,
+                        ValorHora = decimal.Parse(maskedTxtValorHora.Text),
                         Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
                         Formacao = cbFormacao.Text,
-                        Estado = cbEstado.Text,
-                        Cidade = cbCidade.Text,
-                        Bairro = txtBairro.Text
                     };
 
-                    profissional.cadastraDados();
+                    profissional.cadastraProf();
+
+                    MessageBox.Show("Cadastro realizado com Secesso");
 
                     new TelaLogin().Show();
                     Visible = false;
@@ -124,5 +127,6 @@ namespace App_SA
 
             return;
         }
+
     }
 }
