@@ -39,7 +39,6 @@ namespace App_SA
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbProcurarPeloBairro = new System.Windows.Forms.CheckBox();
             this.cbcidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -51,6 +50,8 @@ namespace App_SA
             this.maskedTxtValorMax = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnMinhaConta = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,18 +137,6 @@ namespace App_SA
             this.label4.TabIndex = 17;
             this.label4.Text = "Valor Mínimo";
             // 
-            // cbProcurarPeloBairro
-            // 
-            this.cbProcurarPeloBairro.AutoSize = true;
-            this.cbProcurarPeloBairro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.cbProcurarPeloBairro.ForeColor = System.Drawing.Color.White;
-            this.cbProcurarPeloBairro.Location = new System.Drawing.Point(26, 211);
-            this.cbProcurarPeloBairro.Name = "cbProcurarPeloBairro";
-            this.cbProcurarPeloBairro.Size = new System.Drawing.Size(279, 25);
-            this.cbProcurarPeloBairro.TabIndex = 16;
-            this.cbProcurarPeloBairro.Text = "Pesquisar pelo bairro do usuário.";
-            this.cbProcurarPeloBairro.UseVisualStyleBackColor = true;
-            // 
             // cbcidade
             // 
             this.cbcidade.FormattingEnabled = true;
@@ -196,7 +185,7 @@ namespace App_SA
             this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnPesquisar.Location = new System.Drawing.Point(26, 239);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(408, 54);
+            this.btnPesquisar.Size = new System.Drawing.Size(296, 54);
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -255,13 +244,39 @@ namespace App_SA
             this.btnMinhaConta.BackColor = System.Drawing.Color.Yellow;
             this.btnMinhaConta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnMinhaConta.ForeColor = System.Drawing.Color.Black;
-            this.btnMinhaConta.Location = new System.Drawing.Point(532, 239);
+            this.btnMinhaConta.Location = new System.Drawing.Point(338, 239);
             this.btnMinhaConta.Name = "btnMinhaConta";
-            this.btnMinhaConta.Size = new System.Drawing.Size(408, 54);
+            this.btnMinhaConta.Size = new System.Drawing.Size(296, 54);
             this.btnMinhaConta.TabIndex = 22;
             this.btnMinhaConta.Text = "Minha Conta";
             this.btnMinhaConta.UseVisualStyleBackColor = false;
             this.btnMinhaConta.Click += new System.EventHandler(this.btnMinhaConta_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Yellow;
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSair.ForeColor = System.Drawing.Color.Black;
+            this.btnSair.Location = new System.Drawing.Point(658, 239);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(296, 54);
+            this.btnSair.TabIndex = 23;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
+            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(338, 239);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(296, 54);
+            this.btnVoltar.TabIndex = 24;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // TelaPesquisa
             // 
@@ -269,13 +284,14 @@ namespace App_SA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(966, 608);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnMinhaConta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.maskedTxtValorMax);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.maskedTxtValorMin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbProcurarPeloBairro);
             this.Controls.Add(this.cbcidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEstado);
@@ -298,7 +314,6 @@ namespace App_SA
         private System.Windows.Forms.DataGridView gridProfissionais;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox cbProcurarPeloBairro;
         private System.Windows.Forms.ComboBox cbcidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstado;
@@ -317,5 +332,7 @@ namespace App_SA
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMax;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnMinhaConta;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

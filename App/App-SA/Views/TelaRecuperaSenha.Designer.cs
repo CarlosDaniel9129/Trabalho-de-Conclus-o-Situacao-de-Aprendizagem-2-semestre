@@ -73,7 +73,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(37, 61);
+            this.lblEmail.Location = new System.Drawing.Point(40, 61);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(119, 19);
             this.lblEmail.TabIndex = 24;
@@ -116,7 +116,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
             this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(41, 257);
+            this.btnVoltar.Location = new System.Drawing.Point(41, 260);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(224, 50);
             this.btnVoltar.TabIndex = 29;
@@ -142,7 +142,7 @@
             this.btnConf2.BackColor = System.Drawing.Color.PaleGreen;
             this.btnConf2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnConf2.ForeColor = System.Drawing.Color.Black;
-            this.btnConf2.Location = new System.Drawing.Point(295, 254);
+            this.btnConf2.Location = new System.Drawing.Point(295, 257);
             this.btnConf2.Name = "btnConf2";
             this.btnConf2.Size = new System.Drawing.Size(224, 53);
             this.btnConf2.TabIndex = 31;

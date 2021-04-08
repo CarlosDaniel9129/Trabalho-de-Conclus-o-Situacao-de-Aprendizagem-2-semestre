@@ -29,7 +29,7 @@ namespace App_SA
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAtencao = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtBoxLogin = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -38,25 +38,15 @@ namespace App_SA
             this.label3 = new System.Windows.Forms.Label();
             this.btnAcessarConta = new System.Windows.Forms.Button();
             this.btnCadastroProfissional = new System.Windows.Forms.Button();
+            this.lblAtencao = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblAtencao
-            // 
-            this.lblAtencao.AutoSize = true;
-            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblAtencao.Location = new System.Drawing.Point(104, 68);
-            this.lblAtencao.Name = "lblAtencao";
-            this.lblAtencao.Size = new System.Drawing.Size(216, 13);
-            this.lblAtencao.TabIndex = 0;
-            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
-            this.lblAtencao.Visible = false;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(32, 93);
+            this.lblLogin.Location = new System.Drawing.Point(41, 103);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(53, 21);
             this.lblLogin.TabIndex = 1;
@@ -67,7 +57,7 @@ namespace App_SA
             this.txtBoxLogin.AcceptsTab = true;
             this.txtBoxLogin.BackColor = System.Drawing.Color.White;
             this.txtBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxLogin.Location = new System.Drawing.Point(32, 117);
+            this.txtBoxLogin.Location = new System.Drawing.Point(41, 127);
             this.txtBoxLogin.Name = "txtBoxLogin";
             this.txtBoxLogin.Size = new System.Drawing.Size(348, 20);
             this.txtBoxLogin.TabIndex = 2;
@@ -77,7 +67,7 @@ namespace App_SA
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(28, 147);
+            this.lblSenha.Location = new System.Drawing.Point(37, 157);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(57, 21);
             this.lblSenha.TabIndex = 3;
@@ -86,7 +76,7 @@ namespace App_SA
             // txtBoxSenha
             // 
             this.txtBoxSenha.AcceptsTab = true;
-            this.txtBoxSenha.Location = new System.Drawing.Point(32, 171);
+            this.txtBoxSenha.Location = new System.Drawing.Point(41, 181);
             this.txtBoxSenha.Name = "txtBoxSenha";
             this.txtBoxSenha.Size = new System.Drawing.Size(348, 20);
             this.txtBoxSenha.TabIndex = 4;
@@ -98,7 +88,7 @@ namespace App_SA
             this.linkEsqueceuSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.Green;
             this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.linkEsqueceuSenha.Location = new System.Drawing.Point(143, 201);
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(152, 211);
             this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
             this.linkEsqueceuSenha.Size = new System.Drawing.Size(122, 17);
             this.linkEsqueceuSenha.TabIndex = 5;
@@ -122,7 +112,7 @@ namespace App_SA
             this.btnAcessarConta.BackColor = System.Drawing.Color.Yellow;
             this.btnAcessarConta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnAcessarConta.ForeColor = System.Drawing.Color.Black;
-            this.btnAcessarConta.Location = new System.Drawing.Point(32, 225);
+            this.btnAcessarConta.Location = new System.Drawing.Point(41, 243);
             this.btnAcessarConta.Name = "btnAcessarConta";
             this.btnAcessarConta.Size = new System.Drawing.Size(348, 27);
             this.btnAcessarConta.TabIndex = 7;
@@ -135,7 +125,7 @@ namespace App_SA
             this.btnCadastroProfissional.BackColor = System.Drawing.Color.Yellow;
             this.btnCadastroProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastroProfissional.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroProfissional.Location = new System.Drawing.Point(32, 258);
+            this.btnCadastroProfissional.Location = new System.Drawing.Point(41, 293);
             this.btnCadastroProfissional.Name = "btnCadastroProfissional";
             this.btnCadastroProfissional.Size = new System.Drawing.Size(348, 27);
             this.btnCadastroProfissional.TabIndex = 8;
@@ -143,12 +133,27 @@ namespace App_SA
             this.btnCadastroProfissional.UseVisualStyleBackColor = false;
             this.btnCadastroProfissional.Click += new System.EventHandler(this.btnCadastroProfissional_Click);
             // 
+            // lblAtencao
+            // 
+            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtencao.Image = ((System.Drawing.Image)(resources.GetObject("lblAtencao.Image")));
+            this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAtencao.Location = new System.Drawing.Point(38, 55);
+            this.lblAtencao.Name = "lblAtencao";
+            this.lblAtencao.Size = new System.Drawing.Size(378, 23);
+            this.lblAtencao.TabIndex = 42;
+            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
+            this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAtencao.Visible = false;
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(415, 306);
+            this.ClientSize = new System.Drawing.Size(441, 369);
+            this.Controls.Add(this.lblAtencao);
             this.Controls.Add(this.btnCadastroProfissional);
             this.Controls.Add(this.btnAcessarConta);
             this.Controls.Add(this.label3);
@@ -157,7 +162,6 @@ namespace App_SA
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtBoxLogin);
             this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.lblAtencao);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -167,8 +171,6 @@ namespace App_SA
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblAtencao;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtBoxLogin;
         private System.Windows.Forms.Label lblSenha;
@@ -177,6 +179,7 @@ namespace App_SA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAcessarConta;
         private System.Windows.Forms.Button btnCadastroProfissional;
+        private System.Windows.Forms.Label lblAtencao;
     }
 }
 
