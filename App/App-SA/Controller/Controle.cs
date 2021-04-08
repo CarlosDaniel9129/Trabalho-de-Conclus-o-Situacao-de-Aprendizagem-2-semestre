@@ -40,16 +40,10 @@ namespace App_SA.Controller
             return tem;
         }
 
-        public void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro)
+        public void cadastraUsu(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
         {
             Comandos comandos = new Comandos();
-            comandos.cadastraClien(nome, cpf, sexo, email, senha, estado, cidade, bairro);
-        }
-
-        public void cadastraDados(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
-        {
-            Comandos comandos = new Comandos();
-            comandos.cadastraProf(nome, cpf, sexo, email, senha, estado, cidade, bairro, valorHora, infos, profissao, formacao);
+            comandos.cadastraUsu(nome, cpf, sexo, email, telefone, senha, estado, cidade, bairro, valorHora, infos, profissao, formacao);
         }
 
     }

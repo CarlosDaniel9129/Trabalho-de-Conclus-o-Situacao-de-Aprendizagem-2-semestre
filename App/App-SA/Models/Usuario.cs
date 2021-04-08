@@ -7,7 +7,7 @@ using App_SA.Controller;
 
 namespace App_SA.Models
 {
-    class Cliente
+    class Usuario
     {
 
         private string nome;
@@ -40,6 +40,14 @@ namespace App_SA.Models
         {
             get { return email; }
             set { email = value; }
+        }
+
+        private string telefone;
+
+        public string Telefone
+        {
+            get { return telefone; }
+            set { telefone = value; }
         }
 
         private string senha;
@@ -82,21 +90,71 @@ namespace App_SA.Models
             set { bairro = value; }
         }
 
-        public void cadastraClien()
+        private decimal valorhora;
+
+        public decimal ValorHora
         {
+            get { return valorhora; }
+            set { valorhora = value; }
+        }
+
+        private string infos;
+
+        public string Infos
+        {
+            get { return infos; }
+            set { infos = value; }
+        }
+
+        private string profissao;
+
+        public string Profissao
+        {
+            get { return profissao; }
+            set { profissao = value; }
+        }
+
+        private string formacao;
+
+        public string Formacao
+        {
+            get { return formacao; }
+            set { formacao = value; }
+        }
+
+
+        public void cadastraUsu()
+        {
+
             Controle controle = new Controle();
 
-            //controle.verificaLogin(Nome, Senha);
+            //  controle.verificaLogin(Nome, Senha);
 
             //if (controle.tem.Equals(false))
             //{
-                controle.cadastraDados(Nome, Cpf, Sexo, Email, Senha, Estado, Cidade, Bairro);
+            controle.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
             //}
             //else
             //{
             //    throw new Exception("Este Usuário ja possui cadastro");
             //}
-            
         }
+
+        //public void cadastraClien()
+        //{
+        //    Controle controle = new Controle();
+
+        //    //controle.verificaLogin(Nome, Senha);
+
+        //    //if (controle.tem.Equals(false))
+        //    //{
+        //        controle.cadastraDados(Nome, Cpf, Sexo, Email, Senha, Estado, Cidade, Bairro);
+        //    //}
+        //    //else
+        //    //{
+        //    //    throw new Exception("Este Usuário ja possui cadastro");
+        //    //}
+
+        //}
     }
 }

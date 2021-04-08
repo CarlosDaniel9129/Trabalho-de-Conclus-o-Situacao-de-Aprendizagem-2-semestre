@@ -46,6 +46,7 @@ namespace App_SA.Views
 
         private void btnConfSenha_Click(object sender, EventArgs e)
         {
+           
              new TelaLogin().Show();
              Visible = false;
         }

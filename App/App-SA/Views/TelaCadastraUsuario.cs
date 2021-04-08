@@ -34,7 +34,7 @@ namespace App_SA
         {            
             try
             {
-                if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted || maskedTxtValorHora.MaskCompleted
+                if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted || !maskedTxtValorHora.MaskCompleted
                     || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty 
                     || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty
                     || cbEstado.Text == string.Empty || txtCidade.Text == string.Empty || txtBairro.Text == string.Empty)
@@ -43,17 +43,15 @@ namespace App_SA
                 }
                 else
                 {
-                    Profissional profissional = new Profissional()
+                    Usuario usuario = new Usuario()
                     {
                         Nome = txtNome.Text,
                         Cpf = maskedTxtCpf.Text,
                         Senha = txtSenha.Text,
                         ConfSenha = txtConfirmarSenha.Text,
                         Email = txtEmail.Text,
+                        Telefone = maskedTelefone.Text,
                         Sexo = cbSexo.Text,
-                        Estado = cbEstado.Text,
-                        Cidade = cbCidade.Text,
-                        Bairro = txtBairro.Text,
                         ValorHora = decimal.Parse(maskedTxtValorHora.Text),
                         Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
@@ -63,7 +61,7 @@ namespace App_SA
                         Bairro = txtBairro.Text
                     };
 
-                    profissional.cadastraProf();
+                    usuario.cadastraUsu();
 
                     MessageBox.Show("Cadastro realizado com Secesso");
 

@@ -325,7 +325,7 @@ namespace App_SA
             // 
             // maskedTxtValorHora
             // 
-            this.maskedTxtValorHora.Location = new System.Drawing.Point(10, 279);
+            this.maskedTxtValorHora.Location = new System.Drawing.Point(371, 421);
             this.maskedTxtValorHora.Mask = "000\\.00";
             this.maskedTxtValorHora.Name = "maskedTxtValorHora";
             this.maskedTxtValorHora.Size = new System.Drawing.Size(314, 20);
@@ -520,7 +520,7 @@ namespace App_SA
             // 
             // maskedTelefone
             // 
-            this.maskedTelefone.Location = new System.Drawing.Point(10, 275);
+            this.maskedTelefone.Location = new System.Drawing.Point(12, 275);
             this.maskedTelefone.Mask = "(00) 00000-0000";
             this.maskedTelefone.Name = "maskedTelefone";
             this.maskedTelefone.Size = new System.Drawing.Size(311, 20);
@@ -574,7 +574,7 @@ namespace App_SA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(698, 757);
+            this.ClientSize = new System.Drawing.Size(698, 749);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.btnPesquisaProfissional);
             this.Controls.Add(this.button1);
