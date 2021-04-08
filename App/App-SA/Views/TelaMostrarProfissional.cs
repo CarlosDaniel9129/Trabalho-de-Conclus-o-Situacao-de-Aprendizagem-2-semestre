@@ -16,5 +16,11 @@ namespace App_SA.Views
         {
             InitializeComponent();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            new TelaPesquisa().Show();
+            Visible = false;
+        }
     }
 }

@@ -44,7 +44,6 @@ namespace App_SA.Views
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblProfissao = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.pcBoxFotoProfissional = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -55,7 +54,9 @@ namespace App_SA.Views
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblAreaFormacao = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).BeginInit();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -81,7 +82,7 @@ namespace App_SA.Views
             this.lblValorHora.AutoSize = true;
             this.lblValorHora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblValorHora.ForeColor = System.Drawing.Color.White;
-            this.lblValorHora.Location = new System.Drawing.Point(14, 245);
+            this.lblValorHora.Location = new System.Drawing.Point(7, 190);
             this.lblValorHora.Name = "lblValorHora";
             this.lblValorHora.Size = new System.Drawing.Size(119, 19);
             this.lblValorHora.TabIndex = 70;
@@ -92,7 +93,7 @@ namespace App_SA.Views
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(15, 294);
+            this.label7.Location = new System.Drawing.Point(15, 244);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 19);
             this.label7.TabIndex = 69;
@@ -100,9 +101,9 @@ namespace App_SA.Views
             // 
             // richTxtInformacoesAdicionais
             // 
-            this.richTxtInformacoesAdicionais.Location = new System.Drawing.Point(11, 317);
+            this.richTxtInformacoesAdicionais.Location = new System.Drawing.Point(11, 267);
             this.richTxtInformacoesAdicionais.Name = "richTxtInformacoesAdicionais";
-            this.richTxtInformacoesAdicionais.Size = new System.Drawing.Size(332, 163);
+            this.richTxtInformacoesAdicionais.Size = new System.Drawing.Size(332, 213);
             this.richTxtInformacoesAdicionais.TabIndex = 68;
             this.richTxtInformacoesAdicionais.Text = "";
             // 
@@ -169,7 +170,7 @@ namespace App_SA.Views
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblSexo.ForeColor = System.Drawing.Color.White;
-            this.lblSexo.Location = new System.Drawing.Point(15, 54);
+            this.lblSexo.Location = new System.Drawing.Point(13, 54);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(42, 19);
             this.lblSexo.TabIndex = 56;
@@ -197,16 +198,6 @@ namespace App_SA.Views
             this.lblNome.TabIndex = 54;
             this.lblNome.Text = "Nome";
             // 
-            // pcBoxFotoProfissional
-            // 
-            this.pcBoxFotoProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pcBoxFotoProfissional.Image")));
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(406, 317);
-            this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
-            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(286, 163);
-            this.pcBoxFotoProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcBoxFotoProfissional.TabIndex = 53;
-            this.pcBoxFotoProfissional.TabStop = false;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(375, 31);
@@ -223,7 +214,7 @@ namespace App_SA.Views
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(17, 76);
+            this.textBox4.Location = new System.Drawing.Point(15, 76);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(332, 20);
             this.textBox4.TabIndex = 83;
@@ -237,7 +228,7 @@ namespace App_SA.Views
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(19, 267);
+            this.textBox6.Location = new System.Drawing.Point(12, 212);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(332, 20);
             this.textBox6.TabIndex = 85;
@@ -251,7 +242,7 @@ namespace App_SA.Views
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(19, 168);
+            this.txtTelefone.Location = new System.Drawing.Point(12, 167);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(333, 20);
             this.txtTelefone.TabIndex = 88;
@@ -261,7 +252,7 @@ namespace App_SA.Views
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblTelefone.Location = new System.Drawing.Point(17, 151);
+            this.lblTelefone.Location = new System.Drawing.Point(10, 150);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(67, 19);
             this.lblTelefone.TabIndex = 87;
@@ -285,12 +276,37 @@ namespace App_SA.Views
             this.textBox8.Size = new System.Drawing.Size(332, 20);
             this.textBox8.TabIndex = 90;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
+            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(19, 507);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(296, 54);
+            this.btnVoltar.TabIndex = 91;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // pictureBoxProfissional
+            // 
+            this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
+            this.pictureBoxProfissional.Location = new System.Drawing.Point(404, 302);
+            this.pictureBoxProfissional.Name = "pictureBoxProfissional";
+            this.pictureBoxProfissional.Size = new System.Drawing.Size(279, 178);
+            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxProfissional.TabIndex = 92;
+            this.pictureBoxProfissional.TabStop = false;
+            // 
             // Profissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(719, 655);
+            this.ClientSize = new System.Drawing.Size(719, 587);
+            this.Controls.Add(this.pictureBoxProfissional);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.lblAreaFormacao);
             this.Controls.Add(this.txtTelefone);
@@ -315,10 +331,9 @@ namespace App_SA.Views
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblProfissao);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.pcBoxFotoProfissional);
             this.Name = "Profissional";
             this.Text = "Mostrar Profissional";
-            ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +354,6 @@ namespace App_SA.Views
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblProfissao;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.PictureBox pcBoxFotoProfissional;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -350,5 +364,7 @@ namespace App_SA.Views
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblAreaFormacao;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.PictureBox pictureBoxProfissional;
     }
 }
