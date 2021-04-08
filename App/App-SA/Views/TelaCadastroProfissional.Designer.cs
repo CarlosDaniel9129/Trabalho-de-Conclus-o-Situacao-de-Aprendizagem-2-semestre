@@ -29,6 +29,7 @@ namespace App_SA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroProfissional));
             this.btnCarregarFoto = new System.Windows.Forms.Button();
             this.lblFormacao = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@ namespace App_SA
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.maskedTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.checkSerProfissional = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPesquisaProfissional = new System.Windows.Forms.Button();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -333,9 +333,11 @@ namespace App_SA
             // 
             // pcBoxFotoProfissional
             // 
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(448, 470);
+            this.pcBoxFotoProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pcBoxFotoProfissional.Image")));
+            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(394, 470);
             this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
-            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(186, 163);
+            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(252, 163);
+            this.pcBoxFotoProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcBoxFotoProfissional.TabIndex = 2;
             this.pcBoxFotoProfissional.TabStop = false;
             // 
@@ -526,18 +528,6 @@ namespace App_SA
             this.maskedTelefone.Size = new System.Drawing.Size(311, 20);
             this.maskedTelefone.TabIndex = 95;
             // 
-            // checkSerProfissional
-            // 
-            this.checkSerProfissional.AutoSize = true;
-            this.checkSerProfissional.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.checkSerProfissional.ForeColor = System.Drawing.Color.White;
-            this.checkSerProfissional.Location = new System.Drawing.Point(11, 67);
-            this.checkSerProfissional.Name = "checkSerProfissional";
-            this.checkSerProfissional.Size = new System.Drawing.Size(147, 25);
-            this.checkSerProfissional.TabIndex = 96;
-            this.checkSerProfissional.Text = "Ser profissional";
-            this.checkSerProfissional.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Yellow;
@@ -578,7 +568,6 @@ namespace App_SA
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.btnPesquisaProfissional);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkSerProfissional);
             this.Controls.Add(this.maskedTelefone);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblAreaFormacao);
@@ -658,7 +647,6 @@ namespace App_SA
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.MaskedTextBox maskedTelefone;
-        private System.Windows.Forms.CheckBox checkSerProfissional;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPesquisaProfissional;
         private System.Windows.Forms.TextBox txtCidade;

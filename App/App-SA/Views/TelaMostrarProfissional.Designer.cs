@@ -29,6 +29,7 @@ namespace App_SA.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profissional));
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblValorHora = new System.Windows.Forms.Label();
@@ -41,12 +42,10 @@ namespace App_SA.Views
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.lblCpf = new System.Windows.Forms.Label();
             this.lblProfissao = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcBoxFotoProfissional = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -64,7 +63,7 @@ namespace App_SA.Views
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(11, 146);
+            this.lblEmail.Location = new System.Drawing.Point(14, 104);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(52, 19);
             this.lblEmail.TabIndex = 72;
@@ -72,7 +71,7 @@ namespace App_SA.Views
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(12, 168);
+            this.txtEmail.Location = new System.Drawing.Point(15, 126);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(332, 20);
             this.txtEmail.TabIndex = 71;
@@ -82,7 +81,7 @@ namespace App_SA.Views
             this.lblValorHora.AutoSize = true;
             this.lblValorHora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblValorHora.ForeColor = System.Drawing.Color.White;
-            this.lblValorHora.Location = new System.Drawing.Point(7, 245);
+            this.lblValorHora.Location = new System.Drawing.Point(14, 245);
             this.lblValorHora.Name = "lblValorHora";
             this.lblValorHora.Size = new System.Drawing.Size(119, 19);
             this.lblValorHora.TabIndex = 70;
@@ -170,22 +169,11 @@ namespace App_SA.Views
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblSexo.ForeColor = System.Drawing.Color.White;
-            this.lblSexo.Location = new System.Drawing.Point(12, 96);
+            this.lblSexo.Location = new System.Drawing.Point(15, 54);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(42, 19);
             this.lblSexo.TabIndex = 56;
             this.lblSexo.Text = "Sexo";
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCpf.ForeColor = System.Drawing.Color.White;
-            this.lblCpf.Location = new System.Drawing.Point(14, 58);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(30, 15);
-            this.lblCpf.TabIndex = 55;
-            this.lblCpf.Text = "CPF";
             // 
             // lblProfissao
             // 
@@ -211,9 +199,11 @@ namespace App_SA.Views
             // 
             // pcBoxFotoProfissional
             // 
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(439, 317);
+            this.pcBoxFotoProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pcBoxFotoProfissional.Image")));
+            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(406, 317);
             this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
-            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(186, 163);
+            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(286, 163);
+            this.pcBoxFotoProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcBoxFotoProfissional.TabIndex = 53;
             this.pcBoxFotoProfissional.TabStop = false;
             // 
@@ -224,13 +214,6 @@ namespace App_SA.Views
             this.textBox1.Size = new System.Drawing.Size(332, 20);
             this.textBox1.TabIndex = 80;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(14, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(332, 20);
-            this.textBox2.TabIndex = 81;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(375, 76);
@@ -240,7 +223,7 @@ namespace App_SA.Views
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(14, 118);
+            this.textBox4.Location = new System.Drawing.Point(17, 76);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(332, 20);
             this.textBox4.TabIndex = 83;
@@ -254,7 +237,7 @@ namespace App_SA.Views
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 267);
+            this.textBox6.Location = new System.Drawing.Point(19, 267);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(332, 20);
             this.textBox6.TabIndex = 85;
@@ -268,7 +251,7 @@ namespace App_SA.Views
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(11, 212);
+            this.txtTelefone.Location = new System.Drawing.Point(19, 168);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(333, 20);
             this.txtTelefone.TabIndex = 88;
@@ -278,7 +261,7 @@ namespace App_SA.Views
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblTelefone.Location = new System.Drawing.Point(9, 195);
+            this.lblTelefone.Location = new System.Drawing.Point(17, 151);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(67, 19);
             this.lblTelefone.TabIndex = 87;
@@ -307,7 +290,7 @@ namespace App_SA.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(719, 501);
+            this.ClientSize = new System.Drawing.Size(719, 655);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.lblAreaFormacao);
             this.Controls.Add(this.txtTelefone);
@@ -317,7 +300,6 @@ namespace App_SA.Views
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
@@ -331,7 +313,6 @@ namespace App_SA.Views
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.lblProfissao);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.pcBoxFotoProfissional);
@@ -356,12 +337,10 @@ namespace App_SA.Views
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.Label lblProfissao;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcBoxFotoProfissional;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
