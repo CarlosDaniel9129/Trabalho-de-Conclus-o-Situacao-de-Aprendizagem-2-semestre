@@ -9,9 +9,8 @@ namespace App_SA.Controller
 {
     class Controle
     {
-        public bool tem = true;
 
-        public bool acessar(string email, string senha)
+        public void acessar(string email, string senha)
         {
             Comandos comandos = new Comandos();
             comandos.verificaLogin(email, senha);
@@ -24,21 +23,8 @@ namespace App_SA.Controller
             {
                 MessageBox.Show("Bem Vindo");
             }
-            return tem;
         }
 
-        public bool verificaLogin(string login, string senha)
-        {
-            Comandos comandos = new Comandos();
-            comandos.verificaLogin(login, senha);
-
-            if (comandos.tem.Equals(false)) //da erro na tela de cadastro cliente
-            {
-                tem = false;
-            }
-
-            return tem;
-        }
 
         public void cadastraUsu(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
         {

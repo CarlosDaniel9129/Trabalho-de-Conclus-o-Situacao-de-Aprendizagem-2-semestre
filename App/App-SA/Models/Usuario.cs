@@ -26,12 +26,20 @@ namespace App_SA.Models
             set { cpf = value; }
         }
 
-        private string sexo;
+        private string senha;
 
-        public string Sexo
+        public string Senha
         {
-            get { return sexo; }
-            set { sexo = value; }
+            get { return senha; }
+            set { senha = value; }
+        }
+
+        private string confSenha;
+
+        public string ConfSenha
+        {
+            get { return confSenha; }
+            set { if (value == senha) { confSenha = value; } else { throw new Exception("As senhas devem ser Iguais"); } }
         }
 
         private string email;
@@ -50,44 +58,12 @@ namespace App_SA.Models
             set { telefone = value; }
         }
 
-        private string senha;
+        private string sexo;
 
-        public string Senha
+        public string Sexo
         {
-            get { return senha; }
-            set { senha = value; }
-        }
-
-        private string confSenha;
-
-        public string ConfSenha
-        {
-            get { return confSenha; }
-            set { if (value == senha) { confSenha = value; } else{ throw new Exception("As senhas devem ser Iguais"); } }
-        }
-
-        private string estado;
-
-        public string Estado
-        {
-            get { return estado; }
-            set { estado = value; }
-        }
-
-        private string cidade;
-
-        public string Cidade
-        {
-            get { return cidade; }
-            set { cidade = value; }
-        }
-
-        private string bairro;
-
-        public string Bairro
-        {
-            get { return bairro; }
-            set { bairro = value; }
+            get { return sexo; }
+            set { sexo = value; }
         }
 
         private decimal valorhora;
@@ -121,6 +97,31 @@ namespace App_SA.Models
             get { return formacao; }
             set { formacao = value; }
         }
+
+        private string estado;
+
+        public string Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
+        private string cidade;
+
+        public string Cidade
+        {
+            get { return cidade; }
+            set { cidade = value; }
+        }
+
+        private string bairro;
+
+        public string Bairro
+        {
+            get { return bairro; }
+            set { bairro = value; }
+        }
+
 
 
         public void cadastraUsu()
