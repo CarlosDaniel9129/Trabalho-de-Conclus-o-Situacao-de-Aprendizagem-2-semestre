@@ -102,9 +102,6 @@
     <EmbeddedResource Include="Views\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TelaCadastroProfissional.resx">
-      <DependentUpon>TelaCadastroProfissional.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
