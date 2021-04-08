@@ -53,8 +53,6 @@ namespace App_SA
             this.lblEmail = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.maskedTxtValorHora = new System.Windows.Forms.MaskedTextBox();
-            this.pcBoxFotoProfissional = new System.Windows.Forms.PictureBox();
-            this.lblAtencao = new System.Windows.Forms.Label();
             this.cbFormacao = new System.Windows.Forms.ComboBox();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
@@ -67,7 +65,9 @@ namespace App_SA
             this.button1 = new System.Windows.Forms.Button();
             this.btnPesquisaProfissional = new System.Windows.Forms.Button();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).BeginInit();
+            this.lblAtencao = new System.Windows.Forms.Label();
+            this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCarregarFoto
@@ -331,30 +331,6 @@ namespace App_SA
             this.maskedTxtValorHora.Size = new System.Drawing.Size(314, 20);
             this.maskedTxtValorHora.TabIndex = 40;
             // 
-            // pcBoxFotoProfissional
-            // 
-            this.pcBoxFotoProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pcBoxFotoProfissional.Image")));
-            this.pcBoxFotoProfissional.Location = new System.Drawing.Point(394, 470);
-            this.pcBoxFotoProfissional.Name = "pcBoxFotoProfissional";
-            this.pcBoxFotoProfissional.Size = new System.Drawing.Size(252, 163);
-            this.pcBoxFotoProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcBoxFotoProfissional.TabIndex = 2;
-            this.pcBoxFotoProfissional.TabStop = false;
-            // 
-            // lblAtencao
-            // 
-            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAtencao.Image = global::App_SA.Properties.Resources._2682803_32;
-            this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAtencao.Location = new System.Drawing.Point(6, 18);
-            this.lblAtencao.Name = "lblAtencao";
-            this.lblAtencao.Size = new System.Drawing.Size(675, 35);
-            this.lblAtencao.TabIndex = 41;
-            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
-            this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAtencao.Visible = false;
-            // 
             // cbFormacao
             // 
             this.cbFormacao.FormattingEnabled = true;
@@ -559,12 +535,37 @@ namespace App_SA
             this.txtCidade.Size = new System.Drawing.Size(314, 20);
             this.txtCidade.TabIndex = 99;
             // 
+            // lblAtencao
+            // 
+            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtencao.Image = global::App_SA.Properties.Resources._2682803_32;
+            this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAtencao.Location = new System.Drawing.Point(6, 18);
+            this.lblAtencao.Name = "lblAtencao";
+            this.lblAtencao.Size = new System.Drawing.Size(675, 35);
+            this.lblAtencao.TabIndex = 41;
+            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
+            this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAtencao.Visible = false;
+            // 
+            // pictureBoxProfissional
+            // 
+            this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
+            this.pictureBoxProfissional.Location = new System.Drawing.Point(377, 470);
+            this.pictureBoxProfissional.Name = "pictureBoxProfissional";
+            this.pictureBoxProfissional.Size = new System.Drawing.Size(290, 163);
+            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxProfissional.TabIndex = 100;
+            this.pictureBoxProfissional.TabStop = false;
+            // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(698, 749);
+            this.Controls.Add(this.pictureBoxProfissional);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.btnPesquisaProfissional);
             this.Controls.Add(this.button1);
@@ -600,12 +601,11 @@ namespace App_SA
             this.Controls.Add(this.lblProfissao);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnCarregarFoto);
-            this.Controls.Add(this.pcBoxFotoProfissional);
             this.Controls.Add(this.lblTelefone);
             this.Name = "TelaCadastroProfissional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Usuário";
-            ((System.ComponentModel.ISupportInitialize)(this.pcBoxFotoProfissional)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,7 +614,6 @@ namespace App_SA
         #endregion
 
         private System.Windows.Forms.Button btnCarregarFoto;
-        private System.Windows.Forms.PictureBox pcBoxFotoProfissional;
         private System.Windows.Forms.Label lblFormacao;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
@@ -650,5 +649,6 @@ namespace App_SA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPesquisaProfissional;
         private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.PictureBox pictureBoxProfissional;
     }
 }

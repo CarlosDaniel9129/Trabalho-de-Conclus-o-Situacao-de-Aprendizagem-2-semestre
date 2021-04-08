@@ -244,7 +244,7 @@ namespace App_SA
             this.btnMinhaConta.BackColor = System.Drawing.Color.Yellow;
             this.btnMinhaConta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnMinhaConta.ForeColor = System.Drawing.Color.Black;
-            this.btnMinhaConta.Location = new System.Drawing.Point(338, 239);
+            this.btnMinhaConta.Location = new System.Drawing.Point(338, 213);
             this.btnMinhaConta.Name = "btnMinhaConta";
             this.btnMinhaConta.Size = new System.Drawing.Size(296, 54);
             this.btnMinhaConta.TabIndex = 22;
@@ -270,7 +270,7 @@ namespace App_SA
             this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
             this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(338, 239);
+            this.btnVoltar.Location = new System.Drawing.Point(338, 273);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(296, 54);
             this.btnVoltar.TabIndex = 24;
