@@ -67,6 +67,7 @@ namespace App_SA
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblAtencao = new System.Windows.Forms.Label();
             this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -552,12 +553,16 @@ namespace App_SA
             // pictureBoxProfissional
             // 
             this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
-            this.pictureBoxProfissional.Location = new System.Drawing.Point(377, 470);
+            this.pictureBoxProfissional.Location = new System.Drawing.Point(448, 492);
             this.pictureBoxProfissional.Name = "pictureBoxProfissional";
-            this.pictureBoxProfissional.Size = new System.Drawing.Size(290, 163);
-            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxProfissional.Size = new System.Drawing.Size(128, 128);
+            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfissional.TabIndex = 100;
             this.pictureBoxProfissional.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // TelaCadastroProfissional
             // 
@@ -650,5 +655,6 @@ namespace App_SA
         private System.Windows.Forms.Button btnPesquisaProfissional;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.PictureBox pictureBoxProfissional;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -7,12 +7,18 @@ using System.Text;
 using System.Windows.Forms;
 using App_SA.Models;
 using App_SA.Controller;
+using System.IO; //para usar o memorystream
+using System.Drawing.Imaging; //para usar o ImageFormat
+using MySql.Data.MySqlClient;
 
 namespace App_SA
 {
     public partial class TelaCadastroProfissional : Form
     {
-        Controle controle = new Controle();
+        Bitmap bmp; //para trabalharmos com os pixels
+
+        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=worknow"); //para endereco do banco
+        private MySqlCommand command; //para fazer os comandos
 
         public TelaCadastroProfissional()
         {
@@ -34,7 +40,7 @@ namespace App_SA
         {            
             try
             {
-                if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted || !maskedTxtValorHora.MaskCompleted
+                if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted /*|| !maskedTxtValorHora.MaskCompleted*/
                     || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty 
                     || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty
                     || cbEstado.Text == string.Empty || txtCidade.Text == string.Empty || txtBairro.Text == string.Empty)
@@ -55,13 +61,14 @@ namespace App_SA
                         ValorHora = decimal.Parse(maskedTxtValorHora.Text),
                         Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
-                        Formacao = cbFormacao.Text,
+                        Formacao = comboBox1.Text,
                         Estado = cbEstado.Text,
                         Cidade = txtCidade.Text,
                         Bairro = txtBairro.Text
                     };
 
                     usuario.cadastraUsu();
+                    salvaImagem();
 
                     MessageBox.Show("Cadastro realizado com Secesso");
 
@@ -74,6 +81,7 @@ namespace App_SA
                 MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
         }
+
 
         private void ControlarVisibilidade()
         {
@@ -150,7 +158,39 @@ namespace App_SA
 
         private void btnCarregarFoto_Click(object sender, EventArgs e)
         {
+            carregaImage();
+        }
 
+        public void carregaImage()
+        {
+            //quando estiver aqbertto e o result for OK, faz o if
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string nome = openFileDialog1.FileName; //guarda o nome vindo do open
+
+                bmp = new Bitmap(nome); //passo o nome do arquivo para transformar em pixels a imagem
+
+                pictureBoxProfissional.Image = bmp; //preenche a picture com o bmp 
+            }
+        }
+
+        private void salvaImagem()
+        {
+            MemoryStream memory = new MemoryStream(); //classe que guarda dados na memoria
+
+            bmp.Save(memory, ImageFormat.Bmp); //passo o local e o formato do arquivo 
+
+            byte[] foto = memory.ToArray(); //gravo o conteudo em uma matriz de byte, foto é onde ira conter a imagem
+
+
+            command = new MySqlCommand("insert into usuario (imagem) values(@imagem) where cpf = @cpf", myConn);
+            command.Parameters.AddWithValue("@imagem", foto);
+            command.Parameters.AddWithValue("@cpf", maskedTxtCpf.Text);
+
+            myConn.Open();
+            command.ExecuteNonQuery(); 
+
+            myConn.Close();
         }
     }
 }

@@ -92,6 +92,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Name = "TelaInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Encontre um Profissional";
             this.ResumeLayout(false);
             this.PerformLayout();

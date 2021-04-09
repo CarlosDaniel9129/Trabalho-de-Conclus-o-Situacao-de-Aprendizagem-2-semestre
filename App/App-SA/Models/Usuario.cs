@@ -127,19 +127,12 @@ namespace App_SA.Models
         public void cadastraUsu()
         {
 
-            Controle controle = new Controle();
-
-            //  controle.verificaLogin(Nome, Senha);
-
-            //if (controle.tem.Equals(false))
-            //{
-            controle.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
-            //}
-            //else
-            //{
-            //    throw new Exception("Este Usuário ja possui cadastro");
-            //}
+            Comandos comando = new Comandos();
+            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
+       
         }
+
+
 
         //public void cadastraClien()
         //{

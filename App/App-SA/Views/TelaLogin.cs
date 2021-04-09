@@ -19,27 +19,36 @@ namespace App_SA
             InitializeComponent();
         }
 
+        Comandos comando = new Comandos();
+
         private void btnAcessarConta_Click(object sender, EventArgs e)
         {
+            if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
+            {
+                ControlarVisibilidade();
+            }
+
             try
             {
-                if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
+                comando.verificaLogin(txtBoxLogin.Text, txtBoxSenha.Text);
+                
+
+                if (comando.tem.Equals(true))
                 {
-                    ControlarVisibilidade();
+                    MessageBox.Show("Bem Vindo");
+
+                    lblAtencao.Visible = false;
+                   
+                    new TelaPesquisa().Show();
+                    Visible = false;
                 }
                 else
                 {
-                    lblAtencao.Visible = false;
-                    Controle controle = new Controle();
-                    controle.acessar(txtBoxLogin.Text, txtBoxSenha.Text);
-
-                    TelaPesquisa pesquisarProfissional = new TelaPesquisa();
-                    pesquisarProfissional.ShowDialog();
-                }                
+                    throw new Exception("Verifique Login e Senha e tente novamente");
+                }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
 

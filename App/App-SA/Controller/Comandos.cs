@@ -10,25 +10,25 @@ namespace App_SA.Controller
     class Comandos
     {
         public bool tem = false;
-        public bool logado = false;
+        public bool logado = false; /*fazeer como static para usar em outras telas*/
 
-        private MySqlConnection myConn = new MySqlConnection("server = localhost; user id = root; database = worknow"); //para endereco do banco
-        private MySqlCommand myCommand; //para fazer os comandos
+       
+        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=worknow"); //para endereco do banco
+        private MySqlCommand command; //para fazer os comandos
         private MySqlDataReader myReader; //para guardar algum dado vindo do banco
 
 
         public bool verificaLogin(string email, string senha)
         {
-            
-            myConn.Open();
-
-            MySqlCommand myCommand = new MySqlCommand("select * from clientes where email = @email and senha = @senha", myConn);
-            myCommand.Parameters.AddWithValue("@email", email);
-            myCommand.Parameters.AddWithValue("@senha", senha);
-
             try
             {
-                myReader = myCommand.ExecuteReader();
+                myConn.Open();
+
+                command = new MySqlCommand("select * from usuario where email = @email and senha = @senha", myConn);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@senha", senha);
+            
+                myReader = command.ExecuteReader();
 
                 if (myReader.HasRows)
                 {
@@ -44,103 +44,94 @@ namespace App_SA.Controller
             return tem;
         }
 
+        public bool verificaEmailCpf(string email, string cpf)
+        {
+            try
+            {
+                myConn.Open();
 
+                command = new MySqlCommand("select * from usuario where email = @email and cpf = @cpf", myConn);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@cpf", cpf);
 
-        //public void cadastraUsu(string nome, string cpf, string sexo, string email, string senha, string estado, string cidade, string bairro)
-        //{
-        //    try
-        //    {
-        //        myConn.Open();
+                myReader = command.ExecuteReader();
 
-        //        myCommand = new MySqlCommand("insert into profissionais (cpf, nome, email, senha, sexo, estado, cidade, bairro, valorHora, infos, profissao, formacao) values(@cpf, @nome, @email, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @infos, @profissao, @formacao)", myConn);
-        //        myCommand.Parameters.AddWithValue("@cpf", cpf);
-        //        myCommand.Parameters.AddWithValue("@nome", nome);
-        //        //myCommand.Parameters.AddWithValue("@telefone", nome); //ATENCAO FALTA ADD CAMPO TELEFONE
-        //        myCommand.Parameters.AddWithValue("@email", email);
-        //        myCommand.Parameters.AddWithValue("@senha", senha);
-        //        myCommand.Parameters.AddWithValue("@sexo", sexo);
-        //        myCommand.Parameters.AddWithValue("@estado", estado);
-        //        myCommand.Parameters.AddWithValue("@cidade", cidade);
-        //        myCommand.Parameters.AddWithValue("@bairro", bairro);
-        //        myCommand.Parameters.AddWithValue("@valorHora", valorHora);
-        //        myCommand.Parameters.AddWithValue("@infos", infos);
-        //        myCommand.Parameters.AddWithValue("@profissao", profissao);
-        //        myCommand.Parameters.AddWithValue("@formacao", formacao);
+                if (myReader.HasRows)
+                {
+                    tem = true;
+                    logado = true;
+                }
+            }
+            finally
+            {
+                myConn.Close();
+            }
 
-        //        myCommand.ExecuteNonQuery();
+            return tem;
+        }
 
-        //        myConn.Close();
-        //    }
-        //    catch (Exception)
-        //    {
- 
-        //        throw new Exception("Erro com Banco de Dados");
-        //    }
-        //}
+        public void recuperaSenha(string senha, string confsenha, string cpf)
+        {
+            try
+            {
+                if(senha.Equals(confsenha))
+                {
+                    myConn.Open();
 
+                    command = new MySqlCommand("update usuario set senha = @senha where cpf = @cpf", myConn);
+                    command.Parameters.AddWithValue("@senha", senha);
+                    command.Parameters.AddWithValue("@cpf", cpf);
+
+                    myReader = command.ExecuteReader();
+                }
+                else
+                {
+                    throw new Exception("As senhas devem ser iguais");
+                }
+              
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
 
         public void cadastraUsu(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
         {
             try
             {
                 myConn.Open();
-                MySqlCommand myCommand = new MySqlCommand("insert into usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @informacoes, @profissao, @formacao)", myConn);
-               // myCommand.CommandText = "insert into usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @informacoes, @profissao, @formacao)" ;
-                myCommand.Parameters.AddWithValue("@cpf", cpf);                                                                                                             
-                myCommand.Parameters.AddWithValue("@nome", nome);
-                myCommand.Parameters.AddWithValue("@email", email);
-                myCommand.Parameters.AddWithValue("@telefone", telefone);
-                myCommand.Parameters.AddWithValue("@senha", senha);
-                myCommand.Parameters.AddWithValue("@sexo", sexo);
-                myCommand.Parameters.AddWithValue("@estado", estado);
-                myCommand.Parameters.AddWithValue("@cidade", cidade);
-                myCommand.Parameters.AddWithValue("@bairro", bairro);
-                myCommand.Parameters.AddWithValue("@valorHora", valorHora);
-                myCommand.Parameters.AddWithValue("@informacoes", infos);
-                myCommand.Parameters.AddWithValue("@profissao", profissao);
-                myCommand.Parameters.AddWithValue("@formacao", formacao);
 
-                
-                myCommand.ExecuteNonQuery();
+
+                command = new MySqlCommand("INSERT INTO usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) VALUES(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valorHora, @informacoes, @profissao, @formacao)", myConn);
+                // myComm.CommandText = "insert into usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @informacoes, @profissao, @formacao)" ;
+                command.Parameters.AddWithValue("@cpf", cpf);
+                command.Parameters.AddWithValue("@nome", nome);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@telefone", telefone);
+                command.Parameters.AddWithValue("@senha", senha);
+                command.Parameters.AddWithValue("@sexo", sexo);
+                command.Parameters.AddWithValue("@estado", estado);
+                command.Parameters.AddWithValue("@cidade", cidade);
+                command.Parameters.AddWithValue("@bairro", bairro);
+                command.Parameters.AddWithValue("@valorHora", valorHora);
+                command.Parameters.AddWithValue("@informacoes", infos);
+                command.Parameters.AddWithValue("@profissao", profissao);
+                command.Parameters.AddWithValue("@formacao", formacao);
+
+
+                command.ExecuteNonQuery();
                 myConn.Close();
+
             }
             catch (Exception)
             {
 
                 throw new Exception("Erro com Banco de Dados");
-            }
+            }          
+          
         }
 
-            //public void alteraDados(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string formacao)
-            //{
-            //    try
-            //    {
-            //        myConn.Open();
-
-            //        myCommand = new MySqlCommand("insert into usuario (cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, infos, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @infos, @profissao, @formacao)", myConn);
-            //        myCommand.Parameters.AddWithValue("@cpf", cpf);
-            //        myCommand.Parameters.AddWithValue("@nome", nome);
-            //        myCommand.Parameters.AddWithValue("@email", email);
-            //        myCommand.Parameters.AddWithValue("@telefone", telefone);
-            //        myCommand.Parameters.AddWithValue("@senha", senha);
-            //        myCommand.Parameters.AddWithValue("@sexo", sexo);
-            //        myCommand.Parameters.AddWithValue("@estado", estado);
-            //        myCommand.Parameters.AddWithValue("@cidade", cidade);
-            //        myCommand.Parameters.AddWithValue("@bairro", bairro);
-            //        myCommand.Parameters.AddWithValue("@valorHora", valorHora);
-            //        myCommand.Parameters.AddWithValue("@infos", infos);
-            //        myCommand.Parameters.AddWithValue("@profissao", profissao);
-            //        myCommand.Parameters.AddWithValue("@formacao", formacao);
-
-            //        myCommand.ExecuteNonQuery();
-
-            //        myConn.Close();
-            //    }
-            //    catch (Exception)
-            //    {
-
-            //        throw new Exception("Erro com Banco de Dados");
-            //    }
-            //}
+       
     }
 }

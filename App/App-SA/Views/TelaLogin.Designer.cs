@@ -139,7 +139,7 @@ namespace App_SA
             this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtencao.Image = ((System.Drawing.Image)(resources.GetObject("lblAtencao.Image")));
             this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAtencao.Location = new System.Drawing.Point(38, 55);
+            this.lblAtencao.Location = new System.Drawing.Point(29, 56);
             this.lblAtencao.Name = "lblAtencao";
             this.lblAtencao.Size = new System.Drawing.Size(378, 23);
             this.lblAtencao.TabIndex = 42;

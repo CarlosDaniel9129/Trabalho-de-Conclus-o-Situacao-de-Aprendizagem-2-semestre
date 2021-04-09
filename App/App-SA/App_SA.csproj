@@ -48,8 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Comandos.cs" />
-    <Compile Include="Controller\Conexao.cs" />
-    <Compile Include="Controller\Controle.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

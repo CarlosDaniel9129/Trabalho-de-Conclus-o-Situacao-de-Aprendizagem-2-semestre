@@ -116,7 +116,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Yellow;
             this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(41, 260);
+            this.btnVoltar.Location = new System.Drawing.Point(41, 257);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(224, 50);
             this.btnVoltar.TabIndex = 29;
@@ -144,7 +144,7 @@
             this.btnConf2.ForeColor = System.Drawing.Color.Black;
             this.btnConf2.Location = new System.Drawing.Point(295, 257);
             this.btnConf2.Name = "btnConf2";
-            this.btnConf2.Size = new System.Drawing.Size(224, 53);
+            this.btnConf2.Size = new System.Drawing.Size(224, 50);
             this.btnConf2.TabIndex = 31;
             this.btnConf2.Text = "Confirmar";
             this.btnConf2.UseVisualStyleBackColor = false;
@@ -176,10 +176,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(549, 350);
+            this.Controls.Add(this.btnConf1);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.mkbCpf);
             this.Controls.Add(this.btnConf2);
-            this.Controls.Add(this.btnConf1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtConfSenha);
             this.Controls.Add(this.lblConfSenha);
