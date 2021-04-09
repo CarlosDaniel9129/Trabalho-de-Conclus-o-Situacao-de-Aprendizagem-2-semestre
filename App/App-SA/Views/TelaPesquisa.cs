@@ -19,24 +19,11 @@ namespace App_SA
         public TelaPesquisa()
         {
             InitializeComponent();
-            Comandos conectado = new Comandos();
-
-            if (conectado.verificaLogin("@login", "@senha"))
-            {
-                btnVoltar.Visible = false;
-                btnMinhaConta.Visible = true;
-                //teste
-            }
-            else
-            {
-                btnVoltar.Visible = true;
-                btnMinhaConta.Visible = false;
-            }
         }
 
         private void btnMinhaConta_Click(object sender, EventArgs e)
         {
-            new TelaCadastroProfissional().Show();
+            new TelaLogin().Show();
             Visible = false;
         }
 
