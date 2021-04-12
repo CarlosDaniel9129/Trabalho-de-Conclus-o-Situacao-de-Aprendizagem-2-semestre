@@ -54,6 +54,7 @@ namespace App_SA
             // 
             // txtBoxLogin
             // 
+            this.txtBoxLogin.AcceptsReturn = true;
             this.txtBoxLogin.AcceptsTab = true;
             this.txtBoxLogin.BackColor = System.Drawing.Color.White;
             this.txtBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,6 +76,7 @@ namespace App_SA
             // 
             // txtBoxSenha
             // 
+            this.txtBoxSenha.AcceptsReturn = true;
             this.txtBoxSenha.AcceptsTab = true;
             this.txtBoxSenha.Location = new System.Drawing.Point(41, 181);
             this.txtBoxSenha.Name = "txtBoxSenha";
@@ -172,14 +174,14 @@ namespace App_SA
 
         #endregion
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.TextBox txtBoxLogin;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox txtBoxSenha;
         private System.Windows.Forms.LinkLabel linkEsqueceuSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAcessarConta;
         private System.Windows.Forms.Button btnCadastroProfissional;
         private System.Windows.Forms.Label lblAtencao;
+        public System.Windows.Forms.TextBox txtBoxLogin;
+        public System.Windows.Forms.TextBox txtBoxSenha;
     }
 }
 

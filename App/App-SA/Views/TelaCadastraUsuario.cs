@@ -23,11 +23,12 @@ namespace App_SA
         public TelaCadastroProfissional()
         {
             InitializeComponent();
-            
-            //if ()//ja é cadastrado?
-            //{
-            //   // mostrar botao pesquisar profissional
-            //}
+            bool ehlogado = Comandos.Logado;
+            if (!ehlogado)//ja é cadastrado?
+            {
+                btnPesquisaProfissional.Visible = false;
+               // mostrar botao pesquisar profissional
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace App_SA
                     };
 
                     usuario.cadastraUsu();
-                    salvaImagem();
+                    //salvaImagem();
 
                     MessageBox.Show("Cadastro realizado com Secesso");
 
