@@ -19,6 +19,10 @@ namespace App_SA
             InitializeComponent();
         }
 
+        public bool logado = false;
+
+        TelaPesquisa login = new TelaPesquisa();
+
         Comandos comando = new Comandos();
 
         private void btnAcessarConta_Click(object sender, EventArgs e)
@@ -38,7 +42,9 @@ namespace App_SA
                     MessageBox.Show("Bem Vindo");
 
                     lblAtencao.Visible = false;
-                   
+
+                    logado = true;
+
                     new TelaPesquisa().Show();
                     Visible = false;
                 }

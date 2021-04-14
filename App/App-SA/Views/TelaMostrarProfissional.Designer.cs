@@ -56,7 +56,6 @@ namespace App_SA.Views
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
-            this.btnCarregaImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -300,25 +299,12 @@ namespace App_SA.Views
             this.pictureBoxProfissional.TabIndex = 92;
             this.pictureBoxProfissional.TabStop = false;
             // 
-            // btnCarregaImg
-            // 
-            this.btnCarregaImg.BackColor = System.Drawing.Color.Maroon;
-            this.btnCarregaImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCarregaImg.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCarregaImg.Location = new System.Drawing.Point(548, 486);
-            this.btnCarregaImg.Name = "btnCarregaImg";
-            this.btnCarregaImg.Size = new System.Drawing.Size(135, 23);
-            this.btnCarregaImg.TabIndex = 93;
-            this.btnCarregaImg.Text = "Carregar Imagem";
-            this.btnCarregaImg.UseVisualStyleBackColor = false;
-            // 
             // Profissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(719, 587);
-            this.Controls.Add(this.btnCarregaImg);
             this.Controls.Add(this.pictureBoxProfissional);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.textBox8);
@@ -380,6 +366,5 @@ namespace App_SA.Views
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.PictureBox pictureBoxProfissional;
-        private System.Windows.Forms.Button btnCarregaImg;
     }
 }

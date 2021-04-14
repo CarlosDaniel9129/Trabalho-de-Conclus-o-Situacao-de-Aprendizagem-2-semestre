@@ -184,8 +184,14 @@ namespace App_SA
 
 
             command = new MySqlCommand("insert into usuario (imagem) values(@imagem) where cpf = @cpf", myConn);
-            command.Parameters.AddWithValue("@imagem", foto);
             command.Parameters.AddWithValue("@cpf", maskedTxtCpf.Text);
+
+            MySqlParameter paramFoto = new MySqlParameter("@imagem", MySqlDbType.Binary);
+            paramFoto.Value = foto;
+            command.Parameters.Add(paramFoto);
+            
+
+            
 
             myConn.Open();
             command.ExecuteNonQuery(); 

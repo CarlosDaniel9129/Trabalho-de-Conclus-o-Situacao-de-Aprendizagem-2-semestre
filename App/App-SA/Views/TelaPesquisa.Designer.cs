@@ -68,7 +68,7 @@ namespace App_SA
             this.Descricao});
             this.gridProfissionais.Location = new System.Drawing.Point(-6, 333);
             this.gridProfissionais.Name = "gridProfissionais";
-            this.gridProfissionais.Size = new System.Drawing.Size(973, 311);
+            this.gridProfissionais.Size = new System.Drawing.Size(973, 281);
             this.gridProfissionais.TabIndex = 1;
             this.gridProfissionais.Text = "dataGridView1";
             // 

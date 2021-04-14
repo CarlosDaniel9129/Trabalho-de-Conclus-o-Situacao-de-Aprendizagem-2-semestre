@@ -12,7 +12,8 @@ using System.Windows.Forms;
 namespace App_SA
 {
     public partial class TelaPesquisa : Form
-    {
+    { 
+
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
@@ -21,10 +22,31 @@ namespace App_SA
             InitializeComponent();
         }
 
+        
+
         private void btnMinhaConta_Click(object sender, EventArgs e)
         {
-            new TelaLogin().Show();
-            Visible = false;
+            TelaLogin login = new TelaLogin();
+
+            if (login.logado) //aqui faz a verificacao se o profi esta logado 
+            {
+                new TelaCadastroProfissional().Show();
+                Visible = false;
+
+                /*mostra tela cadastraProfissional, aqui dentro sera mostrado a tela do profissional 
+                quando estiver logado e ira buscar as info do propfissional logado;*/
+            }
+            else
+            {
+                new TelaLogin().Show();
+                Visible = false;
+
+                /*mostra tela loginSenha, porque o profissional nao esta logado entao ele precisa estar
+                logado para mostra a tela de cadastraProfissional*/
+            }
+
+
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
