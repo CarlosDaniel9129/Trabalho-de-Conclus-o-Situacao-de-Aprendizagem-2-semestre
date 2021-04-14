@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App_SA.Models;
+using App_SA.Views;
 using MySql.Data.MySqlClient;
 
 namespace App_SA.Controller
@@ -36,9 +40,9 @@ namespace App_SA.Controller
 
                 myReader = command.ExecuteReader();
 
-                if (myReader.Read())
+                if (myReader.HasRows)
                 {
-                    if (myReader.HasRows)
+                    if (myReader.Read())
                     {
                         tem = true;
                         Comandos.Logado = true;
@@ -141,7 +145,5 @@ namespace App_SA.Controller
             }          
           
         }
-
-       
     }
 }

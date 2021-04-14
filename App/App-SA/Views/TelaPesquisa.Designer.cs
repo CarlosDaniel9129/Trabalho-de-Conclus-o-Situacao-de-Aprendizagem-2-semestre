@@ -31,6 +31,13 @@ namespace App_SA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisa));
             this.gridProfissionais = new System.Windows.Forms.DataGridView();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbcidade = new System.Windows.Forms.ComboBox();
@@ -46,13 +53,6 @@ namespace App_SA
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,8 +67,55 @@ namespace App_SA
             this.cidade,
             this.valorHora,
             this.telefone});
+            this.gridProfissionais.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             resources.ApplyResources(this.gridProfissionais, "gridProfissionais");
+            this.gridProfissionais.MultiSelect = false;
             this.gridProfissionais.Name = "gridProfissionais";
+            this.gridProfissionais.ReadOnly = true;
+            this.gridProfissionais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProfissionais_CellDoubleClick);
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            resources.ApplyResources(this.nome, "nome");
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // Profissao
+            // 
+            this.Profissao.DataPropertyName = "profissao";
+            resources.ApplyResources(this.Profissao, "Profissao");
+            this.Profissao.Name = "Profissao";
+            // 
+            // formacao
+            // 
+            this.formacao.DataPropertyName = "formacao";
+            resources.ApplyResources(this.formacao, "formacao");
+            this.formacao.Name = "formacao";
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            resources.ApplyResources(this.estado, "estado");
+            this.estado.Name = "estado";
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            resources.ApplyResources(this.cidade, "cidade");
+            this.cidade.Name = "cidade";
+            // 
+            // valorHora
+            // 
+            this.valorHora.DataPropertyName = "valorHora";
+            resources.ApplyResources(this.valorHora, "valorHora");
+            this.valorHora.Name = "valorHora";
+            // 
+            // telefone
+            // 
+            this.telefone.DataPropertyName = "telefone";
+            resources.ApplyResources(this.telefone, "telefone");
+            this.telefone.Name = "telefone";
             // 
             // maskedTxtValorMin
             // 
@@ -171,48 +218,6 @@ namespace App_SA
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            resources.ApplyResources(this.nome, "nome");
-            this.nome.Name = "nome";
-            // 
-            // Profissao
-            // 
-            this.Profissao.DataPropertyName = "profissao";
-            resources.ApplyResources(this.Profissao, "Profissao");
-            this.Profissao.Name = "Profissao";
-            // 
-            // formacao
-            // 
-            this.formacao.DataPropertyName = "formacao";
-            resources.ApplyResources(this.formacao, "formacao");
-            this.formacao.Name = "formacao";
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            resources.ApplyResources(this.estado, "estado");
-            this.estado.Name = "estado";
-            // 
-            // cidade
-            // 
-            this.cidade.DataPropertyName = "cidade";
-            resources.ApplyResources(this.cidade, "cidade");
-            this.cidade.Name = "cidade";
-            // 
-            // valorHora
-            // 
-            this.valorHora.DataPropertyName = "valorHora";
-            resources.ApplyResources(this.valorHora, "valorHora");
-            this.valorHora.Name = "valorHora";
-            // 
-            // telefone
-            // 
-            this.telefone.DataPropertyName = "telefone";
-            resources.ApplyResources(this.telefone, "telefone");
-            this.telefone.Name = "telefone";
             // 
             // TelaPesquisa
             // 

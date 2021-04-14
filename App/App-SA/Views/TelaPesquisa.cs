@@ -1,5 +1,6 @@
 ﻿using App_SA.Controller;
 using App_SA.Models;
+using App_SA.Views;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,6 @@ namespace App_SA
 {
     public partial class TelaPesquisa : Form
     {
-        public bool login;
-
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
@@ -36,14 +35,7 @@ namespace App_SA
             {
                 new TelaLogin().Show();
                 Visible = false;
-            }
-
-            
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        { 
-            apresentaDados();
+            }            
         }
 
         private void apresentaDados()
@@ -71,6 +63,18 @@ namespace App_SA
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             new TelaInicial().Show();
+            Visible = false;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            apresentaDados();
+        }
+
+        private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            gridProfissionais.CurrentRow.Selected.ToString();
+            new TelaMostrarProfissional().Show();
             Visible = false;
         }
     }
