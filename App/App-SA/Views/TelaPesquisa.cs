@@ -1,5 +1,6 @@
 ﻿using App_SA.Controller;
 using App_SA.Models;
+using App_SA.Views;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace App_SA
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
-        public TelaPesquisa()
+        public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
             InitializeComponent();
         }
@@ -26,42 +27,28 @@ namespace App_SA
 
         private void btnMinhaConta_Click(object sender, EventArgs e)
         {
-            TelaLogin login = new TelaLogin();
+            bool ehlogado = Comandos.Logado;
 
-            if (login.logado) //aqui faz a verificacao se o profi esta logado 
+            if (ehlogado)
             {
                 new TelaCadastroProfissional().Show();
                 Visible = false;
-
-                /*mostra tela cadastraProfissional, aqui dentro sera mostrado a tela do profissional 
-                quando estiver logado e ira buscar as info do propfissional logado;*/
             }
             else
             {
                 new TelaLogin().Show();
                 Visible = false;
-
-                /*mostra tela loginSenha, porque o profissional nao esta logado entao ele precisa estar
-                logado para mostra a tela de cadastraProfissional*/
-            }
-
-
-
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            apresentaDados();
+            }            
         }
 
         private void apresentaDados()
         {
             mDataSet = new DataSet();
-            mConn = new MySqlConnection("server=localhost;user id=root;database=visualstudiomysql");
+            mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
             mConn.Open();
 
             //cria um adapter utilizando a instrução SQL para aceder à tabela
-            mAdapter = new MySqlDataAdapter("select * from usuario order by id", mConn);
+            mAdapter = new MySqlDataAdapter("select nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
 
             //preenche o dataset através do adapter
             mAdapter.Fill(mDataSet, "usuario");
@@ -79,6 +66,18 @@ namespace App_SA
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             new TelaInicial().Show();
+            Visible = false;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            apresentaDados();
+        }
+
+        private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            gridProfissionais.CurrentRow.Selected.ToString();
+            new TelaMostrarProfissional().Show();
             Visible = false;
         }
     }

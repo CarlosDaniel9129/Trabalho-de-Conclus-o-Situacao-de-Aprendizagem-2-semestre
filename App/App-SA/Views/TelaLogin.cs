@@ -34,23 +34,20 @@ namespace App_SA
 
             try
             {
-                comando.verificaLogin(txtBoxLogin.Text, txtBoxSenha.Text);
-                
+                comando.verificaLogin(txtBoxLogin.Text, txtBoxSenha.Text);                
 
                 if (comando.tem.Equals(true))
                 {
                     MessageBox.Show("Bem Vindo");
 
                     lblAtencao.Visible = false;
-
-                    logado = true;
-
-                    new TelaPesquisa().Show();
+                    TelaPesquisa abrirtela = new TelaPesquisa();
+                    abrirtela.ShowDialog();
                     Visible = false;
                 }
                 else
                 {
-                    throw new Exception("Verifique Login e Senha e tente novamente");
+                    lblAtencao.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -75,8 +72,6 @@ namespace App_SA
 
         private void ControlarVisibilidade()
         {
-            lblAtencao.Visible = true;
-
             if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null)
                 lblLogin.ForeColor = Color.Red;
             else

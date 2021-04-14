@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App_SA.Models;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +12,12 @@ using System.Windows.Forms;
 
 namespace App_SA.Views
 {
-    public partial class Profissional : Form
+    public partial class TelaMostrarProfissional : Form
     {
-        public Profissional()
+        public TelaMostrarProfissional()
         {
             InitializeComponent();
         }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             new TelaPesquisa().Show();

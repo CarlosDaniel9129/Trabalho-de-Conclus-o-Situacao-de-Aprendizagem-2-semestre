@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App_SA.Models;
+using App_SA.Views;
 using MySql.Data.MySqlClient;
 
 namespace App_SA.Controller
@@ -10,10 +14,16 @@ namespace App_SA.Controller
     class Comandos
     {
         public bool tem = false;
-        public bool logado = false; /*fazeer como static para usar em outras telas*/
+        
 
-       
-        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=worknow"); //para endereco do banco
+        private static bool logado;
+        public static bool Logado
+        {
+            get { return logado; }
+            set { logado = value; }
+        }
+
+        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=workers"); //para endereco do banco
         private MySqlCommand command; //para fazer os comandos
         private MySqlDataReader myReader; //para guardar algum dado vindo do banco
 
@@ -27,14 +37,18 @@ namespace App_SA.Controller
                 command = new MySqlCommand("select * from usuario where email = @email and senha = @senha", myConn);
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@senha", senha);
-            
+
                 myReader = command.ExecuteReader();
 
                 if (myReader.HasRows)
                 {
-                    tem = true;
-                    logado = true;
+                    if (myReader.Read())
+                    {
+                        tem = true;
+                        Comandos.Logado = true;
+                    }
                 }
+                
             }
             finally
             {
@@ -131,7 +145,5 @@ namespace App_SA.Controller
             }          
           
         }
-
-       
     }
 }
