@@ -18,7 +18,6 @@ namespace App_SA
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
-        private MySqlCommand command;
         public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace App_SA
             }            
         }
 
-        private void apresentaDados(string profissao, string estado, string cidade, int valorMax, int valorMin)
+        private void apresentaDados(string profissao, string estado, string cidade, string valorMax, string valorMin)
         {
             mDataSet = new DataSet();
             mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
@@ -73,8 +72,8 @@ namespace App_SA
             string profissao = txtProfissao.Text;
             string estado = cbEstado.Text;
             string cidade = cbcidade.Text;
-            int valorMin = Convert.ToInt32(maskedTxtValorMin.Mask);
-            int valorMax = Convert.ToInt32(maskedTxtValorMax.Mask);
+            string valorMin = maskedTxtValorMin.Text;
+            string valorMax = maskedTxtValorMax.Text;
             apresentaDados(profissao, estado, cidade, valorMax, valorMin);
         }
 

@@ -53,13 +53,13 @@ namespace App_SA
             this.lblEmail = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.maskedTxtValorHora = new System.Windows.Forms.MaskedTextBox();
-            this.cbFormacao = new System.Windows.Forms.ComboBox();
+            this.cbAreaFormacao = new System.Windows.Forms.ComboBox();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblAreaFormacao = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cdFormacao = new System.Windows.Forms.ComboBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.maskedTelefone = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@ namespace App_SA
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblAtencao = new System.Windows.Forms.Label();
             this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
+            this.btnBackup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,10 +332,10 @@ namespace App_SA
             this.maskedTxtValorHora.Size = new System.Drawing.Size(314, 20);
             this.maskedTxtValorHora.TabIndex = 40;
             // 
-            // cbFormacao
+            // cbAreaFormacao
             // 
-            this.cbFormacao.FormattingEnabled = true;
-            this.cbFormacao.Items.AddRange(new object[] {
+            this.cbAreaFormacao.FormattingEnabled = true;
+            this.cbAreaFormacao.Items.AddRange(new object[] {
             "Nenhum",
             "Curso Tecnico",
             "Administração",
@@ -407,10 +408,10 @@ namespace App_SA
             "Tradução e Interpretação",
             "Turismo",
             "Zootecnia"});
-            this.cbFormacao.Location = new System.Drawing.Point(371, 174);
-            this.cbFormacao.Name = "cbFormacao";
-            this.cbFormacao.Size = new System.Drawing.Size(314, 21);
-            this.cbFormacao.TabIndex = 42;
+            this.cbAreaFormacao.Location = new System.Drawing.Point(371, 174);
+            this.cbAreaFormacao.Name = "cbAreaFormacao";
+            this.cbAreaFormacao.Size = new System.Drawing.Size(314, 21);
+            this.cbAreaFormacao.TabIndex = 42;
             // 
             // txtConfirmarSenha
             // 
@@ -459,10 +460,10 @@ namespace App_SA
             this.lblAreaFormacao.TabIndex = 91;
             this.lblAreaFormacao.Text = "Área de Formação";
             // 
-            // comboBox1
+            // cdFormacao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cdFormacao.FormattingEnabled = true;
+            this.cdFormacao.Items.AddRange(new object[] {
             "Nenhum",
             "Ensino Fundamental Incompleto",
             "Ensino Fundamental Completo",
@@ -480,10 +481,10 @@ namespace App_SA
             "Pós Doutorado Completo",
             "Cusro Técnico Incompleto",
             "Curso Técnico Completo"});
-            this.comboBox1.Location = new System.Drawing.Point(371, 222);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(314, 21);
-            this.comboBox1.TabIndex = 92;
+            this.cdFormacao.Location = new System.Drawing.Point(371, 222);
+            this.cdFormacao.Name = "cdFormacao";
+            this.cdFormacao.Size = new System.Drawing.Size(314, 21);
+            this.cdFormacao.TabIndex = 92;
             // 
             // lblTelefone
             // 
@@ -559,24 +560,39 @@ namespace App_SA
             this.pictureBoxProfissional.TabIndex = 100;
             this.pictureBoxProfissional.TabStop = false;
             // 
+            // btnBackup
+            // 
+            this.btnBackup.BackColor = System.Drawing.Color.Salmon;
+            this.btnBackup.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.ForeColor = System.Drawing.Color.Black;
+            this.btnBackup.Location = new System.Drawing.Point(15, 67);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnBackup.Size = new System.Drawing.Size(76, 25);
+            this.btnBackup.TabIndex = 101;
+            this.btnBackup.Text = "Backup";
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(698, 749);
+            this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.pictureBoxProfissional);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.btnPesquisaProfissional);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTelefone);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cdFormacao);
             this.Controls.Add(this.lblAreaFormacao);
             this.Controls.Add(this.txtConfirmarSenha);
             this.Controls.Add(this.lblConfirmarSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.cbFormacao);
+            this.Controls.Add(this.cbAreaFormacao);
             this.Controls.Add(this.lblAtencao);
             this.Controls.Add(this.maskedTxtValorHora);
             this.Controls.Add(this.cbSexo);
@@ -637,18 +653,19 @@ namespace App_SA
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorHora;
         private System.Windows.Forms.Label lblAtencao;
-        private System.Windows.Forms.ComboBox cbFormacao;
+        private System.Windows.Forms.ComboBox cbAreaFormacao;
         private System.Windows.Forms.TextBox txtConfirmarSenha;
         private System.Windows.Forms.Label lblConfirmarSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblAreaFormacao;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cdFormacao;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.MaskedTextBox maskedTelefone;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPesquisaProfissional;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.PictureBox pictureBoxProfissional;
+        private System.Windows.Forms.Button btnBackup;
     }
 }

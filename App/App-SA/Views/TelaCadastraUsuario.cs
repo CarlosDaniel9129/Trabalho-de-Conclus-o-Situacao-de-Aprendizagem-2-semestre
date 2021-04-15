@@ -40,7 +40,7 @@ namespace App_SA
 
                 if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted /*|| !maskedTxtValorHora.MaskCompleted*/
                     || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty 
-                    || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty
+                    || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbAreaFormacao.Text == string.Empty
                     || cbEstado.Text == string.Empty || txtCidade.Text == string.Empty || txtBairro.Text == string.Empty)
                 {
                     ControlarVisibilidade();
@@ -60,10 +60,11 @@ namespace App_SA
                         ValorHora = decimal.Parse(maskedTxtValorHora.Text),
                         Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
-                        Formacao = comboBox1.Text,
+                        Formacao = cdFormacao.Text,
                         Estado = cbEstado.Text,
                         Cidade = txtCidade.Text,
                         Bairro = txtBairro.Text,
+                        areaFormacao = cbAreaFormacao.Text,
                         Imagem = conversorImagem()
                     };
 
@@ -84,11 +85,12 @@ namespace App_SA
                         ValorHora = decimal.Parse(maskedTxtValorHora.Text),
                         Infos = richTxtInformacoesAdicionais.Text,
                         Profissao = cbProfissao.Text,
-                        Formacao = comboBox1.Text,
+                        Formacao = cdFormacao.Text,
                         Estado = cbEstado.Text,
                         Cidade = txtCidade.Text,
                         Bairro = txtBairro.Text,
-                        //Imagem = conversorImagem()
+                        areaFormacao = cbAreaFormacao.Text,
+                        Imagem = conversorImagem()
                     };
 
                     usuario.cadastraUsu();
@@ -111,6 +113,7 @@ namespace App_SA
             if (!ehlogado)//ja é cadastrado?
             {
                 btnPesquisaProfissional.Visible = false;
+                btnBackup.Visible = false;
                 // mostrar botao pesquisar profissional
             }
 
@@ -161,7 +164,7 @@ namespace App_SA
             else
                 lblProfissao.ForeColor = Color.White;
 
-            if (cbFormacao.Text == string.Empty)
+            if (cbAreaFormacao.Text == string.Empty)
                 lblFormacao.ForeColor = Color.Red;
             else
                 lblFormacao.ForeColor = Color.White;
@@ -220,6 +223,9 @@ namespace App_SA
             return imagem_byte;
         }
 
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -124,6 +124,14 @@ namespace App_SA.Models
             set { bairro = value; }
         }
 
+        private string AreaFormacao;
+
+        public string areaFormacao
+        {
+            get { return AreaFormacao; }
+            set { AreaFormacao = value; }
+        }
+
 
         private byte[] imagem;
 
@@ -137,13 +145,13 @@ namespace App_SA.Models
         public void cadastraUsu()
         {
             comando = new Comandos();
-            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, Imagem);
+            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, AreaFormacao, Imagem);
         }
 
         public void recadastraUsu()
         {
             comando = new Comandos();
-            comando.recadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, Imagem);
+            comando.recadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, AreaFormacao,  Formacao, Imagem);
         }
     }
 }

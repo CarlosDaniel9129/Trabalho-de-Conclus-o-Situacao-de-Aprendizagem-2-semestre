@@ -54,7 +54,7 @@ namespace App_SA.Views
                         richTxtInformacoesAdicionais.Text = myReader.GetString("informacoes").ToString();
                         txtProfissao.Text = myReader.GetString("profissao").ToString();
                         txtFormacao.Text = myReader.GetString("formacao").ToString();
-                        txtAreaFormacao.Text = myReader.GetString("areaFormacao");
+                        txtAreaFormacao.Text = myReader.GetString("areaFormacao").ToString();
                         txtEstado.Text = myReader.GetString("estado").ToString();
                         txtCidade.Text = myReader.GetString("cidade").ToString();
                         txtBairro.Text = myReader.GetString("bairro").ToString();
