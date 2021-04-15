@@ -9,6 +9,8 @@ namespace App_SA.Models
 {
     class Usuario
     {
+        Comandos comando = new Comandos();
+
 
         private string nome;
 
@@ -123,32 +125,25 @@ namespace App_SA.Models
         }
 
 
+        private byte[] imagem;
 
-        public void cadastraUsu()
+        public byte[] Imagem
         {
-
-            Comandos comando = new Comandos();
-            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao);
-       
+            get { return imagem; }
+            set { imagem = value; }
         }
 
 
+        public void cadastraUsu()
+        {
+            comando = new Comandos();
+            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, Imagem);
+        }
 
-        //public void cadastraClien()
-        //{
-        //    Controle controle = new Controle();
-
-        //    //controle.verificaLogin(Nome, Senha);
-
-        //    //if (controle.tem.Equals(false))
-        //    //{
-        //        controle.cadastraDados(Nome, Cpf, Sexo, Email, Senha, Estado, Cidade, Bairro);
-        //    //}
-        //    //else
-        //    //{
-        //    //    throw new Exception("Este Usuário ja possui cadastro");
-        //    //}
-
-        //}
+        public void recadastraUsu()
+        {
+            comando = new Comandos();
+            comando.recadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, Imagem);
+        }
     }
 }

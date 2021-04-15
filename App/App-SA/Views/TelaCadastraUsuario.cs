@@ -15,21 +15,17 @@ namespace App_SA
 {
     public partial class TelaCadastroProfissional : Form
     {
-        Bitmap bmp; //para trabalharmos com os pixels
 
-        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=worknow"); //para endereco do banco
-        private MySqlCommand command; //para fazer os comandos
+
+        public string caminhoFoto;
 
         public TelaCadastroProfissional()
         {
             InitializeComponent();
-            bool ehlogado = Comandos.Logado;
-            if (!ehlogado)//ja é cadastrado?
-            {
-                btnPesquisaProfissional.Visible = false;
-               // mostrar botao pesquisar profissional
-            }
+            ehLogado();
         }
+
+
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -41,6 +37,7 @@ namespace App_SA
         {            
             try
             {
+
                 if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted /*|| !maskedTxtValorHora.MaskCompleted*/
                     || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty 
                     || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbFormacao.Text == string.Empty
@@ -48,8 +45,9 @@ namespace App_SA
                 {
                     ControlarVisibilidade();
                 }
-                else
+                else if (ehLogado().Equals(true))
                 {
+                    //caso ele nao esteja logado, ele chama o metodo !!! Recadastra !!!
                     Usuario usuario = new Usuario()
                     {
                         Nome = txtNome.Text,
@@ -65,11 +63,35 @@ namespace App_SA
                         Formacao = comboBox1.Text,
                         Estado = cbEstado.Text,
                         Cidade = txtCidade.Text,
-                        Bairro = txtBairro.Text
+                        Bairro = txtBairro.Text,
+                        Imagem = conversorImagem()
+                    };
+
+                    usuario.recadastraUsu();
+                }
+                else
+                {
+                    //caso ele nao esteja logado, ele chama o metodo !!! Cadastra !!!
+                    Usuario usuario = new Usuario()
+                    {
+                        Nome = txtNome.Text,
+                        Cpf = maskedTxtCpf.Text,
+                        Senha = txtSenha.Text,
+                        ConfSenha = txtConfirmarSenha.Text,
+                        Email = txtEmail.Text,
+                        Telefone = maskedTelefone.Text,
+                        Sexo = cbSexo.Text,
+                        ValorHora = decimal.Parse(maskedTxtValorHora.Text),
+                        Infos = richTxtInformacoesAdicionais.Text,
+                        Profissao = cbProfissao.Text,
+                        Formacao = comboBox1.Text,
+                        Estado = cbEstado.Text,
+                        Cidade = txtCidade.Text,
+                        Bairro = txtBairro.Text,
+                        Imagem = conversorImagem()
                     };
 
                     usuario.cadastraUsu();
-                    //salvaImagem();
 
                     MessageBox.Show("Cadastro realizado com Secesso");
 
@@ -83,6 +105,17 @@ namespace App_SA
             }
         }
 
+        private bool ehLogado()
+        {
+            bool ehlogado = Comandos.Logado;
+            if (!ehlogado)//ja é cadastrado?
+            {
+                btnPesquisaProfissional.Visible = false;
+                // mostrar botao pesquisar profissional
+            }
+
+            return ehlogado;
+        }
 
         private void ControlarVisibilidade()
         {
@@ -159,45 +192,34 @@ namespace App_SA
 
         private void btnCarregarFoto_Click(object sender, EventArgs e)
         {
-            carregaImage();
+            carregaImagem();
         }
 
-        public void carregaImage()
+        public void carregaImagem()
         {
-            //quando estiver aqbertto e o result for OK, faz o if
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*"; //filtra somente arquivos com esses tipos
+                                                                                               //qualquer arquivo and nome
+
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                string nome = openFileDialog1.FileName; //guarda o nome vindo do open
-
-                bmp = new Bitmap(nome); //passo o nome do arquivo para transformar em pixels a imagem
-
-                pictureBoxProfissional.Image = bmp; //preenche a picture com o bmp 
+                caminhoFoto = dialog.FileName.ToString();
+                pictureBoxProfissional.ImageLocation = caminhoFoto; // o caminho da imagem sera igual ao caminhoFOto, para exibir na pictureBox
             }
+        
         }
 
-        private void salvaImagem()
+
+        public byte[] conversorImagem()
         {
-            MemoryStream memory = new MemoryStream(); //classe que guarda dados na memoria
+            FileStream fstream = new FileStream(this.caminhoFoto, FileMode.Open, FileAccess.Read); //serve para inserir os bytes da imagem dentro do array de byte, contem o diretorio da imagem
+            BinaryReader br = new BinaryReader(fstream); //leitor de dados binarios
+            byte[] imagem_byte = br.ReadBytes((int)fstream.Length); //o imagem_byte vai ser igual a leitura do tamanho desses dados binarios
 
-            bmp.Save(memory, ImageFormat.Bmp); //passo o local e o formato do arquivo 
-
-            byte[] foto = memory.ToArray(); //gravo o conteudo em uma matriz de byte, foto é onde ira conter a imagem
-
-
-            command = new MySqlCommand("insert into usuario (imagem) values(@imagem) where cpf = @cpf", myConn);
-            command.Parameters.AddWithValue("@cpf", maskedTxtCpf.Text);
-
-            MySqlParameter paramFoto = new MySqlParameter("@imagem", MySqlDbType.Binary);
-            paramFoto.Value = foto;
-            command.Parameters.Add(paramFoto);
-            
-
-            
-
-            myConn.Open();
-            command.ExecuteNonQuery(); 
-
-            myConn.Close();
+            return imagem_byte;
         }
+
+
     }
 }

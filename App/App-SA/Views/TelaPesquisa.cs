@@ -44,11 +44,11 @@ namespace App_SA
         private void apresentaDados()
         {
             mDataSet = new DataSet();
-            mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
+            mConn = new MySqlConnection("server=localhost;user id=root;database=worknow");
             mConn.Open();
 
             //cria um adapter utilizando a instrução SQL para aceder à tabela
-            mAdapter = new MySqlDataAdapter("select nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
+            mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
 
             //preenche o dataset através do adapter
             mAdapter.Fill(mDataSet, "usuario");
@@ -58,7 +58,7 @@ namespace App_SA
             gridProfissionais.DataMember = "usuario";
         }
 
-            private void btnSair_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -76,9 +76,13 @@ namespace App_SA
 
         private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            gridProfissionais.CurrentRow.Selected.ToString();
-            new TelaMostrarProfissional().Show();
-            Visible = false;
+            Comandos comando = new Comandos();
+
+            int id = Convert.ToInt32(gridProfissionais.Rows[e.RowIndex].Cells["idUsuario"].Value.ToString());
+            //comando.viewProfissional(id);
+
+            new TelaMostrarProfissional(id).Show();
+
         }
     }
 }

@@ -84,5 +84,11 @@ namespace App_SA
 
             return;
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            new TelaInicial().Show();
+            Visible = false;
+        }
     }
 }

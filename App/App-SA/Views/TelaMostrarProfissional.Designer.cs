@@ -206,21 +206,11 @@ namespace App_SA.Views
             this.pictureBoxProfissional.Name = "pictureBoxProfissional";
             this.pictureBoxProfissional.TabStop = false;
             // 
-            // btnCarregaImg
-            // 
-            this.btnCarregaImg.BackColor = System.Drawing.Color.Maroon;
-            this.btnCarregaImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCarregaImg.ForeColor = System.Drawing.SystemColors.ControlText;
-            resources.ApplyResources(this.btnCarregaImg, "btnCarregaImg");
-            this.btnCarregaImg.Name = "btnCarregaImg";
-            this.btnCarregaImg.UseVisualStyleBackColor = false;
-            // 
             // TelaMostrarProfissional
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.btnCarregaImg);
             this.Controls.Add(this.pictureBoxProfissional);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtAreaFormacao);

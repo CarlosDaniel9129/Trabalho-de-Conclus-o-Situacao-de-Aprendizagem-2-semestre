@@ -31,13 +31,6 @@ namespace App_SA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisa));
             this.gridProfissionais = new System.Windows.Forms.DataGridView();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbcidade = new System.Windows.Forms.ComboBox();
@@ -53,6 +46,14 @@ namespace App_SA
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@ namespace App_SA
             // 
             this.gridProfissionais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProfissionais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUsuario,
             this.nome,
             this.Profissao,
             this.formacao,
@@ -73,49 +75,6 @@ namespace App_SA
             this.gridProfissionais.Name = "gridProfissionais";
             this.gridProfissionais.ReadOnly = true;
             this.gridProfissionais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProfissionais_CellDoubleClick);
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            resources.ApplyResources(this.nome, "nome");
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // Profissao
-            // 
-            this.Profissao.DataPropertyName = "profissao";
-            resources.ApplyResources(this.Profissao, "Profissao");
-            this.Profissao.Name = "Profissao";
-            // 
-            // formacao
-            // 
-            this.formacao.DataPropertyName = "formacao";
-            resources.ApplyResources(this.formacao, "formacao");
-            this.formacao.Name = "formacao";
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            resources.ApplyResources(this.estado, "estado");
-            this.estado.Name = "estado";
-            // 
-            // cidade
-            // 
-            this.cidade.DataPropertyName = "cidade";
-            resources.ApplyResources(this.cidade, "cidade");
-            this.cidade.Name = "cidade";
-            // 
-            // valorHora
-            // 
-            this.valorHora.DataPropertyName = "valorHora";
-            resources.ApplyResources(this.valorHora, "valorHora");
-            this.valorHora.Name = "valorHora";
-            // 
-            // telefone
-            // 
-            this.telefone.DataPropertyName = "telefone";
-            resources.ApplyResources(this.telefone, "telefone");
-            this.telefone.Name = "telefone";
             // 
             // maskedTxtValorMin
             // 
@@ -219,6 +178,62 @@ namespace App_SA
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // idUsuario
+            // 
+            this.idUsuario.DataPropertyName = "idUsuario";
+            resources.ApplyResources(this.idUsuario, "idUsuario");
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            resources.ApplyResources(this.nome, "nome");
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // Profissao
+            // 
+            this.Profissao.DataPropertyName = "profissao";
+            resources.ApplyResources(this.Profissao, "Profissao");
+            this.Profissao.Name = "Profissao";
+            this.Profissao.ReadOnly = true;
+            // 
+            // formacao
+            // 
+            this.formacao.DataPropertyName = "formacao";
+            resources.ApplyResources(this.formacao, "formacao");
+            this.formacao.Name = "formacao";
+            this.formacao.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            resources.ApplyResources(this.estado, "estado");
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            resources.ApplyResources(this.cidade, "cidade");
+            this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
+            // 
+            // valorHora
+            // 
+            this.valorHora.DataPropertyName = "valorHora";
+            resources.ApplyResources(this.valorHora, "valorHora");
+            this.valorHora.Name = "valorHora";
+            this.valorHora.ReadOnly = true;
+            // 
+            // telefone
+            // 
+            this.telefone.DataPropertyName = "telefone";
+            resources.ApplyResources(this.telefone, "telefone");
+            this.telefone.Name = "telefone";
+            this.telefone.ReadOnly = true;
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
@@ -265,6 +280,7 @@ namespace App_SA
         private System.Windows.Forms.Button btnMinhaConta;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profissao;
         private System.Windows.Forms.DataGridViewTextBoxColumn formacao;

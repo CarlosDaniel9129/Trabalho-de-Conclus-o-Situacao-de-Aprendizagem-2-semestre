@@ -67,7 +67,6 @@ namespace App_SA
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblAtencao = new System.Windows.Forms.Label();
             this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -560,10 +559,6 @@ namespace App_SA
             this.pictureBoxProfissional.TabIndex = 100;
             this.pictureBoxProfissional.TabStop = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,6 +650,5 @@ namespace App_SA
         private System.Windows.Forms.Button btnPesquisaProfissional;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.PictureBox pictureBoxProfissional;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

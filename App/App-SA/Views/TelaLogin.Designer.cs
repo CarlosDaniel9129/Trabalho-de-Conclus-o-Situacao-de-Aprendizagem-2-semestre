@@ -39,6 +39,7 @@ namespace App_SA
             this.btnAcessarConta = new System.Windows.Forms.Button();
             this.btnCadastroProfissional = new System.Windows.Forms.Button();
             this.lblAtencao = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLogin
@@ -149,12 +150,27 @@ namespace App_SA
             this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAtencao.Visible = false;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Salmon;
+            this.btnVoltar.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(353, 351);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnVoltar.Size = new System.Drawing.Size(76, 25);
+            this.btnVoltar.TabIndex = 43;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(441, 369);
+            this.ClientSize = new System.Drawing.Size(441, 388);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblAtencao);
             this.Controls.Add(this.btnCadastroProfissional);
             this.Controls.Add(this.btnAcessarConta);
@@ -182,6 +198,7 @@ namespace App_SA
         private System.Windows.Forms.Label lblAtencao;
         public System.Windows.Forms.TextBox txtBoxLogin;
         public System.Windows.Forms.TextBox txtBoxSenha;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
 
