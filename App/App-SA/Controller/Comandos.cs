@@ -17,7 +17,7 @@ namespace App_SA.Controller
     {
         public bool tem = false;
 
-
+      
         private static bool logado;
         public static bool Logado
         {
@@ -25,7 +25,7 @@ namespace App_SA.Controller
             set { logado = value; }
         }
 
-        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=worknow"); //para endereco do banco
+        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=workers"); //para endereco do banco
         private MySqlCommand command; //para fazer os comandos
         private MySqlDataReader myReader; //para guardar algum dado vindo do banco
         TelaMostrarProfissional mostrar;
@@ -46,6 +46,7 @@ namespace App_SA.Controller
                 {
                     if (myReader.Read())
                     {
+                        
                         tem = true;
                         Comandos.Logado = true;
                     }
@@ -190,7 +191,7 @@ namespace App_SA.Controller
             {
                 myConn.Open();
 
-                command = new MySqlCommand("select nome, sexo, email, telefone, valorHora, informacoes, profissao, formacao, estado, cidade, bairro, imagem from usuario where idUsuario = @id", myConn);
+                command = new MySqlCommand("select nome, sexo, email, telefone, valorHora, informacoes, profissao, formacao, areaFormacao, estado, cidade, bairro, valorHora, imagem from usuario where idUsuario = @id", myConn);
 
                 command.Parameters.AddWithValue("@id", id);
 
@@ -200,16 +201,14 @@ namespace App_SA.Controller
                 {
                     while (myReader.Read())
                     {
-                        TelaMostrarProfissional mostrar = new TelaMostrarProfissional(id);
                         mostrar.txtNome.Text = myReader.GetString("nome").ToString();
                         mostrar.txtSexo.Text = myReader.GetString("sexo").ToString();
                         mostrar.txtEmail.Text = myReader.GetString("email").ToString();
                         mostrar.txtTelefone.Text = myReader.GetString("telefone").ToString();
-                        mostrar.txtValorHora.Text = myReader.GetString("valorHora").ToString();
                         mostrar.richTxtInformacoesAdicionais.Text = myReader.GetString("informacoes").ToString();
                         mostrar.txtProfissao.Text = myReader.GetString("profissao").ToString();
                         mostrar.txtFormacao.Text = myReader.GetString("formacao").ToString();
-                        // txtAreaFormacao.Text = myReader.GetString("areaformacao");
+                        mostrar.txtAreaFormacao.Text = myReader.GetString("areaFormacao");
                         mostrar.txtEstado.Text = myReader.GetString("estado").ToString();
                         mostrar.txtCidade.Text = myReader.GetString("cidade").ToString();
                         mostrar.txtBairro.Text = myReader.GetString("bairro").ToString();

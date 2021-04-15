@@ -88,7 +88,7 @@ namespace App_SA
                         Estado = cbEstado.Text,
                         Cidade = txtCidade.Text,
                         Bairro = txtBairro.Text,
-                        Imagem = conversorImagem()
+                        //Imagem = conversorImagem()
                     };
 
                     usuario.cadastraUsu();

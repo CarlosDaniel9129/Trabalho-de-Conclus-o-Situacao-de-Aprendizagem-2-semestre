@@ -18,6 +18,7 @@ namespace App_SA
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
+        private MySqlCommand command;
         public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace App_SA
             bool ehlogado = Comandos.Logado;
 
             if (ehlogado)
-            {
+            {               
                 new TelaCadastroProfissional().Show();
                 Visible = false;
             }
@@ -38,15 +39,16 @@ namespace App_SA
             }            
         }
 
-        private void apresentaDados()
+        private void apresentaDados(string profissao, string estado, string cidade, int valorMax, int valorMin)
         {
             mDataSet = new DataSet();
-            mConn = new MySqlConnection("server=localhost;user id=root;database=worknow");
+            mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
             mConn.Open();
 
             //cria um adapter utilizando a instrução SQL para aceder à tabela
             mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
-
+            
+          
             //preenche o dataset através do adapter
             mAdapter.Fill(mDataSet, "usuario");
 
@@ -68,16 +70,17 @@ namespace App_SA
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            apresentaDados();
+            string profissao = txtProfissao.Text;
+            string estado = cbEstado.Text;
+            string cidade = cbcidade.Text;
+            int valorMin = Convert.ToInt32(maskedTxtValorMin.Mask);
+            int valorMax = Convert.ToInt32(maskedTxtValorMax.Mask);
+            apresentaDados(profissao, estado, cidade, valorMax, valorMin);
         }
 
         private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Comandos comando = new Comandos();
-
             int id = Convert.ToInt32(gridProfissionais.Rows[e.RowIndex].Cells["idUsuario"].Value.ToString());
-            comando.viewProfissional(id);
-
             new TelaMostrarProfissional(id).Show();
 
         }
