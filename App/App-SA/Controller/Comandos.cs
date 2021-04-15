@@ -185,5 +185,66 @@ namespace App_SA.Controller
             }
 
         }
+
+        public void backup()
+        {
+            myConn.Open();
+
+            // usa-se a hora, min, seg, pois Workbenchs desatualizados nao permite usar o comando "OR Replace"
+            // Certo seriastring sql = "CREATE OR REPLACE TABLE BKP" + hj + " AS SELECT * FROM livros";
+
+            string hj = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Millisecond.ToString();
+            string sql = "CREATE TABLE BKP" + hj + " AS SELECT * FROM usuarios";
+            MySqlCommand command = new MySqlCommand(sql, myConn);
+            int a = command.ExecuteNonQuery(); //pega o retorno da excecussão do banco, no caso o valor 1 de "1 row"
+
+            myConn.Close();
+            if (a > 0)
+                MessageBox.Show("backup criado com Sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        public void viewProfissional(int id)
+        {
+            try
+            {
+                myConn.Open();
+
+                command = new MySqlCommand("select nome, sexo, email, telefone, valorHora, informacoes, profissao, formacao, areaFormacao, estado, cidade, bairro, valorHora, imagem from usuario where idUsuario = @id", myConn);
+
+                command.Parameters.AddWithValue("@id", id);
+
+                myReader = command.ExecuteReader();
+
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        mostrar.txtNome.Text = myReader.GetString("nome").ToString();
+                        mostrar.txtSexo.Text = myReader.GetString("sexo").ToString();
+                        mostrar.txtEmail.Text = myReader.GetString("email").ToString();
+                        mostrar.txtTelefone.Text = myReader.GetString("telefone").ToString();
+                        mostrar.richTxtInformacoesAdicionais.Text = myReader.GetString("informacoes").ToString();
+                        mostrar.txtProfissao.Text = myReader.GetString("profissao").ToString();
+                        mostrar.txtFormacao.Text = myReader.GetString("formacao").ToString();
+                        mostrar.txtAreaFormacao.Text = myReader.GetString("areaFormacao");
+                        mostrar.txtEstado.Text = myReader.GetString("estado").ToString();
+                        mostrar.txtCidade.Text = myReader.GetString("cidade").ToString();
+                        mostrar.txtBairro.Text = myReader.GetString("bairro").ToString();
+                        mostrar.txtValorHora.Text = myReader.GetString("valorHora").ToString();
+
+                        byte[] imagem = (byte[])(myReader["imagem"]);
+                        MemoryStream mstream = new MemoryStream(imagem); //guarda uma quantidade de byte referente a uma variavel de armazenagem na memoria
+                        mostrar.pictureBoxProfissional.Image = System.Drawing.Image.FromStream(mstream);
+                    }
+
+                }
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
+
     }
 }
