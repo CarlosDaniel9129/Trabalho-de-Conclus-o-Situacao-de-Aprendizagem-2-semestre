@@ -185,6 +185,24 @@ namespace App_SA.Controller
 
         }
 
+        public void backup()
+        {
+            myConn.Open();
+
+            // usa-se a hora, min, seg, pois Workbenchs desatualizados nao permite usar o comando "OR Replace"
+            // Certo seriastring sql = "CREATE OR REPLACE TABLE BKP" + hj + " AS SELECT * FROM livros";
+
+            string hj = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Millisecond.ToString();
+            string sql = "CREATE TABLE BKP" + hj + " AS SELECT * FROM livros";
+            MySqlCommand command = new MySqlCommand(sql, myConn);
+            int a = command.ExecuteNonQuery(); //pega o retorno da excecussão do banco, no caso o valor 1 de "1 row"
+
+            myConn.Close();
+            if (a > 0)
+                MessageBox.Show("backup criado com Sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
         public void viewProfissional(int id)
         {
             try
