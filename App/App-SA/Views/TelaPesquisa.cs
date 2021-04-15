@@ -39,7 +39,7 @@ namespace App_SA
             }            
         }
 
-        private void apresentaDados(string profissao, string estado, string cidade, int valorMax, int valorMin)
+        private void apresentaDados()
         {
             mDataSet = new DataSet();
             mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
@@ -75,7 +75,7 @@ namespace App_SA
             string cidade = cbcidade.Text;
             int valorMin = Convert.ToInt32(maskedTxtValorMin.Mask);
             int valorMax = Convert.ToInt32(maskedTxtValorMax.Mask);
-            apresentaDados(profissao, estado, cidade, valorMax, valorMin);
+            apresentaDados();
         }
 
         private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +83,24 @@ namespace App_SA
             int id = Convert.ToInt32(gridProfissionais.Rows[e.RowIndex].Cells["idUsuario"].Value.ToString());
             new TelaMostrarProfissional(id).Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mDataSet = new DataSet();
+            mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
+            mConn.Open();
+
+            //cria um adapter utilizando a instrução SQL para aceder à tabela
+            mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
+
+
+            //preenche o dataset através do adapter
+            mAdapter.Fill(mDataSet, "usuario");
+
+            //atribui o resultado à propriedade DataSource da dataGridView
+            gridProfissionais.DataSource = mDataSet;
+            gridProfissionais.DataMember = "usuario";
         }
     }
 }

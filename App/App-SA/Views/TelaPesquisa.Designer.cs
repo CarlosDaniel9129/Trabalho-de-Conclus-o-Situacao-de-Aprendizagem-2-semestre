@@ -54,6 +54,7 @@ namespace App_SA
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,11 +235,21 @@ namespace App_SA
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.PeachPuff;
+            this.button1.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnMinhaConta);
@@ -288,5 +299,6 @@ namespace App_SA
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
+        private System.Windows.Forms.Button button1;
     }
 }
