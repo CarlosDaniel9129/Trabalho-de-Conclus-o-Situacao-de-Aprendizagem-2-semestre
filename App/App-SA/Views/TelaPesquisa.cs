@@ -18,7 +18,6 @@ namespace App_SA
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
-        private MySqlCommand command;
         public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
             InitializeComponent();
@@ -73,9 +72,9 @@ namespace App_SA
             string profissao = txtProfissao.Text;
             string estado = cbEstado.Text;
             string cidade = cbcidade.Text;
-            int valorMin = Convert.ToInt32(maskedTxtValorMin.Mask);
-            int valorMax = Convert.ToInt32(maskedTxtValorMax.Mask);
-            apresentaDados();
+            string valorMin = maskedTxtValorMin.Text;
+            string valorMax = maskedTxtValorMax.Text;
+            apresentaDados(profissao, estado, cidade, valorMax, valorMin);
         }
 
         private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

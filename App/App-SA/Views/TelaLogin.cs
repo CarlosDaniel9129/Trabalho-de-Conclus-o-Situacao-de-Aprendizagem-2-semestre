@@ -60,8 +60,7 @@ namespace App_SA
 
         private void btnCadastroProfissional_Click(object sender, EventArgs e)
         {
-            int id = int.MinValue;
-            new TelaCadastroProfissional(id).Show();
+            new TelaCadastroProfissional().Show();
             Visible = false;
         }
 
