@@ -202,49 +202,5 @@ namespace App_SA.Controller
             if (a > 0)
                 MessageBox.Show("backup criado com Sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
-        public void viewProfissional(int id)
-        {
-            try
-            {
-                myConn.Open();
-
-                command = new MySqlCommand("select nome, sexo, email, telefone, valorHora, informacoes, profissao, formacao, areaFormacao, estado, cidade, bairro, valorHora, imagem from usuario where idUsuario = @id", myConn);
-
-                command.Parameters.AddWithValue("@id", id);
-
-                myReader = command.ExecuteReader();
-
-                if (myReader.HasRows)
-                {
-                    while (myReader.Read())
-                    {
-                        mostrar.txtNome.Text = myReader.GetString("nome").ToString();
-                        mostrar.txtSexo.Text = myReader.GetString("sexo").ToString();
-                        mostrar.txtEmail.Text = myReader.GetString("email").ToString();
-                        mostrar.txtTelefone.Text = myReader.GetString("telefone").ToString();
-                        mostrar.richTxtInformacoesAdicionais.Text = myReader.GetString("informacoes").ToString();
-                        mostrar.txtProfissao.Text = myReader.GetString("profissao").ToString();
-                        mostrar.txtFormacao.Text = myReader.GetString("formacao").ToString();
-                        mostrar.txtAreaFormacao.Text = myReader.GetString("areaFormacao");
-                        mostrar.txtEstado.Text = myReader.GetString("estado").ToString();
-                        mostrar.txtCidade.Text = myReader.GetString("cidade").ToString();
-                        mostrar.txtBairro.Text = myReader.GetString("bairro").ToString();
-                        mostrar.txtValorHora.Text = myReader.GetString("valorHora").ToString();
-
-                        byte[] imagem = (byte[])(myReader["imagem"]);
-                        MemoryStream mstream = new MemoryStream(imagem); //guarda uma quantidade de byte referente a uma variavel de armazenagem na memoria
-                        mostrar.pictureBoxProfissional.Image = System.Drawing.Image.FromStream(mstream);
-                    }
-
-                }
-            }
-            finally
-            {
-                myConn.Close();
-            }
-        }
-
     }
 }
