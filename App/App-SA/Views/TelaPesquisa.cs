@@ -22,9 +22,6 @@ namespace App_SA
         {
             InitializeComponent();
         }
-
-        
-
         private void btnMinhaConta_Click(object sender, EventArgs e)
         {
             bool ehlogado = Comandos.Logado;
@@ -79,7 +76,7 @@ namespace App_SA
             Comandos comando = new Comandos();
 
             int id = Convert.ToInt32(gridProfissionais.Rows[e.RowIndex].Cells["idUsuario"].Value.ToString());
-            //comando.viewProfissional(id);
+            comando.viewProfissional(id);
 
             new TelaMostrarProfissional(id).Show();
 

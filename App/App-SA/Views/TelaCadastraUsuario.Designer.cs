@@ -552,9 +552,9 @@ namespace App_SA
             // pictureBoxProfissional
             // 
             this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
-            this.pictureBoxProfissional.Location = new System.Drawing.Point(448, 492);
+            this.pictureBoxProfissional.Location = new System.Drawing.Point(390, 470);
             this.pictureBoxProfissional.Name = "pictureBoxProfissional";
-            this.pictureBoxProfissional.Size = new System.Drawing.Size(128, 128);
+            this.pictureBoxProfissional.Size = new System.Drawing.Size(276, 163);
             this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfissional.TabIndex = 100;
             this.pictureBoxProfissional.TabStop = false;

@@ -69,6 +69,7 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             // 
             // lblValorHora
             // 
@@ -86,6 +87,7 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.richTxtInformacoesAdicionais, "richTxtInformacoesAdicionais");
             this.richTxtInformacoesAdicionais.Name = "richTxtInformacoesAdicionais";
+            this.richTxtInformacoesAdicionais.ReadOnly = true;
             // 
             // lblFormacao
             // 
@@ -97,6 +99,7 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.txtBairro, "txtBairro");
             this.txtBairro.Name = "txtBairro";
+            this.txtBairro.ReadOnly = true;
             // 
             // lblBairro
             // 
@@ -120,6 +123,7 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.txtNome, "txtNome");
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             // 
             // lblSexo
             // 
@@ -143,36 +147,43 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.txtProfissao, "txtProfissao");
             this.txtProfissao.Name = "txtProfissao";
+            this.txtProfissao.ReadOnly = true;
             // 
             // txtFormacao
             // 
             resources.ApplyResources(this.txtFormacao, "txtFormacao");
             this.txtFormacao.Name = "txtFormacao";
+            this.txtFormacao.ReadOnly = true;
             // 
             // txtSexo
             // 
             resources.ApplyResources(this.txtSexo, "txtSexo");
             this.txtSexo.Name = "txtSexo";
+            this.txtSexo.ReadOnly = true;
             // 
             // txtEstado
             // 
             resources.ApplyResources(this.txtEstado, "txtEstado");
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             // 
             // txtValorHora
             // 
             resources.ApplyResources(this.txtValorHora, "txtValorHora");
             this.txtValorHora.Name = "txtValorHora";
+            this.txtValorHora.ReadOnly = true;
             // 
             // txtCidade
             // 
             resources.ApplyResources(this.txtCidade, "txtCidade");
             this.txtCidade.Name = "txtCidade";
+            this.txtCidade.ReadOnly = true;
             // 
             // txtTelefone
             // 
             resources.ApplyResources(this.txtTelefone, "txtTelefone");
             this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.ReadOnly = true;
             // 
             // lblTelefone
             // 
@@ -190,6 +201,7 @@ namespace App_SA.Views
             // 
             resources.ApplyResources(this.txtAreaFormacao, "txtAreaFormacao");
             this.txtAreaFormacao.Name = "txtAreaFormacao";
+            this.txtAreaFormacao.ReadOnly = true;
             // 
             // btnVoltar
             // 

@@ -285,7 +285,7 @@
     <value>17</value>
   </data>
   <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 267</value>
+    <value>374, 267</value>
   </data>
   <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 20</value>
@@ -312,7 +312,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="lblBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 246</value>
+    <value>372, 246</value>
   </data>
   <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 19</value>
@@ -570,7 +570,7 @@
     <value>9</value>
   </data>
   <data name="txtEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 168</value>
+    <value>374, 167</value>
   </data>
   <data name="txtEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 20</value>
@@ -714,7 +714,7 @@
     <value>3</value>
   </data>
   <data name="txtAreaFormacao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 118</value>
+    <value>374, 123</value>
   </data>
   <data name="txtAreaFormacao.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 20</value>
@@ -822,7 +822,7 @@
 </value>
   </data>
   <data name="pictureBoxProfissional.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 302</value>
+    <value>411, 302</value>
   </data>
   <data name="pictureBoxProfissional.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 178</value>
