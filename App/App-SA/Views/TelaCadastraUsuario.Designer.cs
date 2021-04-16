@@ -621,6 +621,7 @@ namespace App_SA
             this.Name = "TelaCadastroProfissional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Usuário";
+            this.Load += new System.EventHandler(this.TelaCadastroProfissional_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,7 +15,9 @@ namespace App_SA
 {
     public partial class TelaCadastroProfissional : Form
     {
-
+        private MySqlConnection myConn = new MySqlConnection("server=localhost;user id=root;database=workers"); //para endereco do banco
+        private MySqlCommand command; //para fazer os comandos
+        private MySqlDataReader myReader; //para guardar algum dado vindo do banco
 
         public string caminhoFoto;
 
@@ -228,5 +230,52 @@ namespace App_SA
             Comandos comando = new Comandos();
             comando.backup();
         }
-    }
+
+        private void TelaCadastroProfissional_Load(object sender, EventArgs e)
+        {
+            string usuario = TelaLogin.usuarioLogado;
+
+            try
+            {
+                myConn.Open();
+
+                command = new MySqlCommand("select nome, cpf, sexo, email, senha, telefone, valorHora, informacoes, profissao, formacao, areaFormacao, estado, cidade, bairro, valorHora, imagem from usuario where email = @email", myConn);
+
+                command.Parameters.AddWithValue("@email", usuario);
+
+                myReader = command.ExecuteReader();
+
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        txtNome.Text = myReader.GetString("nome").ToString();
+                        cbSexo.Text = myReader.GetString("sexo").ToString();
+                        txtEmail.Text = myReader.GetString("email").ToString();
+                        txtSenha.Text = myReader.GetString("senha").ToString();
+                        txtConfirmarSenha.Text = txtSenha.Text;
+                        maskedTelefone.Text = myReader.GetString("telefone").ToString();
+                        richTxtInformacoesAdicionais.Text = myReader.GetString("informacoes").ToString();
+                        cbProfissao.Text = myReader.GetString("profissao").ToString();
+                        cdFormacao.Text = myReader.GetString("formacao").ToString();
+                        cbAreaFormacao.Text = myReader.GetString("areaFormacao").ToString();
+                        cbEstado.Text = myReader.GetString("estado").ToString();
+                        txtCidade.Text = myReader.GetString("cidade").ToString();
+                        txtBairro.Text = myReader.GetString("bairro").ToString();
+                        maskedTxtValorHora.Text = myReader.GetString("valorHora").ToString();
+                        maskedTxtCpf.Text = myReader.GetString("cpf").ToString();
+
+                        byte[] imagem = (byte[])(myReader["imagem"]);
+                        MemoryStream mstream = new MemoryStream(imagem); //guarda uma quantidade de byte referente a uma variavel de armazenagem na memoria
+                        pictureBoxProfissional.Image = System.Drawing.Image.FromStream(mstream);
+                    }
+
+                }
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
+    }    
 }
