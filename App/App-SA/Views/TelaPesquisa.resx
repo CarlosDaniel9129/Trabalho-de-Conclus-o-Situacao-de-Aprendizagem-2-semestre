@@ -120,59 +120,10 @@
   <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Profissao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="formacao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="valorHora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="telefone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gridProfissionais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-6, 361</value>
-  </data>
-  <data name="gridProfissionais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 283</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridProfissionais.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gridProfissionais.Text" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Name" xml:space="preserve">
-    <value>gridProfissionais</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="idUsuario.HeaderText" xml:space="preserve">
     <value>id</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="idUsuario.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -233,29 +184,30 @@
   <data name="telefone.Width" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="maskedTxtValorMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 167</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gridProfissionais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-6, 361</value>
   </data>
-  <data name="maskedTxtValorMin.Mask" xml:space="preserve">
-    <value>$000\,00</value>
+  <data name="gridProfissionais.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 283</value>
   </data>
-  <data name="maskedTxtValorMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+  <data name="gridProfissionais.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="maskedTxtValorMin.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="gridProfissionais.Text" xml:space="preserve">
+    <value>dataGridView1</value>
   </data>
-  <data name="&gt;&gt;maskedTxtValorMin.Name" xml:space="preserve">
-    <value>maskedTxtValorMin</value>
+  <data name="&gt;&gt;gridProfissionais.Name" xml:space="preserve">
+    <value>gridProfissionais</value>
   </data>
-  <data name="&gt;&gt;maskedTxtValorMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;gridProfissionais.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;maskedTxtValorMin.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gridProfissionais.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;maskedTxtValorMin.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;gridProfissionais.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -342,7 +294,85 @@
     <value>9</value>
   </data>
   <data name="cbEstado.Items" xml:space="preserve">
-    <value>100</value>
+    <value>Acre (AC)</value>
+  </data>
+  <data name="cbEstado.Items1" xml:space="preserve">
+    <value>Alagoas (AL)</value>
+  </data>
+  <data name="cbEstado.Items2" xml:space="preserve">
+    <value>Amapá (AP)</value>
+  </data>
+  <data name="cbEstado.Items3" xml:space="preserve">
+    <value>Amazonas (AM)</value>
+  </data>
+  <data name="cbEstado.Items4" xml:space="preserve">
+    <value>Bahia (BA)</value>
+  </data>
+  <data name="cbEstado.Items5" xml:space="preserve">
+    <value>Ceará (CE)</value>
+  </data>
+  <data name="cbEstado.Items6" xml:space="preserve">
+    <value>Distrito Federal (DF)</value>
+  </data>
+  <data name="cbEstado.Items7" xml:space="preserve">
+    <value>Espírito Santo (ES)</value>
+  </data>
+  <data name="cbEstado.Items8" xml:space="preserve">
+    <value>Goiás (GO)</value>
+  </data>
+  <data name="cbEstado.Items9" xml:space="preserve">
+    <value>Maranhão (MA)</value>
+  </data>
+  <data name="cbEstado.Items10" xml:space="preserve">
+    <value>Mato Grosso (MT)</value>
+  </data>
+  <data name="cbEstado.Items11" xml:space="preserve">
+    <value>Mato Grosso do Sul (MS)</value>
+  </data>
+  <data name="cbEstado.Items12" xml:space="preserve">
+    <value>Minas Gerais (MG)</value>
+  </data>
+  <data name="cbEstado.Items13" xml:space="preserve">
+    <value>Pará (PA)</value>
+  </data>
+  <data name="cbEstado.Items14" xml:space="preserve">
+    <value>Paraíba (PB)</value>
+  </data>
+  <data name="cbEstado.Items15" xml:space="preserve">
+    <value>Paraná (PR)</value>
+  </data>
+  <data name="cbEstado.Items16" xml:space="preserve">
+    <value>Pernambuco (PE)</value>
+  </data>
+  <data name="cbEstado.Items17" xml:space="preserve">
+    <value>Piauí (PI)</value>
+  </data>
+  <data name="cbEstado.Items18" xml:space="preserve">
+    <value>Rio de Janeiro (RJ)</value>
+  </data>
+  <data name="cbEstado.Items19" xml:space="preserve">
+    <value>Rio Grande do Norte (RN)</value>
+  </data>
+  <data name="cbEstado.Items20" xml:space="preserve">
+    <value>Rio Grande do Sul (RS)</value>
+  </data>
+  <data name="cbEstado.Items21" xml:space="preserve">
+    <value>Rondônia (RO)</value>
+  </data>
+  <data name="cbEstado.Items22" xml:space="preserve">
+    <value>Roraima (RR)</value>
+  </data>
+  <data name="cbEstado.Items23" xml:space="preserve">
+    <value>Santa Catarina (SC)</value>
+  </data>
+  <data name="cbEstado.Items24" xml:space="preserve">
+    <value>São Paulo (SP)</value>
+  </data>
+  <data name="cbEstado.Items25" xml:space="preserve">
+    <value>Sergipe (SE)</value>
+  </data>
+  <data name="cbEstado.Items26" xml:space="preserve">
+    <value>Tocantins (TO)</value>
   </data>
   <data name="cbEstado.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 101</value>
@@ -503,30 +533,6 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="maskedTxtValorMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 166</value>
-  </data>
-  <data name="maskedTxtValorMax.Mask" xml:space="preserve">
-    <value>$000\.00</value>
-  </data>
-  <data name="maskedTxtValorMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
-  </data>
-  <data name="maskedTxtValorMax.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;maskedTxtValorMax.Name" xml:space="preserve">
-    <value>maskedTxtValorMax</value>
-  </data>
-  <data name="&gt;&gt;maskedTxtValorMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;maskedTxtValorMax.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;maskedTxtValorMax.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -637,6 +643,54 @@
   </data>
   <data name="&gt;&gt;btnVoltar.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="maskedTxtValorMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 167</value>
+  </data>
+  <data name="maskedTxtValorMin.Mask" xml:space="preserve">
+    <value>$000\,00</value>
+  </data>
+  <data name="maskedTxtValorMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 20</value>
+  </data>
+  <data name="maskedTxtValorMin.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMin.Name" xml:space="preserve">
+    <value>maskedTxtValorMin</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMin.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="maskedTxtValorMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 166</value>
+  </data>
+  <data name="maskedTxtValorMax.Mask" xml:space="preserve">
+    <value>$000\.00</value>
+  </data>
+  <data name="maskedTxtValorMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 20</value>
+  </data>
+  <data name="maskedTxtValorMax.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMax.Name" xml:space="preserve">
+    <value>maskedTxtValorMax</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMax.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;maskedTxtValorMax.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

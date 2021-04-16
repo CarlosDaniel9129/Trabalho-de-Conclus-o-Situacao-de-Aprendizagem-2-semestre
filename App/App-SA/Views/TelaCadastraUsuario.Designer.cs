@@ -249,9 +249,32 @@ namespace App_SA
             // 
             this.cbProfissao.FormattingEnabled = true;
             this.cbProfissao.Items.AddRange(new object[] {
-            "Eletricista",
+            "Auditor",
+            "Babá",
+            "Barbeiro(a)",
+            "Cabelereiro(a)",
+            "Consultor",
+            "Cozinheiro(a)",
             "Diarista",
-            "Massoterapeuta"});
+            "Eletricista",
+            "Empresário(a)",
+            "Farmacêutico",
+            "Gesseiro(a)",
+            "Gestor(a) Financeiro",
+            "Gestor(a) Marketing",
+            "Historiador(a)",
+            "Influenciador(a) Digital",
+            "Motorista",
+            "Pedreiro(a)",
+            "Personal Trainer",
+            "Pintor(a)",
+            "Professor",
+            "Programador",
+            "Recursos Humanos",
+            "Tatuador(a)",
+            "Vendedor(a)",
+            "Youtuber",
+            "Outro"});
             this.cbProfissao.Location = new System.Drawing.Point(371, 127);
             this.cbProfissao.Name = "cbProfissao";
             this.cbProfissao.Size = new System.Drawing.Size(314, 21);
@@ -337,7 +360,6 @@ namespace App_SA
             this.cbAreaFormacao.FormattingEnabled = true;
             this.cbAreaFormacao.Items.AddRange(new object[] {
             "Nenhum",
-            "Curso Tecnico",
             "Administração",
             "Agronomia",
             "Antropologia",
@@ -407,7 +429,8 @@ namespace App_SA
             "Terapia Ocupacional",
             "Tradução e Interpretação",
             "Turismo",
-            "Zootecnia"});
+            "Zootecnia",
+            "Outro"});
             this.cbAreaFormacao.Location = new System.Drawing.Point(371, 174);
             this.cbAreaFormacao.Name = "cbAreaFormacao";
             this.cbAreaFormacao.Size = new System.Drawing.Size(314, 21);

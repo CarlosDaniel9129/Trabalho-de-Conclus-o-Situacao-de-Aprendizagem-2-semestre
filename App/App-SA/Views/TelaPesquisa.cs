@@ -60,21 +60,21 @@ namespace App_SA
                 sql = sql + " and cidade = '" + cbcidade.Text + "'";
             }
 
-            //if (maskedTxtValorMin.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //}
+            if (maskedTxtValorMin.Text != string.Empty)
+            {
+                sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
+            }
 
-            //if (maskedTxtValorMax.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMax.Text + "'";
-            //}
+            if (maskedTxtValorMax.Text != string.Empty)
+            {
+                sql = sql + " and valorHora = '" + maskedTxtValorMax.Text + "'";
+            }
 
-            //if (maskedTxtValorMin.Text != string.Empty && maskedTxtValorMax.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //}
+            if (maskedTxtValorMin.Text != string.Empty && maskedTxtValorMax.Text != string.Empty)
+            {
+                sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
+                sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
+            }
 
 
 
@@ -102,11 +102,6 @@ namespace App_SA
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            string profissao = txtProfissao.Text;
-            string estado = cbEstado.Text;
-            string cidade = cbcidade.Text;
-            string valorMin = maskedTxtValorMin.Text;
-            string valorMax = maskedTxtValorMax.Text;
             apresentaDados();
         }
 

@@ -39,7 +39,6 @@ namespace App_SA
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbcidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,11 +48,12 @@ namespace App_SA
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.lblProfissao = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTxtValorMax = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTxtValorMax = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,11 +132,6 @@ namespace App_SA
             this.telefone.Name = "telefone";
             this.telefone.ReadOnly = true;
             // 
-            // maskedTxtValorMin
-            // 
-            resources.ApplyResources(this.maskedTxtValorMin, "maskedTxtValorMin");
-            this.maskedTxtValorMin.Name = "maskedTxtValorMin";
-            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
@@ -161,7 +156,33 @@ namespace App_SA
             // 
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            resources.GetString("cbEstado.Items")});
+            resources.GetString("cbEstado.Items"),
+            resources.GetString("cbEstado.Items1"),
+            resources.GetString("cbEstado.Items2"),
+            resources.GetString("cbEstado.Items3"),
+            resources.GetString("cbEstado.Items4"),
+            resources.GetString("cbEstado.Items5"),
+            resources.GetString("cbEstado.Items6"),
+            resources.GetString("cbEstado.Items7"),
+            resources.GetString("cbEstado.Items8"),
+            resources.GetString("cbEstado.Items9"),
+            resources.GetString("cbEstado.Items10"),
+            resources.GetString("cbEstado.Items11"),
+            resources.GetString("cbEstado.Items12"),
+            resources.GetString("cbEstado.Items13"),
+            resources.GetString("cbEstado.Items14"),
+            resources.GetString("cbEstado.Items15"),
+            resources.GetString("cbEstado.Items16"),
+            resources.GetString("cbEstado.Items17"),
+            resources.GetString("cbEstado.Items18"),
+            resources.GetString("cbEstado.Items19"),
+            resources.GetString("cbEstado.Items20"),
+            resources.GetString("cbEstado.Items21"),
+            resources.GetString("cbEstado.Items22"),
+            resources.GetString("cbEstado.Items23"),
+            resources.GetString("cbEstado.Items24"),
+            resources.GetString("cbEstado.Items25"),
+            resources.GetString("cbEstado.Items26")});
             resources.ApplyResources(this.cbEstado, "cbEstado");
             this.cbEstado.Name = "cbEstado";
             // 
@@ -196,11 +217,6 @@ namespace App_SA
             this.label5.ForeColor = System.Drawing.Color.Yellow;
             this.label5.Name = "label5";
             // 
-            // maskedTxtValorMax
-            // 
-            resources.ApplyResources(this.maskedTxtValorMax, "maskedTxtValorMax");
-            this.maskedTxtValorMax.Name = "maskedTxtValorMax";
-            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
@@ -234,6 +250,16 @@ namespace App_SA
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // maskedTxtValorMin
+            // 
+            resources.ApplyResources(this.maskedTxtValorMin, "maskedTxtValorMin");
+            this.maskedTxtValorMin.Name = "maskedTxtValorMin";
+            // 
+            // maskedTxtValorMax
+            // 
+            resources.ApplyResources(this.maskedTxtValorMax, "maskedTxtValorMax");
+            this.maskedTxtValorMax.Name = "maskedTxtValorMax";
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
@@ -265,7 +291,6 @@ namespace App_SA
         #endregion
 
         private System.Windows.Forms.DataGridView gridProfissionais;
-        private System.Windows.Forms.MaskedTextBox maskedTxtValorMin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbcidade;
         private System.Windows.Forms.Label label3;
@@ -275,7 +300,6 @@ namespace App_SA
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.Label lblProfissao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTxtValorMax;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnMinhaConta;
         private System.Windows.Forms.Button btnSair;
@@ -288,5 +312,7 @@ namespace App_SA
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
+        private System.Windows.Forms.MaskedTextBox maskedTxtValorMin;
+        private System.Windows.Forms.MaskedTextBox maskedTxtValorMax;
     }
 }
