@@ -225,7 +225,8 @@ namespace App_SA
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
-
+            Comandos comando = new Comandos();
+            comando.backup();
         }
     }
 }

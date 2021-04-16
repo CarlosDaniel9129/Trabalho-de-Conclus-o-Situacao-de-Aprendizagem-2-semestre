@@ -46,7 +46,7 @@ namespace App_SA
 
             //cria um adapter utilizando a instrução SQL para aceder à tabela
             mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
-            
+           
           
             //preenche o dataset através do adapter
             mAdapter.Fill(mDataSet, "usuario");
@@ -74,7 +74,7 @@ namespace App_SA
             string cidade = cbcidade.Text;
             string valorMin = maskedTxtValorMin.Text;
             string valorMax = maskedTxtValorMax.Text;
-            apresentaDados(profissao, estado, cidade, valorMax, valorMin);
+            apresentaDados();
         }
 
         private void gridProfissionais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -91,8 +91,8 @@ namespace App_SA
             mConn.Open();
 
             //cria um adapter utilizando a instrução SQL para aceder à tabela
-            mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario order by idUsuario", mConn);
-
+            mAdapter = new MySqlDataAdapter("select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario where profissao = @profissao and estado = @estado ando valorHora = @valorHora and cidade = @cidade order by idUsuario", mConn);
+       
 
             //preenche o dataset através do adapter
             mAdapter.Fill(mDataSet, "usuario");
