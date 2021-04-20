@@ -53,29 +53,35 @@ namespace App_SA
 
             if (cbEstado.Text != string.Empty)
             {
-                sql = sql + " and estado = '" + cbEstado.Text + "'";
+                sql = sql + " and estado like '%" + cbEstado.Text + "%'";
             }
 
             if (txtCidade.Text != string.Empty)
             {
-                sql = sql + " and cidade = '" + txtCidade.Text + "'";
+                sql = sql + " and cidade like '%" + cbcidade.Text + "%'";
             }
 
-            //if (maskedTxtValorMin.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //}
+            if (maskedTxtValorMin.MaskCompleted || maskedTxtValorMax.MaskCompleted)
+            {
+                sql = sql + " and valorHora >= '" + maskedTxtValorMin.Text + "'";
+            }
 
-            //if (maskedTxtValorMax.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMax.Text + "'";
-            //}
+            if (maskedTxtValorMax.MaskCompleted)
+            {
+                sql = sql + " and valorHora <= '" + maskedTxtValorMax.Text + "'";
+            }
 
-            //if (maskedTxtValorMin.Text != string.Empty && maskedTxtValorMax.Text != string.Empty)
-            //{
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //    sql = sql + " and valorHora = '" + maskedTxtValorMin.Text + "'";
-            //}
+            if (maskedTxtValorMin.MaskCompleted && maskedTxtValorMax.MaskCompleted)
+            {
+                var valorMin = Convert.ToDecimal(maskedTxtValorMin.Text);
+                var valoMax = Convert.ToDecimal(maskedTxtValorMax.Text);
+                if (valorMin > valoMax)
+                {
+                    lblAvisoValor.Visible = true;
+                    lblValorMin.ForeColor = Color.Red;
+                    lblValorMax.ForeColor = Color.Red;
+                }
+            }
 
 
 
@@ -103,11 +109,6 @@ namespace App_SA
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            string profissao = cbProfissao.Text;
-            string estado = cbEstado.Text;
-            string cidade = txtCidade.Text;
-            string valorMin = maskedTxtValorMin.Text;
-            string valorMax = maskedTxtValorMax.Text;
             apresentaDados();
         }
 
