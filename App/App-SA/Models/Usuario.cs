@@ -9,8 +9,7 @@ namespace App_SA.Models
 {
     class Usuario
     {
-        Comandos comando = new Comandos();
-
+        Comandos comando;
 
         private string nome;
 
@@ -28,28 +27,12 @@ namespace App_SA.Models
             set { cpf = value; }
         }
 
-        private string senha;
+        private string sexo;
 
-        public string Senha
+        public string Sexo
         {
-            get { return senha; }
-            set { senha = value; }
-        }
-
-        private string confSenha;
-
-        public string ConfSenha
-        {
-            get { return confSenha; }
-            set { if (value == senha) { confSenha = value; } else { throw new Exception("As senhas devem ser Iguais"); } }
-        }
-
-        private string email;
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
+            get { return sexo; }
+            set { sexo = value; }
         }
 
         private string telefone;
@@ -60,20 +43,28 @@ namespace App_SA.Models
             set { telefone = value; }
         }
 
-        private string sexo;
+        private string email;
 
-        public string Sexo
+        public string Email
         {
-            get { return sexo; }
-            set { sexo = value; }
+            get { return email; }
+            set { email = value; }
         }
 
-        private decimal valorhora;
+        private string senha;
 
-        public decimal ValorHora
+        public string Senha
         {
-            get { return valorhora; }
-            set { valorhora = value; }
+            get { return senha; }
+            set { senha = value; }
+        }
+        
+        private string confSenha;
+
+        public string ConfSenha
+        {
+            get { return confSenha; }
+            set { if (value == senha) { confSenha = value; } else { throw new Exception("As senhas devem ser Iguais"); } }
         }
 
         private string infos;
@@ -90,6 +81,14 @@ namespace App_SA.Models
         {
             get { return profissao; }
             set { profissao = value; }
+        }
+
+        private string areaFormacao;
+
+        public string AreaFormacao
+        {
+            get { return areaFormacao; }
+            set { areaFormacao = value; }
         }
 
         private string formacao;
@@ -124,14 +123,13 @@ namespace App_SA.Models
             set { bairro = value; }
         }
 
-        private string AreaFormacao;
+        private decimal valorhora;
 
-        public string areaFormacao
+        public decimal ValorHora
         {
-            get { return AreaFormacao; }
-            set { AreaFormacao = value; }
+            get { return valorhora; }
+            set { valorhora = value; }
         }
-
 
         private byte[] imagem;
 
@@ -145,13 +143,13 @@ namespace App_SA.Models
         public void cadastraUsu()
         {
             comando = new Comandos();
-            comando.cadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, Formacao, AreaFormacao, Imagem);
+            comando.cadastraUsu(Nome, Cpf, Sexo, Telefone, Email, Senha, Infos, Profissao, AreaFormacao, Formacao, Estado, Cidade, Bairro, ValorHora, Imagem);
         }
 
-        public void recadastraUsu()
-        {
-            comando = new Comandos();
-            comando.recadastraUsu(Nome, Cpf, Sexo, Email, Telefone, Senha, Estado, Cidade, Bairro, ValorHora, Infos, Profissao, AreaFormacao,  Formacao, Imagem);
-        }
+        //public void recadastraUsu(int id)
+        //{
+        //    comando = new Comandos();
+        //    comando.recadastraUsu(id, Nome, Cpf, Sexo, Telefone, Email, Senha, Infos, Profissao, AreaFormacao, Formacao, Estado, Cidade, Bairro, ValorHora, Imagem);
+        //}
     }
 }

@@ -14,25 +14,28 @@ namespace App_SA
 {
     public partial class TelaLogin : Form
     {
-        public static string usuarioLogado = string.Empty;
+        
+
         public TelaLogin()
         {
             InitializeComponent();
         }
 
-        public bool logado = false;
-
-        TelaPesquisa login = new TelaPesquisa();
+        //variaveis staticas não é possivel utilizar o objeto da classe para chamar, deve-se usar a Classe.staticVar
+        public static string usuarioLogado = string.Empty;
 
         Comandos comando = new Comandos();
 
+        
         private void btnAcessarConta_Click(object sender, EventArgs e)
         {
             if (txtBoxLogin.Text == string.Empty || txtBoxLogin.Text == null || txtBoxSenha.Text == string.Empty || txtBoxSenha.Text == null)
             {
                 ControlarVisibilidade();
+                lblAtencao.Visible = true;
             }
-
+            else
+            {
             try
             {
                 comando.verificaLogin(txtBoxLogin.Text, txtBoxSenha.Text);                
@@ -48,14 +51,14 @@ namespace App_SA
                 }
                 else
                 {
-                    lblAtencao.Visible = true;
+                    throw new Exception("Verifique o campos, e tente novamente");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocorreu um erro. {ex.Message}");
             }
-
+            }
 
         }
 

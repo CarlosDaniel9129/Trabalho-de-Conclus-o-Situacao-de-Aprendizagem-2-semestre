@@ -112,29 +112,28 @@ namespace App_SA.Controller
             }
         }
 
-        public void cadastraUsu(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string areaFormacao, string formacao, byte[] imagem)
+        public void cadastraUsu(string nome, string cpf, string sexo, string telefone, string email, string senha, string informacoes, string profissao, string areaFormacao, string formacao, string estado, string cidade, string bairro, decimal valorHora, byte[] imagem)
         {
             try
             {
                 myConn.Open();
+                                
+                command = new MySqlCommand("insert into usuario(nome, cpf, sexo, telefone, email, senha, informacoes, profissao, areaFormacao, formacao, estado, cidade, bairro, valorHora, imagem) values(@nome, @cpf, @sexo, @telefone, @email, @senha, @informacoes, @profissao, @areaFormacao, @formacao, @estado, @cidade, @bairro, @valorHora, @imagem)", myConn);
 
-
-                command = new MySqlCommand("INSERT INTO usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, areaFormacao, formacao, imagem) VALUES(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valorHora, @informacoes, @profissao, @areaFormacao, @formacao, @imagem)", myConn);
-                // myComm.CommandText = "insert into usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @informacoes, @profissao, @formacao)" ;
-                command.Parameters.AddWithValue("@cpf", cpf);
                 command.Parameters.AddWithValue("@nome", nome);
-                command.Parameters.AddWithValue("@email", email);
-                command.Parameters.AddWithValue("@telefone", telefone);
-                command.Parameters.AddWithValue("@senha", senha);
+                command.Parameters.AddWithValue("@cpf", cpf);
                 command.Parameters.AddWithValue("@sexo", sexo);
+                command.Parameters.AddWithValue("@telefone", telefone);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@senha", senha);
+                command.Parameters.AddWithValue("@informacoes", informacoes);
+                command.Parameters.AddWithValue("@profissao", profissao);
+                command.Parameters.AddWithValue("@areaFormacao", areaFormacao);
+                command.Parameters.AddWithValue("@formacao", formacao);
                 command.Parameters.AddWithValue("@estado", estado);
                 command.Parameters.AddWithValue("@cidade", cidade);
                 command.Parameters.AddWithValue("@bairro", bairro);
                 command.Parameters.AddWithValue("@valorHora", valorHora);
-                command.Parameters.AddWithValue("@informacoes", infos);
-                command.Parameters.AddWithValue("@profissao", profissao);
-                command.Parameters.AddWithValue("@formacao", formacao);
-                command.Parameters.AddWithValue("@areaformacao", areaFormacao);
                 command.Parameters.AddWithValue("@imagem", imagem);
 
                 command.ExecuteNonQuery();
@@ -149,32 +148,34 @@ namespace App_SA.Controller
 
         }
 
-        public void recadastraUsu(string nome, string cpf, string sexo, string email, string telefone, string senha, string estado, string cidade, string bairro, decimal valorHora, string infos, string profissao, string areaFormacao, string formacao, byte[] imagem)
+        public void recadastraUsu(int id, string nome, string cpf, string sexo, string telefone, string email, string senha, string informacoes, string profissao, string areaFormacao, string formacao, string estado, string cidade, string bairro, decimal valorHora, byte[] imagem)
         {
             try
             {
                 myConn.Open();
 
+                                          
+                command = new MySqlCommand("update usuario set nome = @nome, cpf = @cpf, sexo = @sexo, telefone = @telefone, email = @email, senha = @senha, informacoes = @informacoes, profissao = @profissao, areaFormacao = @areaFormacao, formacao = @formacao, estado = @estado, cidade = @cidade, bairro = @bairro, valorHora = @valorHora, imagem = @imagem where idUsuario = @id", myConn);
 
-                command = new MySqlCommand("update usuario set cpf = @cpf, nome = @nome, email = @email, telefone = @telefone, senha = @senha, sexo = @sexo, estado = @estado, cidade = @cidade, bairro = @bairro, valorHora = @valorHora, informacoes = @informacoes, profissao = @profissao, formacao = @formacao, areaFormacao = @areaFormacao, imagem = @imagem) where cpf = @cpf", myConn);
-                // myComm.CommandText = "insert into usuario(cpf, nome, email, telefone, senha, sexo, estado, cidade, bairro, valorHora, informacoes, profissao, formacao) values(@cpf, @nome, @email, @telefone, @senha, @sexo, @estado, @cidade, @bairro, @valoHora, @informacoes, @profissao, @formacao)" ;
-                command.Parameters.AddWithValue("@cpf", cpf);
+                command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@nome", nome);
-                command.Parameters.AddWithValue("@email", email);
-                command.Parameters.AddWithValue("@telefone", telefone);
-                command.Parameters.AddWithValue("@senha", senha);
+                command.Parameters.AddWithValue("@cpf", cpf);
                 command.Parameters.AddWithValue("@sexo", sexo);
+                command.Parameters.AddWithValue("@telefone", telefone);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@senha", senha);
+                command.Parameters.AddWithValue("@informacoes", informacoes);
+                command.Parameters.AddWithValue("@profissao", profissao);
+                command.Parameters.AddWithValue("@areaFormacao", areaFormacao);
+                command.Parameters.AddWithValue("@formacao", formacao);
                 command.Parameters.AddWithValue("@estado", estado);
                 command.Parameters.AddWithValue("@cidade", cidade);
                 command.Parameters.AddWithValue("@bairro", bairro);
                 command.Parameters.AddWithValue("@valorHora", valorHora);
-                command.Parameters.AddWithValue("@informacoes", infos);
-                command.Parameters.AddWithValue("@profissao", profissao);
-                command.Parameters.AddWithValue("@formacao", formacao);
-                command.Parameters.AddWithValue("@areaformacao", areaFormacao);
                 command.Parameters.AddWithValue("@imagem", imagem);
-
+                             
                 command.ExecuteNonQuery();
+
                 myConn.Close();
 
             }
@@ -194,7 +195,7 @@ namespace App_SA.Controller
             // Certo seriastring sql = "CREATE OR REPLACE TABLE BKP" + hj + " AS SELECT * FROM livros";
 
             string hj = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Millisecond.ToString();
-            string sql = "CREATE TABLE BKP" + hj + " AS SELECT * FROM usuarios";
+            string sql = "CREATE TABLE BKP" + hj + " AS SELECT * FROM usuario";
             MySqlCommand command = new MySqlCommand(sql, myConn);
             int a = command.ExecuteNonQuery(); //pega o retorno da excecussão do banco, no caso o valor 1 de "1 row"
 

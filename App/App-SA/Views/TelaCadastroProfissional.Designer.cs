@@ -38,7 +38,6 @@ namespace App_SA
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnSalvarProfissional = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
@@ -65,9 +64,10 @@ namespace App_SA
             this.button1 = new System.Windows.Forms.Button();
             this.btnPesquisaProfissional = new System.Windows.Forms.Button();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.lblAtencao = new System.Windows.Forms.Label();
-            this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
             this.btnBackup = new System.Windows.Forms.Button();
+            this.pictureBoxProfissional = new System.Windows.Forms.PictureBox();
+            this.lblAtencao = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,18 +181,6 @@ namespace App_SA
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // btnSalvarProfissional
-            // 
-            this.btnSalvarProfissional.BackColor = System.Drawing.Color.Yellow;
-            this.btnSalvarProfissional.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvarProfissional.Location = new System.Drawing.Point(252, 671);
-            this.btnSalvarProfissional.Name = "btnSalvarProfissional";
-            this.btnSalvarProfissional.Size = new System.Drawing.Size(195, 54);
-            this.btnSalvarProfissional.TabIndex = 21;
-            this.btnSalvarProfissional.Text = "Salvar";
-            this.btnSalvarProfissional.UseVisualStyleBackColor = false;
-            this.btnSalvarProfissional.Click += new System.EventHandler(this.btnSalvarProfissional_Click);
             // 
             // txtNome
             // 
@@ -536,30 +524,6 @@ namespace App_SA
             this.txtCidade.Size = new System.Drawing.Size(314, 20);
             this.txtCidade.TabIndex = 99;
             // 
-            // lblAtencao
-            // 
-            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAtencao.Image = global::App_SA.Properties.Resources._2682803_32;
-            this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAtencao.Location = new System.Drawing.Point(6, 18);
-            this.lblAtencao.Name = "lblAtencao";
-            this.lblAtencao.Size = new System.Drawing.Size(675, 35);
-            this.lblAtencao.TabIndex = 41;
-            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
-            this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAtencao.Visible = false;
-            // 
-            // pictureBoxProfissional
-            // 
-            this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
-            this.pictureBoxProfissional.Location = new System.Drawing.Point(390, 470);
-            this.pictureBoxProfissional.Name = "pictureBoxProfissional";
-            this.pictureBoxProfissional.Size = new System.Drawing.Size(276, 163);
-            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxProfissional.TabIndex = 100;
-            this.pictureBoxProfissional.TabStop = false;
-            // 
             // btnBackup
             // 
             this.btnBackup.BackColor = System.Drawing.Color.Salmon;
@@ -574,12 +538,49 @@ namespace App_SA
             this.btnBackup.UseVisualStyleBackColor = false;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
+            // pictureBoxProfissional
+            // 
+            this.pictureBoxProfissional.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfissional.Image")));
+            this.pictureBoxProfissional.Location = new System.Drawing.Point(435, 470);
+            this.pictureBoxProfissional.Name = "pictureBoxProfissional";
+            this.pictureBoxProfissional.Size = new System.Drawing.Size(163, 163);
+            this.pictureBoxProfissional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfissional.TabIndex = 100;
+            this.pictureBoxProfissional.TabStop = false;
+            // 
+            // lblAtencao
+            // 
+            this.lblAtencao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblAtencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtencao.Image = global::App_SA.Properties.Resources._2682803_32;
+            this.lblAtencao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAtencao.Location = new System.Drawing.Point(13, 19);
+            this.lblAtencao.Name = "lblAtencao";
+            this.lblAtencao.Size = new System.Drawing.Size(675, 35);
+            this.lblAtencao.TabIndex = 41;
+            this.lblAtencao.Text = "ATENÇÃO - Informe os campos obrigatórios.";
+            this.lblAtencao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAtencao.Visible = false;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Yellow;
+            this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.Location = new System.Drawing.Point(256, 671);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(195, 54);
+            this.btnSalvar.TabIndex = 102;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // TelaCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(698, 749);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.pictureBoxProfissional);
             this.Controls.Add(this.txtCidade);
@@ -610,7 +611,6 @@ namespace App_SA
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnSalvarProfissional);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblCpf);
@@ -620,8 +620,6 @@ namespace App_SA
             this.Controls.Add(this.lblTelefone);
             this.Name = "TelaCadastroProfissional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Usuário";
-            this.Load += new System.EventHandler(this.TelaCadastroProfissional_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -638,7 +636,6 @@ namespace App_SA
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnSalvarProfissional;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblCpf;
@@ -668,5 +665,6 @@ namespace App_SA
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.PictureBox pictureBoxProfissional;
         private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

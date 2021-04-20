@@ -41,12 +41,10 @@ namespace App_SA
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbcidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtProfissao = new System.Windows.Forms.TextBox();
             this.lblProfissao = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTxtValorMax = new System.Windows.Forms.MaskedTextBox();
@@ -54,6 +52,9 @@ namespace App_SA
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbProfissao = new System.Windows.Forms.ComboBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,14 +144,6 @@ namespace App_SA
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
             // 
-            // cbcidade
-            // 
-            this.cbcidade.FormattingEnabled = true;
-            this.cbcidade.Items.AddRange(new object[] {
-            resources.GetString("cbcidade.Items")});
-            resources.ApplyResources(this.cbcidade, "cbcidade");
-            this.cbcidade.Name = "cbcidade";
-            // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
@@ -161,7 +154,33 @@ namespace App_SA
             // 
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            resources.GetString("cbEstado.Items")});
+            resources.GetString("cbEstado.Items"),
+            resources.GetString("cbEstado.Items1"),
+            resources.GetString("cbEstado.Items2"),
+            resources.GetString("cbEstado.Items3"),
+            resources.GetString("cbEstado.Items4"),
+            resources.GetString("cbEstado.Items5"),
+            resources.GetString("cbEstado.Items6"),
+            resources.GetString("cbEstado.Items7"),
+            resources.GetString("cbEstado.Items8"),
+            resources.GetString("cbEstado.Items9"),
+            resources.GetString("cbEstado.Items10"),
+            resources.GetString("cbEstado.Items11"),
+            resources.GetString("cbEstado.Items12"),
+            resources.GetString("cbEstado.Items13"),
+            resources.GetString("cbEstado.Items14"),
+            resources.GetString("cbEstado.Items15"),
+            resources.GetString("cbEstado.Items16"),
+            resources.GetString("cbEstado.Items17"),
+            resources.GetString("cbEstado.Items18"),
+            resources.GetString("cbEstado.Items19"),
+            resources.GetString("cbEstado.Items20"),
+            resources.GetString("cbEstado.Items21"),
+            resources.GetString("cbEstado.Items22"),
+            resources.GetString("cbEstado.Items23"),
+            resources.GetString("cbEstado.Items24"),
+            resources.GetString("cbEstado.Items25"),
+            resources.GetString("cbEstado.Items26")});
             resources.ApplyResources(this.cbEstado, "cbEstado");
             this.cbEstado.Name = "cbEstado";
             // 
@@ -178,11 +197,6 @@ namespace App_SA
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // txtProfissao
-            // 
-            resources.ApplyResources(this.txtProfissao, "txtProfissao");
-            this.txtProfissao.Name = "txtProfissao";
             // 
             // lblProfissao
             // 
@@ -234,11 +248,33 @@ namespace App_SA
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Name = "label1";
+            // 
+            // cbProfissao
+            // 
+            this.cbProfissao.FormattingEnabled = true;
+            this.cbProfissao.Items.AddRange(new object[] {
+            resources.GetString("cbProfissao.Items")});
+            resources.ApplyResources(this.cbProfissao, "cbProfissao");
+            this.cbProfissao.Name = "cbProfissao";
+            // 
+            // txtCidade
+            // 
+            resources.ApplyResources(this.txtCidade, "txtCidade");
+            this.txtCidade.Name = "txtCidade";
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.cbProfissao);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnMinhaConta);
@@ -247,12 +283,10 @@ namespace App_SA
             this.Controls.Add(this.label5);
             this.Controls.Add(this.maskedTxtValorMin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbcidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.txtProfissao);
             this.Controls.Add(this.lblProfissao);
             this.Controls.Add(this.gridProfissionais);
             this.Name = "TelaPesquisa";
@@ -267,12 +301,10 @@ namespace App_SA
         private System.Windows.Forms.DataGridView gridProfissionais;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbcidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.Label lblProfissao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMax;
@@ -288,5 +320,8 @@ namespace App_SA
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbProfissao;
+        private System.Windows.Forms.TextBox txtCidade;
     }
 }

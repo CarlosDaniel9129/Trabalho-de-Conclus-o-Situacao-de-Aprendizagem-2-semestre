@@ -19,6 +19,7 @@ namespace App_SA
         private DataSet mDataSet;
 
         bool ehlogado = Comandos.Logado;
+
         public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace App_SA
         }
         private void btnMinhaConta_Click(object sender, EventArgs e)
         {
-            new TelaCadastroProfissional().Show();
+            new TelaAtualizaDados().Show();
             Visible = false;
         }
 
@@ -45,9 +46,9 @@ namespace App_SA
             mConn = new MySqlConnection("server=localhost;user id=root;database=workers");
             mConn.Open();
             string sql = "select idUsuario, nome, profissao, estado, cidade, formacao, valorHora, telefone from usuario where 1 = 1";
-            if (txtProfissao.Text != string.Empty)
+            if (cbProfissao.Text != string.Empty)
             {
-                sql = sql + " and profissao like '%" + txtProfissao.Text + "%'";
+                sql = sql + " and profissao like '%" + cbProfissao.Text + "%'";
             }
 
             if (cbEstado.Text != string.Empty)
@@ -55,9 +56,9 @@ namespace App_SA
                 sql = sql + " and estado = '" + cbEstado.Text + "'";
             }
 
-            if (cbcidade.Text != string.Empty)
+            if (txtCidade.Text != string.Empty)
             {
-                sql = sql + " and cidade = '" + cbcidade.Text + "'";
+                sql = sql + " and cidade = '" + txtCidade.Text + "'";
             }
 
             //if (maskedTxtValorMin.Text != string.Empty)
@@ -102,9 +103,9 @@ namespace App_SA
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            string profissao = txtProfissao.Text;
+            string profissao = cbProfissao.Text;
             string estado = cbEstado.Text;
-            string cidade = cbcidade.Text;
+            string cidade = txtCidade.Text;
             string valorMin = maskedTxtValorMin.Text;
             string valorMax = maskedTxtValorMax.Text;
             apresentaDados();

@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gridProfissionais.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -234,7 +234,7 @@
     <value>150</value>
   </data>
   <data name="maskedTxtValorMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 167</value>
+    <value>26, 199</value>
   </data>
   <data name="maskedTxtValorMin.Mask" xml:space="preserve">
     <value>$000\,00</value>
@@ -255,7 +255,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;maskedTxtValorMin.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -264,7 +264,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 145</value>
+    <value>26, 177</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 19</value>
@@ -285,31 +285,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cbcidade.Items" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="cbcidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 166</value>
-  </data>
-  <data name="cbcidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>408, 21</value>
-  </data>
-  <data name="cbcidade.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;cbcidade.Name" xml:space="preserve">
-    <value>cbcidade</value>
-  </data>
-  <data name="&gt;&gt;cbcidade.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbcidade.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cbcidade.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -318,7 +294,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 147</value>
+    <value>528, 179</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 19</value>
@@ -339,13 +315,91 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="cbEstado.Items" xml:space="preserve">
-    <value>100</value>
+    <value>Acre (AC)</value>
+  </data>
+  <data name="cbEstado.Items1" xml:space="preserve">
+    <value>Alagoas (AL)</value>
+  </data>
+  <data name="cbEstado.Items2" xml:space="preserve">
+    <value>Amapá (AP)</value>
+  </data>
+  <data name="cbEstado.Items3" xml:space="preserve">
+    <value>Amazonas	 (AM)</value>
+  </data>
+  <data name="cbEstado.Items4" xml:space="preserve">
+    <value>Bahia (BA)</value>
+  </data>
+  <data name="cbEstado.Items5" xml:space="preserve">
+    <value>Ceará (CE)</value>
+  </data>
+  <data name="cbEstado.Items6" xml:space="preserve">
+    <value>Distrito Federal (DF)</value>
+  </data>
+  <data name="cbEstado.Items7" xml:space="preserve">
+    <value>Espírito Santo (ES)</value>
+  </data>
+  <data name="cbEstado.Items8" xml:space="preserve">
+    <value>Goiás (GO)</value>
+  </data>
+  <data name="cbEstado.Items9" xml:space="preserve">
+    <value>Maranhão (MA)</value>
+  </data>
+  <data name="cbEstado.Items10" xml:space="preserve">
+    <value>Mato Grosso (MT)</value>
+  </data>
+  <data name="cbEstado.Items11" xml:space="preserve">
+    <value>Mato Grosso do Sul (MS)</value>
+  </data>
+  <data name="cbEstado.Items12" xml:space="preserve">
+    <value>Minas Gerais (MG)</value>
+  </data>
+  <data name="cbEstado.Items13" xml:space="preserve">
+    <value>Pará (PA)</value>
+  </data>
+  <data name="cbEstado.Items14" xml:space="preserve">
+    <value>Paraíba (PB)</value>
+  </data>
+  <data name="cbEstado.Items15" xml:space="preserve">
+    <value>Paraná (PR) </value>
+  </data>
+  <data name="cbEstado.Items16" xml:space="preserve">
+    <value>Pernambuco (PE)</value>
+  </data>
+  <data name="cbEstado.Items17" xml:space="preserve">
+    <value>Piauí (PI)</value>
+  </data>
+  <data name="cbEstado.Items18" xml:space="preserve">
+    <value>Rio de Janeiro (RJ)</value>
+  </data>
+  <data name="cbEstado.Items19" xml:space="preserve">
+    <value>Rio Grande do Norte (RN)</value>
+  </data>
+  <data name="cbEstado.Items20" xml:space="preserve">
+    <value>Rio Grande do Sul (RS)</value>
+  </data>
+  <data name="cbEstado.Items21" xml:space="preserve">
+    <value>Rondônia	(RO)</value>
+  </data>
+  <data name="cbEstado.Items22" xml:space="preserve">
+    <value>Roraima (RR)</value>
+  </data>
+  <data name="cbEstado.Items23" xml:space="preserve">
+    <value>Santa Catarina (SC)</value>
+  </data>
+  <data name="cbEstado.Items24" xml:space="preserve">
+    <value>São Paulo	(SP)</value>
+  </data>
+  <data name="cbEstado.Items25" xml:space="preserve">
+    <value>Sergipe (SE)</value>
+  </data>
+  <data name="cbEstado.Items26" xml:space="preserve">
+    <value>Tocantins (TO)</value>
   </data>
   <data name="cbEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 101</value>
+    <value>532, 133</value>
   </data>
   <data name="cbEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>408, 21</value>
@@ -363,7 +417,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbEstado.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -372,7 +426,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 79</value>
+    <value>529, 111</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 19</value>
@@ -393,7 +447,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="btnPesquisar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -408,7 +462,7 @@
     <value>11</value>
   </data>
   <data name="btnPesquisar.Text" xml:space="preserve">
-    <value>Pesquisar Todos</value>
+    <value>Pesquisar</value>
   </data>
   <data name="&gt;&gt;btnPesquisar.Name" xml:space="preserve">
     <value>btnPesquisar</value>
@@ -420,28 +474,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnPesquisar.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="txtProfissao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 101</value>
-  </data>
-  <data name="txtProfissao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>408, 20</value>
-  </data>
-  <data name="txtProfissao.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;txtProfissao.Name" xml:space="preserve">
-    <value>txtProfissao</value>
-  </data>
-  <data name="&gt;&gt;txtProfissao.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtProfissao.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtProfissao.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lblProfissao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -450,7 +483,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="lblProfissao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 79</value>
+    <value>26, 111</value>
   </data>
   <data name="lblProfissao.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 19</value>
@@ -471,7 +504,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblProfissao.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -501,13 +534,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="maskedTxtValorMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 166</value>
+    <value>252, 198</value>
   </data>
   <data name="maskedTxtValorMax.Mask" xml:space="preserve">
-    <value>$000\.00</value>
+    <value>$000\,00</value>
   </data>
   <data name="maskedTxtValorMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 20</value>
@@ -525,7 +558,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;maskedTxtValorMax.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -534,7 +567,7 @@
     <value>Times New Roman, 12pt, style=Bold</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 145</value>
+    <value>257, 177</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 19</value>
@@ -555,7 +588,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="btnMinhaConta.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -582,7 +615,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnMinhaConta.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="btnSair.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -609,7 +642,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="btnVoltar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -636,6 +669,85 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnVoltar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 85</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Filtrar Profissionais:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbProfissao.Items" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="cbProfissao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 133</value>
+  </data>
+  <data name="cbProfissao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>408, 21</value>
+  </data>
+  <data name="cbProfissao.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;cbProfissao.Name" xml:space="preserve">
+    <value>cbProfissao</value>
+  </data>
+  <data name="&gt;&gt;cbProfissao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbProfissao.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbProfissao.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>532, 201</value>
+  </data>
+  <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>408, 20</value>
+  </data>
+  <data name="txtCidade.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;txtCidade.Name" xml:space="preserve">
+    <value>txtCidade</value>
+  </data>
+  <data name="&gt;&gt;txtCidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtCidade.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtCidade.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -647,7 +759,6 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>972, 608</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
