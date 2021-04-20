@@ -39,7 +39,7 @@ namespace App_SA
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblValorMin = new System.Windows.Forms.Label();
             this.cbcidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -48,12 +48,15 @@ namespace App_SA
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.lblProfissao = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblValorMax = new System.Windows.Forms.Label();
             this.btnMinhaConta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.maskedTxtValorMin = new System.Windows.Forms.MaskedTextBox();
             this.maskedTxtValorMax = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblAvisoValor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,11 +135,11 @@ namespace App_SA
             this.telefone.Name = "telefone";
             this.telefone.ReadOnly = true;
             // 
-            // label4
+            // lblValorMin
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblValorMin, "lblValorMin");
+            this.lblValorMin.ForeColor = System.Drawing.Color.White;
+            this.lblValorMin.Name = "lblValorMin";
             // 
             // cbcidade
             // 
@@ -217,11 +220,11 @@ namespace App_SA
             this.label5.ForeColor = System.Drawing.Color.Yellow;
             this.label5.Name = "label5";
             // 
-            // label6
+            // lblValorMax
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.lblValorMax, "lblValorMax");
+            this.lblValorMax.ForeColor = System.Drawing.Color.White;
+            this.lblValorMax.Name = "lblValorMax";
             // 
             // btnMinhaConta
             // 
@@ -260,19 +263,40 @@ namespace App_SA
             resources.ApplyResources(this.maskedTxtValorMax, "maskedTxtValorMax");
             this.maskedTxtValorMax.Name = "maskedTxtValorMax";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Name = "label7";
+            // 
+            // lblAvisoValor
+            // 
+            resources.ApplyResources(this.lblAvisoValor, "lblAvisoValor");
+            this.lblAvisoValor.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoValor.Name = "lblAvisoValor";
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.lblAvisoValor);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnMinhaConta);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblValorMax);
             this.Controls.Add(this.maskedTxtValorMax);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.maskedTxtValorMin);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblValorMin);
             this.Controls.Add(this.cbcidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEstado);
@@ -291,7 +315,7 @@ namespace App_SA
         #endregion
 
         private System.Windows.Forms.DataGridView gridProfissionais;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblValorMin;
         private System.Windows.Forms.ComboBox cbcidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstado;
@@ -300,7 +324,7 @@ namespace App_SA
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.Label lblProfissao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblValorMax;
         private System.Windows.Forms.Button btnMinhaConta;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVoltar;
@@ -314,5 +338,8 @@ namespace App_SA
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMin;
         private System.Windows.Forms.MaskedTextBox maskedTxtValorMax;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAvisoValor;
     }
 }
