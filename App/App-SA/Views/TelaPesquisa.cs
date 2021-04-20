@@ -18,15 +18,15 @@ namespace App_SA
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
 
-        bool ehlogado = Comandos.Logado;
-
         public TelaPesquisa()//recebo por parametro um objeto do tipo FORM
         {
+            bool ehlogado = Comandos.Logado;
             InitializeComponent();
             if (ehlogado)
             {
                 btnVoltar.Visible = false;
                 btnMinhaConta.Visible = true;
+                btnDeslogar.Visible = true;
             }
             else
             {
@@ -58,10 +58,10 @@ namespace App_SA
 
             if (txtCidade.Text != string.Empty)
             {
-                sql = sql + " and cidade like '%" + cbcidade.Text + "%'";
+                sql = sql + " and cidade like '%" + txtCidade.Text + "%'";
             }
 
-            if (maskedTxtValorMin.MaskCompleted || maskedTxtValorMax.MaskCompleted)
+            if (maskedTxtValorMin.MaskCompleted)
             {
                 sql = sql + " and valorHora >= '" + maskedTxtValorMin.Text + "'";
             }
@@ -117,6 +117,12 @@ namespace App_SA
             int id = Convert.ToInt32(gridProfissionais.Rows[e.RowIndex].Cells["idUsuario"].Value.ToString());
             new TelaMostrarProfissional(id).Show();
 
+        }
+
+        private void btnDeslogar_Click(object sender, EventArgs e)
+        {
+            new TelaInicial().Show();
+            Visible = false;
         }
     }
 }

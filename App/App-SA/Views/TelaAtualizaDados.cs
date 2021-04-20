@@ -33,6 +33,12 @@ namespace App_SA.Views
         public TelaAtualizaDados()
         {
             InitializeComponent();
+            bool ehlogado = Comandos.Logado;
+            if (ehlogado)//ja é cadastrado?
+            {
+                btnBackup.Visible = true;
+                // mostrar botao pesquisar profissional
+            }
             carregaDados();
         }
 
@@ -198,7 +204,7 @@ namespace App_SA.Views
 
         private void btnSalvarProfissional_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted /*|| !maskedTxtValorHora.MaskCompleted*/
+            if (txtNome.Text == string.Empty || !maskedTxtCpf.MaskCompleted || !maskedTxtValorHora.MaskCompleted
             || !maskedTelefone.MaskCompleted || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty
             || txtConfirmarSenha.Text == string.Empty || cbProfissao.Text == string.Empty || cbAreaFormacao.Text == string.Empty
             || cbEstado.Text == string.Empty || txtCidade.Text == string.Empty || txtBairro.Text == string.Empty)
@@ -206,8 +212,10 @@ namespace App_SA.Views
                 ControlarVisibilidade();
                 lblAtencao.Visible = true;
             }
-
-            recadastraDados();
+            else
+            {
+                recadastraDados();
+            }            
         }
 
         private void recadastraDados()

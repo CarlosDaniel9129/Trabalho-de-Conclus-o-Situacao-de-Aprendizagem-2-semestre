@@ -40,7 +40,6 @@ namespace App_SA
             this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblValorMin = new System.Windows.Forms.Label();
-            this.cbcidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +55,9 @@ namespace App_SA
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblAvisoValor = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.cbProfissao = new System.Windows.Forms.ComboBox();
+            this.btnDeslogar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfissionais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,14 +141,6 @@ namespace App_SA
             resources.ApplyResources(this.lblValorMin, "lblValorMin");
             this.lblValorMin.ForeColor = System.Drawing.Color.White;
             this.lblValorMin.Name = "lblValorMin";
-            // 
-            // cbcidade
-            // 
-            this.cbcidade.FormattingEnabled = true;
-            this.cbcidade.Items.AddRange(new object[] {
-            resources.GetString("cbcidade.Items")});
-            resources.ApplyResources(this.cbcidade, "cbcidade");
-            this.cbcidade.Name = "cbcidade";
             // 
             // label3
             // 
@@ -275,11 +269,61 @@ namespace App_SA
             this.lblAvisoValor.ForeColor = System.Drawing.Color.Red;
             this.lblAvisoValor.Name = "lblAvisoValor";
             // 
+            // txtCidade
+            // 
+            resources.ApplyResources(this.txtCidade, "txtCidade");
+            this.txtCidade.Name = "txtCidade";
+            // 
+            // cbProfissao
+            // 
+            this.cbProfissao.FormattingEnabled = true;
+            this.cbProfissao.Items.AddRange(new object[] {
+            resources.GetString("cbProfissao.Items"),
+            resources.GetString("cbProfissao.Items1"),
+            resources.GetString("cbProfissao.Items2"),
+            resources.GetString("cbProfissao.Items3"),
+            resources.GetString("cbProfissao.Items4"),
+            resources.GetString("cbProfissao.Items5"),
+            resources.GetString("cbProfissao.Items6"),
+            resources.GetString("cbProfissao.Items7"),
+            resources.GetString("cbProfissao.Items8"),
+            resources.GetString("cbProfissao.Items9"),
+            resources.GetString("cbProfissao.Items10"),
+            resources.GetString("cbProfissao.Items11"),
+            resources.GetString("cbProfissao.Items12"),
+            resources.GetString("cbProfissao.Items13"),
+            resources.GetString("cbProfissao.Items14"),
+            resources.GetString("cbProfissao.Items15"),
+            resources.GetString("cbProfissao.Items16"),
+            resources.GetString("cbProfissao.Items17"),
+            resources.GetString("cbProfissao.Items18"),
+            resources.GetString("cbProfissao.Items19"),
+            resources.GetString("cbProfissao.Items20"),
+            resources.GetString("cbProfissao.Items21"),
+            resources.GetString("cbProfissao.Items22"),
+            resources.GetString("cbProfissao.Items23"),
+            resources.GetString("cbProfissao.Items24"),
+            resources.GetString("cbProfissao.Items25")});
+            resources.ApplyResources(this.cbProfissao, "cbProfissao");
+            this.cbProfissao.Name = "cbProfissao";
+            // 
+            // btnDeslogar
+            // 
+            this.btnDeslogar.BackColor = System.Drawing.Color.Yellow;
+            resources.ApplyResources(this.btnDeslogar, "btnDeslogar");
+            this.btnDeslogar.ForeColor = System.Drawing.Color.Black;
+            this.btnDeslogar.Name = "btnDeslogar";
+            this.btnDeslogar.UseVisualStyleBackColor = false;
+            this.btnDeslogar.Click += new System.EventHandler(this.btnDeslogar_Click);
+            // 
             // TelaPesquisa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.btnDeslogar);
+            this.Controls.Add(this.cbProfissao);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblAvisoValor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
@@ -291,7 +335,6 @@ namespace App_SA
             this.Controls.Add(this.label5);
             this.Controls.Add(this.maskedTxtValorMin);
             this.Controls.Add(this.lblValorMin);
-            this.Controls.Add(this.cbcidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label2);
@@ -309,7 +352,6 @@ namespace App_SA
 
         private System.Windows.Forms.DataGridView gridProfissionais;
         private System.Windows.Forms.Label lblValorMin;
-        private System.Windows.Forms.ComboBox cbcidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label2;
@@ -333,5 +375,8 @@ namespace App_SA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblAvisoValor;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.ComboBox cbProfissao;
+        private System.Windows.Forms.Button btnDeslogar;
     }
 }

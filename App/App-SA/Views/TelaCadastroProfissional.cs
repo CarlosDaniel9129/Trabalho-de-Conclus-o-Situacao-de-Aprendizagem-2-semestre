@@ -20,10 +20,9 @@ namespace App_SA
 
         public TelaCadastroProfissional()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
-        
-        
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             new TelaLogin().Show();
@@ -158,41 +157,41 @@ namespace App_SA
 
             else
             {
-            try
-            {
-                //caso ele nao esteja logado, ele chama o metodo !!! Cadastra !!!
-                Usuario usuario = new Usuario()
+                try
                 {
-                    Nome = txtNome.Text,
-                    Cpf = maskedTxtCpf.Text,
-                    Sexo = cbSexo.Text,
-                    Telefone = maskedTelefone.Text,
-                    Email = txtEmail.Text,
-                    Senha = txtSenha.Text,
-                    ConfSenha = txtConfirmarSenha.Text,
-                    Infos = richTxtInformacoesAdicionais.Text,
-                    Profissao = cbProfissao.Text,
-                    AreaFormacao = cbAreaFormacao.Text,
-                    Formacao = cdFormacao.Text,
-                    Estado = cbEstado.Text,
-                    Cidade = txtCidade.Text,
-                    Bairro = txtBairro.Text,
-                    ValorHora = decimal.Parse(maskedTxtValorHora.Text),
-                    Imagem = conversorImagem()
-                };
+                    //caso ele nao esteja logado, ele chama o metodo !!! Cadastra !!!
+                    Usuario usuario = new Usuario()
+                    {
+                        Nome = txtNome.Text,
+                        Cpf = maskedTxtCpf.Text,
+                        Sexo = cbSexo.Text,
+                        Telefone = maskedTelefone.Text,
+                        Email = txtEmail.Text,
+                        Senha = txtSenha.Text,
+                        ConfSenha = txtConfirmarSenha.Text,
+                        Infos = richTxtInformacoesAdicionais.Text,
+                        Profissao = cbProfissao.Text,
+                        AreaFormacao = cbAreaFormacao.Text,
+                        Formacao = cdFormacao.Text,
+                        Estado = cbEstado.Text,
+                        Cidade = txtCidade.Text,
+                        Bairro = txtBairro.Text,
+                        ValorHora = decimal.Parse(maskedTxtValorHora.Text),
+                        Imagem = conversorImagem()
+                    };
 
-                usuario.cadastraUsu();
+                    usuario.cadastraUsu();
 
-                MessageBox.Show("Cadastro realizado com Sucesso");
+                    MessageBox.Show("Cadastro realizado com Sucesso");
 
-                new TelaLogin().Show();
-                Visible = false;
-            }
+                    new TelaLogin().Show();
+                    Visible = false;
+                }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocorreu um erro. {ex.Message}");
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro. {ex.Message}");
+                }
 
             }
         }

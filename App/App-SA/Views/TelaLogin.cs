@@ -14,8 +14,7 @@ namespace App_SA
 {
     public partial class TelaLogin : Form
     {
-        
-
+       
         public TelaLogin()
         {
             InitializeComponent();
@@ -42,6 +41,7 @@ namespace App_SA
 
                 if (comando.tem.Equals(true))
                 {
+                    Comandos.Logado = true;
                     MessageBox.Show("Bem Vindo");
                     usuarioLogado = txtBoxLogin.Text;
                     lblAtencao.Visible = false;

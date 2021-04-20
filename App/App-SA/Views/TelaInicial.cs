@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App_SA.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace App_SA
         public TelaInicial()
         {
             InitializeComponent();
+            bool ehlogado = Comandos.Logado;
+            if (ehlogado)//ja é cadastrado?
+            {
+                Comandos.Logado = false;
+                // mostrar botao pesquisar profissional
+            }
         }
 
         private void btnPesquisaProfissional_Click(object sender, EventArgs e)
