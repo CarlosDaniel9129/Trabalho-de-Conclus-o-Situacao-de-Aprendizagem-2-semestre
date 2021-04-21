@@ -120,59 +120,10 @@
   <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Profissao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="formacao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="valorHora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="telefone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gridProfissionais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-6, 361</value>
-  </data>
-  <data name="gridProfissionais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 283</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridProfissionais.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gridProfissionais.Text" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Name" xml:space="preserve">
-    <value>gridProfissionais</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gridProfissionais.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="idUsuario.HeaderText" xml:space="preserve">
     <value>id</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="idUsuario.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -232,6 +183,31 @@
   </data>
   <data name="telefone.Width" type="System.Int32, mscorlib">
     <value>150</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gridProfissionais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-6, 361</value>
+  </data>
+  <data name="gridProfissionais.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 283</value>
+  </data>
+  <data name="gridProfissionais.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridProfissionais.Text" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;gridProfissionais.Name" xml:space="preserve">
+    <value>gridProfissionais</value>
+  </data>
+  <data name="&gt;&gt;gridProfissionais.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridProfissionais.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridProfissionais.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="lblValorMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -627,7 +603,7 @@
     <value>61, 168</value>
   </data>
   <data name="maskedTxtValorMin.Mask" xml:space="preserve">
-    <value>000\,00</value>
+    <value>000\.00</value>
   </data>
   <data name="maskedTxtValorMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 20</value>
@@ -651,7 +627,7 @@
     <value>292, 166</value>
   </data>
   <data name="maskedTxtValorMax.Mask" xml:space="preserve">
-    <value>000\,00</value>
+    <value>000\.00</value>
   </data>
   <data name="maskedTxtValorMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 20</value>

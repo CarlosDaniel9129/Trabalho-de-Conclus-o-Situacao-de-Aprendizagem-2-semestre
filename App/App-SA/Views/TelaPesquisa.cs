@@ -81,6 +81,18 @@ namespace App_SA
                     lblValorMin.ForeColor = Color.Red;
                     lblValorMax.ForeColor = Color.Red;
                 }
+                else
+                {
+                    lblAvisoValor.Visible = false;
+                    lblValorMin.ForeColor = Color.White;
+                    lblValorMax.ForeColor = Color.White;
+                }
+            }
+            else
+            {
+                lblAvisoValor.Visible = false;
+                lblValorMin.ForeColor = Color.White;
+                lblValorMax.ForeColor = Color.White;
             }
 
 

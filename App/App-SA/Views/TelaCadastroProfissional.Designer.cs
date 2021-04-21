@@ -336,7 +336,7 @@ namespace App_SA
             // maskedTxtValorHora
             // 
             this.maskedTxtValorHora.Location = new System.Drawing.Point(372, 382);
-            this.maskedTxtValorHora.Mask = "000\\,00";
+            this.maskedTxtValorHora.Mask = "000\\.00";
             this.maskedTxtValorHora.Name = "maskedTxtValorHora";
             this.maskedTxtValorHora.Size = new System.Drawing.Size(314, 20);
             this.maskedTxtValorHora.TabIndex = 40;

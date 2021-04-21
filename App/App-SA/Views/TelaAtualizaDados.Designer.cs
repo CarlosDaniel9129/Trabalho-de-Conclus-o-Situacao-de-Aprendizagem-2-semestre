@@ -590,7 +590,7 @@
             this.Controls.Add(this.btnCarregarFoto);
             this.Controls.Add(this.lblTelefone);
             this.Name = "TelaAtualizaDados";
-            this.Text = "Form1";
+            this.Text = "Meu Cadastro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfissional)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

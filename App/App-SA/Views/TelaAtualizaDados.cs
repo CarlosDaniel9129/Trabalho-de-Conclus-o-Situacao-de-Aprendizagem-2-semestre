@@ -260,7 +260,5 @@ namespace App_SA.Views
             new TelaPesquisa().Show();
             Visible = false;
         }
-
-
     }
 }
